@@ -35,6 +35,11 @@
                 </div>
                 <ul class="nav">
                     <li class="nav__item subnav"><a href="#" class="nav__link">Link 1</a>
+                        <svg class="subnav__icon">
+                            <use
+                                xlink:href="<?php echo get_stylesheet_directory_uri() ?>/img/sprite.svg#icon-chevron-thin-down">
+                            </use>
+                        </svg>
                         <ul class="subnav__nav">
                             <li class="nav__item"><a href="#" class="nav__link">Sublink</a>
                             <li class="nav__item"><a href="#" class="nav__link">Sublink Sublink</a>

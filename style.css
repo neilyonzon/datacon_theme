@@ -495,7 +495,7 @@ a {
 }
 
 a:visited {
-	color: #800080;
+	color: #000;
 }
 
 a:hover, a:focus, a:active {
@@ -636,6 +636,10 @@ html {
 	align-items: center;
 }
 
+.nav > * {
+	flex: 0 0 15%;
+}
+
 .nav__item {
 	height: auto;
 }
@@ -653,6 +657,15 @@ html {
 .subnav {
 	position: relative;
 	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.subnav__icon {
+	fill: black;
+	margin-left: .5rem;
+	width: 1rem;
+	height: 1rem;
 }
 
 .subnav__nav {
@@ -661,6 +674,7 @@ html {
 	padding: 1rem;
 	transform: translateX(-50%);
 	left: 50%;
+	top: 1rem;
 	background-color: #FFA800;
 	background-clip: content-box;
 	visibility: hidden;
