@@ -18,7 +18,7 @@
 
 .nav {
     display: flex;
-    flex: .5;
+    flex: .7;
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
@@ -29,6 +29,7 @@
 
     &__item {
         height: auto;
+        text-align: center;
     }
 
     &__link {

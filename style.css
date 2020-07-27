@@ -630,7 +630,7 @@ html {
 
 .nav {
 	display: flex;
-	flex: .5;
+	flex: .7;
 	justify-content: space-evenly;
 	list-style: none;
 	align-items: center;
@@ -642,6 +642,7 @@ html {
 
 .nav__item {
 	height: auto;
+	text-align: center;
 }
 
 .nav__link {
