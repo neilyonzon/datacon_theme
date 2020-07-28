@@ -1,7 +1,8 @@
 .main-navigation {
     display: flex;
     width: 100vw;
-    height: auto;
+    height: 12rem;
+    font-size: 1.6rem;
     color: $color-black;
     text-transform: uppercase;
     justify-content: space-around;
@@ -18,18 +19,18 @@
 
 .nav {
     display: flex;
-    flex: .7;
+    flex: .8;
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
 
-    &>* {
-        flex: 0 0 15%;
-    }
 
     &__item {
         height: auto;
         text-align: center;
+        flex-shrink: 0;
+        min-width: 12rem;
+        margin: 0 .5rem;
     }
 
     &__link {
@@ -53,10 +54,12 @@
 
 
     &__icon {
-        fill: black;
+        fill: $color-tertiary;
+        font-weight: bold;
         margin-left: .5rem;
         width: 1rem;
         height: 1rem;
+        visibility: hidden;
     }
 
 
@@ -66,14 +69,19 @@
         padding: 1rem;
         transform: translateX(-50%);
         left: 50%;
-        top: 1rem;
+        top: 2rem;
         background-color: $color-tertiary;
         background-clip: content-box;
         visibility: hidden;
     }
 
-    &:hover .subnav__nav {
+    &:hover .subnav__nav,
+    &:hover .subnav__icon {
         visibility: visible;
+    }
+
+    &:hover>.nav__link {
+        color: $color-tertiary;
     }
 
 

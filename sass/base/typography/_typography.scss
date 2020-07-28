@@ -12,3 +12,14 @@ textarea {
 
 @import "headings";
 @import "copy";
+
+
+.callout {
+	font-size: 6rem;
+	font-weight: bold;
+	line-height: 7rem;
+
+	&--primary {
+		color: $color-primary;
+	}
+}

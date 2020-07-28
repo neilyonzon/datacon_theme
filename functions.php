@@ -119,6 +119,14 @@ function datacon_refresh_content_width() {
 }
 add_action( 'after_setup_theme', 'datacon_refresh_content_width', 0 );
 
+//Adding Fonts
+
+// function custom_add_google_fonts() {
+//     wp_enqueue_style( 'custom-google-fonts', '<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">', false );
+//     }
+    
+// add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
+
 /**
  * Register widget area.
  *

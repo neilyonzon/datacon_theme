@@ -34,7 +34,7 @@
                     <a href="#" class="main-navigation__logo-img">Placeholder Logo</a>
                 </div>
                 <ul class="nav">
-                    <li class="nav__item subnav"><a href="#" class="nav__link">Link 1</a>
+                    <li class="nav__item subnav"><a href="#" class="nav__link">Conference</a>
                         <svg class="subnav__icon">
                             <use
                                 xlink:href="<?php echo get_stylesheet_directory_uri() ?>/img/sprite.svg#icon-chevron-thin-down">
@@ -46,12 +46,12 @@
                             <li class="nav__item"><a href="#" class="nav__link">Sublindfsdfds</a>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Agenda</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Speakers</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Sponsors</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Panels</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Startup Showcase</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Get Tickets</a></li>
                 </ul>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
