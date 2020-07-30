@@ -508,6 +508,7 @@ table {
 	width: 100%;
 }
 
+p,
 .paragraph {
 	font-size: 1.8rem;
 	color: #000;
@@ -623,11 +624,14 @@ html {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.container {
+	padding: 1rem 12rem;
+}
+
 .container-flex {
 	display: flex;
 	justify-content: space-between;
-	width: 100vw;
-	padding: 1rem 12rem;
+	width: 100%;
 	position: relative;
 }
 
@@ -870,26 +874,8 @@ html {
 	display: block;
 }
 
-/* Home Page Hero
---------------------------------------------- */
-.hero {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100vw;
-	height: 41rem;
-	background: url(img/Los_Angeles.png);
-	background-repeat: no-repeat;
-}
-
-.hero__image {
-	width: 90rem;
-}
-
-.hero__info {
-	font-size: 2.8rem;
-}
-
+/*Call to Action CTA Box 
+---------------------------------------------- */
 .cta-box {
 	width: 58rem;
 	height: 30rem;
@@ -930,6 +916,102 @@ html {
 .cta-box__cta {
 	position: relative;
 	bottom: 1.3rem;
+}
+
+/* Stats
+---------------------------------------------- */
+.stats {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	color: #FFA800;
+	margin: 8rem 0rem;
+}
+
+.stats__col {
+	width: 30%;
+}
+
+.stats__number {
+	font-size: 4.8rem;
+}
+
+.stats__detail {
+	font-size: 3.2rem;
+}
+
+.stats__line {
+	width: 30%;
+	position: absolute;
+	height: 5px;
+	background: #FFA800;
+}
+
+/* Stats
+---------------------------------------------- */
+.media-banner {
+	width: 100%;
+	position: relative;
+	height: 52rem;
+	color: white;
+	text-transform: uppercase;
+}
+
+.media-banner__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	object-fit: cover;
+	height: 100%;
+}
+
+.media-banner__overlay {
+	background: rgba(22, 159, 255, 0.7);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 8rem 10rem 3rem;
+}
+
+.media-banner__intro-text {
+	font-size: 2.4rem;
+}
+
+.media-banner__header {
+	font-size: 5rem;
+	width: 50rem;
+}
+
+.media-banner__line {
+	width: 50%;
+}
+
+.media-banner__cta {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+/* Home Page Hero
+--------------------------------------------- */
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	height: 41rem;
+	background: url(img/Los_Angeles.png);
+	background-repeat: no-repeat;
+}
+
+.hero__image {
+	width: 90rem;
+}
+
+.hero__info {
+	font-size: 2.8rem;
 }
 
 /*--------------------------------------------------------------

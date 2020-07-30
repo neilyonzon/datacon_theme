@@ -1,8 +1,11 @@
+.container {
+    padding: 1rem 12rem;
+}
+
 .container-flex {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    padding: 1rem 12rem;
+    width: 100%;
     position: relative;
 }
 

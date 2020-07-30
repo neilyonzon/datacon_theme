@@ -1,0 +1,46 @@
+.media-banner {
+    width: 100%;
+    position: relative;
+    height: 52rem;
+    color: white;
+    text-transform: uppercase;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &__overlay {
+        background: rgba(22, 159, 255, .7);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8rem 10rem 3rem;
+    }
+
+    &__intro-text {
+        font-size: 2.4rem;
+    }
+
+    &__header {
+        font-size: 5rem;
+        width: 50rem;
+    }
+
+    &__line {
+        width: 50%;
+    }
+
+
+    &__cta {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+
+}

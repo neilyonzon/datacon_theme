@@ -151,7 +151,7 @@ add_action( 'widgets_init', 'datacon_refresh_widgets_init' );
  * Enqueue scripts and styles.
  */
 function datacon_refresh_scripts() {
-	wp_enqueue_style( 'datacon-refresh-style', get_stylesheet_uri(), array(), 2);
+	wp_enqueue_style( 'datacon-refresh-style', get_stylesheet_uri(), array(), rand(111,9999));
 	wp_style_add_data( 'datacon-refresh-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'datacon-refresh-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -188,3 +188,10 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/*Set Constant to Image Directory 
+*/
+if( !defined(THEME_IMG_PATH)){
+    define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/img' );
+   }

@@ -26,6 +26,22 @@
 --------------------------------------------- */
 @import "media/galleries";
 
+/*Call to Action CTA Box 
+---------------------------------------------- */
+
+@import "cta-box";
+
+/* Stats
+---------------------------------------------- */
+
+@import "stats";
+
+
+/* Stats
+---------------------------------------------- */
+
+@import "media-banner";
+
 /* Home Page Hero
 --------------------------------------------- */
 
@@ -44,44 +60,5 @@
 
     &__info {
         font-size: 2.8rem;
-    }
-}
-
-.cta-box {
-    width: 58rem;
-    height: 30rem;
-    border: solid .8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    @include center-self;
-    text-align: center;
-
-    &--primary {
-        border-color: $color-primary;
-        color: $color-primary;
-    }
-
-    &--secondary {
-        border-color: $color-secondary;
-        color: $color-secondary;
-    }
-
-    &__header {
-        font-size: 3.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        position: relative;
-        top: 2rem;
-    }
-
-    &__body {
-        width: 75%;
-    }
-
-    &__cta {
-        position: relative;
-        bottom: 1.3rem;
     }
 }
