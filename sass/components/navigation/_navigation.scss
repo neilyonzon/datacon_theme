@@ -36,16 +36,16 @@
         flex-shrink: 0;
         min-width: 8rem;
         margin: 0 .5rem;
+
+        &--highlight {
+            background: #7DE634;
+            padding: .7rem 1.5rem;
+        }
     }
 
     &__link {
         text-decoration: none;
         color: inherit;
-    }
-
-    &>.nav__item:last-child {
-        background: #7DE634;
-        padding: .7rem 1.5rem;
     }
 
 }

@@ -690,14 +690,14 @@ html {
 	margin: 0 .5rem;
 }
 
+.nav__item--highlight {
+	background: #7DE634;
+	padding: .7rem 1.5rem;
+}
+
 .nav__link {
 	text-decoration: none;
 	color: inherit;
-}
-
-.nav > .nav__item:last-child {
-	background: #7DE634;
-	padding: .7rem 1.5rem;
 }
 
 .subnav {
