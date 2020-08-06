@@ -28,10 +28,19 @@
             href="#primary"><?php esc_html_e( 'Skip to content', 'datacon-refresh' ); ?></a>
 
         <header id="masthead" class="site-header">
+            <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'main-nav',
+            )
+        )
+        ?>
             <nav id="site-navigation" class="main-navigation">
-                <!-- <img src="" class="logo"></img> -->
                 <div class="main-navigation__logo">
-                    <a href="#" class="main-navigation__logo-img">Placeholder Logo</a>
+                    <a href="#" class="main-navigation__logo-link">
+                        <img src="<?php echo THEME_IMG_PATH;?>/logo.png" alt="Data Con Logo"
+                            class="main-navigation__logo-img">
+                    </a>
                 </div>
                 <ul class="nav">
                     <li class="nav__item subnav"><a href="#" class="nav__link">Conference</a>
@@ -53,5 +62,5 @@
                     <li class="nav__item"><a href="#" class="nav__link">Startup Showcase</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Get Tickets</a></li>
                 </ul>
-            </nav><!-- #site-navigation -->
+            </nav>
         </header><!-- #masthead -->

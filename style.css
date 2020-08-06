@@ -624,7 +624,7 @@ html {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.container {
+.section-container {
 	padding: 1rem 12rem;
 }
 
@@ -654,7 +654,7 @@ html {
 	display: flex;
 	width: 100vw;
 	height: 12rem;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	color: #000;
 	text-transform: uppercase;
 	justify-content: space-around;
@@ -669,6 +669,11 @@ html {
 	color: #FFA800;
 }
 
+.main-navigation__logo-img {
+	min-width: 20rem;
+	max-width: 33rem;
+}
+
 .nav {
 	display: flex;
 	flex: .8;
@@ -681,7 +686,7 @@ html {
 	height: auto;
 	text-align: center;
 	flex-shrink: 0;
-	min-width: 12rem;
+	min-width: 8rem;
 	margin: 0 .5rem;
 }
 

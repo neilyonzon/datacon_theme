@@ -2,7 +2,7 @@
     display: flex;
     width: 100vw;
     height: 12rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: $color-black;
     text-transform: uppercase;
     justify-content: space-around;
@@ -14,6 +14,11 @@
         &:hover {
             color: $color-tertiary;
         }
+    }
+
+    &__logo-img {
+        min-width: 20rem;
+        max-width: 33rem;
     }
 }
 
@@ -29,7 +34,7 @@
         height: auto;
         text-align: center;
         flex-shrink: 0;
-        min-width: 12rem;
+        min-width: 8rem;
         margin: 0 .5rem;
     }
 

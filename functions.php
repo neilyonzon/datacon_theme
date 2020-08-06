@@ -50,7 +50,7 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'datacon-refresh' ),
+				'main-nav' => esc_html__( 'Primary', 'datacon-refresh' ),
 			)
 		);
 
@@ -192,6 +192,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 /*Set Constant to Image Directory 
 */
-if( !defined(THEME_IMG_PATH)){
+if( !defined($THEME_IMG_PATH)){
     define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/img' );
    }

@@ -3,13 +3,13 @@
 <!--Main Content -->
 <div class="hero">
     <div class="hero__image-container">
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" alt="" class="hero__image">
+        <img src="<?php echo THEME_IMG_PATH;?>/logo.png" alt="" class="hero__image">
     </div>
     <div class="hero__info">
         <span>University of Southern California, Los Angeles • March 6, 2020</span>
     </div>
 </div>
-<div class="container">
+<div class="section-container">
     <div class="container-flex">
         <div class="col-1-of-2">
             <div class="callout callout--primary">Data Con LA is the largest, of its kind, data conference in Southern
@@ -73,7 +73,7 @@
     </div>
 </div>
 <div class="media-banner">
-    <img src="<?php echo THEME_IMG_PATH; ?>/conference.png" alt="" class="media-banner__img">
+    <img src="<?php echo THEME_IMG_PATH;?>/conference.png" alt="" class="media-banner__img">
     <div class="media-banner__overlay">
         <div class="media-banner__intro-text">DATA CON LA 2019</div>
         <div class="media-banner__header">Highlights from Last Year's Event</div>
