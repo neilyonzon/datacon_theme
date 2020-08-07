@@ -31,6 +31,80 @@
 
     }
 
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: white;
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+        display: none;
+
+        @include respond(tab-land) {
+            display: block;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        top: 45%;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+
 }
 
 .nav {
@@ -43,7 +117,7 @@
     @include respond(tab-land) {
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 70%;
         display: block;
         background: white;
         position: fixed;
@@ -55,6 +129,14 @@
         margin-left: 0;
         margin-top: 0;
         z-index: 9999;
+        transform: translateX(0);
+        transition: transform .3s ease-in;
+    }
+
+    &.nav--inactive {
+        @include respond(tab-land) {
+            transform: translateX(-100%);
+        }
     }
 
 
@@ -74,6 +156,7 @@
             width: 100%;
             margin: 0;
             min-height: 3rem;
+            padding: 1rem;
         }
     }
 
@@ -82,7 +165,7 @@
         color: inherit;
 
         @include respond(tab-land) {
-            width: 100%;
+            width: 70%;
             height: 100%;
             display: inline-block;
         }
@@ -93,6 +176,20 @@
 .subnav {
     position: relative;
     align-items: center;
+
+    // &:after {
+    //     content: '\002B';
+    //     color: #777;
+    //     padding: 1rem;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 5%;
+    //     cursor: pointer;
+    // }
+
+    // &.active:after {
+    //     content: "\2212";
+    // }
 
 
     &__icon {
@@ -129,6 +226,19 @@
             top: 0;
             margin: 0;
             padding: 0;
+        }
+
+        &.subnav__nav--active {
+            @include respond(tab-land) {
+                visibility: visible;
+                height: initial;
+                position: relative;
+                transform: translate(0, 0);
+                left: 0%;
+                top: 0;
+                margin: 0;
+                padding: 0;
+            }
         }
 
     }

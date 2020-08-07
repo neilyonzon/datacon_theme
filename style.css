@@ -694,6 +694,78 @@ html {
 	}
 }
 
+.main-navigation__checkbox {
+	display: none;
+}
+
+.main-navigation__button {
+	background-color: white;
+	height: 5rem;
+	width: 5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+
+@media only screen and (max-width: 75em) {
+	.main-navigation__button {
+		display: block;
+	}
+}
+
+.main-navigation__icon {
+	position: relative;
+	top: 45%;
+}
+
+.main-navigation__icon, .main-navigation__icon::before, .main-navigation__icon::after {
+	width: 3rem;
+	height: 2px;
+	background-color: #169FFF;
+	display: inline-block;
+}
+
+.main-navigation__icon::before, .main-navigation__icon::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	transition: all .2s;
+}
+
+.main-navigation__icon::before {
+	top: -.8rem;
+}
+
+.main-navigation__icon::after {
+	top: .8rem;
+}
+
+.main-navigation__button:hover .main-navigation__icon::before {
+	top: -1rem;
+}
+
+.main-navigation__button:hover .main-navigation__icon::after {
+	top: 1rem;
+}
+
+.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon {
+	background-color: transparent;
+}
+
+.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon::before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon::after {
+	top: 0;
+	transform: rotate(-135deg);
+}
+
 .nav {
 	display: flex;
 	flex: .8;
@@ -706,7 +778,7 @@ html {
 	.nav {
 		flex-direction: column;
 		align-items: center;
-		width: 50%;
+		width: 70%;
 		display: block;
 		background: white;
 		position: fixed;
@@ -718,6 +790,14 @@ html {
 		margin-left: 0;
 		margin-top: 0;
 		z-index: 9999;
+		transform: translateX(0);
+		transition: transform .3s ease-in;
+	}
+}
+
+@media only screen and (max-width: 75em) {
+	.nav.nav--inactive {
+		transform: translateX(-100%);
 	}
 }
 
@@ -739,6 +819,7 @@ html {
 		width: 100%;
 		margin: 0;
 		min-height: 3rem;
+		padding: 1rem;
 	}
 }
 
@@ -749,7 +830,7 @@ html {
 
 @media only screen and (max-width: 75em) {
 	.nav__link {
-		width: 100%;
+		width: 70%;
 		height: 100%;
 		display: inline-block;
 	}
@@ -793,6 +874,19 @@ html {
 		height: 0;
 		position: relative;
 		transform: translate(0, -100%);
+		left: 0%;
+		top: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 75em) {
+	.subnav__nav.subnav__nav--active {
+		visibility: visible;
+		height: initial;
+		position: relative;
+		transform: translate(0, 0);
 		left: 0%;
 		top: 0;
 		margin: 0;

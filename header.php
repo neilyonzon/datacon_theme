@@ -29,6 +29,10 @@
 
         <header id="masthead" class="site-header">
             <nav id="site-navigation" class="main-navigation">
+                <input id="main-navigation-toggle" type="checkbox" class="main-navigation__checkbox">
+                <label for="main-navigation-toggle" class="main-navigation__button">
+                    <span class="main-navigation__icon">&nbsp;</span>
+                </label>
                 <div class="main-navigation__logo">
                     <a href="#" class="main-navigation__logo-link">
                         <img src="<?php echo THEME_IMG_PATH;?>/logo.png" alt="Data Con Logo"
@@ -39,7 +43,7 @@
                        wp_nav_menu(array(
                             'theme_location'  => 'main-nav',
                             'container'       => 'ul',
-                            'menu_class'      => 'nav',
+                            'menu_class'      => 'nav nav--inactive',
                             'walker'          => new Walker_Nav_Primary()
                             )
                        );
