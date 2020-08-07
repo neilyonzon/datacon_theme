@@ -59,18 +59,21 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 		
 
 		class Walker_Nav_Primary extends Walker_Nav_Menu {
-			function start_lvl( &$output, $depth = 0, $args = array()) { //ul
+			function start_lvl( &$output, $depth = 0, $args = array()) { // handles the ul
 				//Variable that is used to create indents in the HTML code
 				$indent = str_repeat("\t",$depth);
 				$submenu = ($depth > 0 ) ? 'subnav': '';
 				$output  .= "\n$indent<ul class=\"subnav__nav$submenu depth_$depth\">\n";
 			}
 
-			function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) { //li a span (manages the markup of the li a span)
+			function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) { //li a span (manages the markup of the li a)
 				$indent = ($depth) ? str_repeat("\t",$depth) : '';
 
 				$li_attributes = '';
+
+				//Create variable that will hold all classes for each li element
 				$class_names = $value = '';
+
 
 				$classes = empty($item -> classes) ? 'array()' : (array) $item -> classes;
 				
@@ -81,6 +84,8 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 
 				$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
 				$class_names = 'class = "' . esc_attr($class_names) . '"';
+
+				//The commented code below creates an id variable that would be used for the LI. This is not needed so commenting out.
 				// $id = apply_filters('nav_menu_item_id', 'menu-item-'. $item-> ID, $item, $args);
 				// $id = strlen( $id ) ? ' id="' . esc_attr($id) . '"' : '';
 				$output .= $indent . '<li ' . $value . $class_names . $li_attributes . '>';

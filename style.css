@@ -48,6 +48,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/*Media Query Manager
+This theme is desktop first and media queries will use max-width 
+0 - 600px - Phone
+600 - 900px - Tablet Portrait
+900 - 1200px - Tablet Landscape
+1200 - 1800px - Normal styles apply 
+*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -659,6 +666,13 @@ html {
 	text-transform: uppercase;
 	justify-content: space-around;
 	align-items: center;
+	position: relative;
+}
+
+@media only screen and (max-width: 75em) {
+	.main-navigation {
+		height: 5rem;
+	}
 }
 
 .main-navigation a {
@@ -674,12 +688,37 @@ html {
 	max-width: 33rem;
 }
 
+@media only screen and (max-width: 75em) {
+	.main-navigation__logo-img {
+		max-width: 20rem;
+	}
+}
+
 .nav {
 	display: flex;
 	flex: .8;
 	justify-content: space-evenly;
 	list-style: none;
 	align-items: center;
+}
+
+@media only screen and (max-width: 75em) {
+	.nav {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		display: block;
+		background: white;
+		position: fixed;
+		top: 5rem;
+		padding-top: 2rem;
+		padding-left: 0;
+		left: 0%;
+		height: 100vh;
+		margin-left: 0;
+		margin-top: 0;
+		z-index: 9999;
+	}
 }
 
 .nav__item {
@@ -695,15 +734,29 @@ html {
 	padding: .7rem 1.5rem;
 }
 
+@media only screen and (max-width: 75em) {
+	.nav__item {
+		width: 100%;
+		margin: 0;
+		min-height: 3rem;
+	}
+}
+
 .nav__link {
 	text-decoration: none;
 	color: inherit;
 }
 
+@media only screen and (max-width: 75em) {
+	.nav__link {
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+	}
+}
+
 .subnav {
 	position: relative;
-	text-align: center;
-	display: flex;
 	align-items: center;
 }
 
@@ -714,6 +767,12 @@ html {
 	width: 1rem;
 	height: 1rem;
 	visibility: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+	.subnav__icon {
+		display: none;
+	}
 }
 
 .subnav__nav {
@@ -728,9 +787,24 @@ html {
 	visibility: hidden;
 }
 
-.subnav:hover .subnav__nav,
-.subnav:hover .subnav__icon {
-	visibility: visible;
+@media only screen and (max-width: 75em) {
+	.subnav__nav {
+		visibility: hidden;
+		height: 0;
+		position: relative;
+		transform: translate(0, -100%);
+		left: 0%;
+		top: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 75em) {
+	.subnav:hover .subnav__nav,
+	.subnav:hover .subnav__icon {
+		visibility: visible;
+	}
 }
 
 .subnav:hover > .nav__link {
