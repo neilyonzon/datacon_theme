@@ -7,19 +7,52 @@
 (function () {
 
 
-	console.log('testing');
-
 	const hamburgerMenu = document.querySelector('#main-navigation-toggle');
+
+	let modalBackground = document.querySelector('#modal-background');
 
 	const toggleSideNav = () => {
 		const sideNav = document.querySelector('ul.nav');
-		sideNav.classList.toggle('nav--inactive');
+		sideNav.classList.toggle('nav--active');
 	}
+
+	const fixBody = () => {
+		const body = document.querySelector('body');
+		let modalBackground = document.querySelector('#modal-background');
+		body.classList.toggle('fixed');
+		modalBackground.classList.toggle('active');
+	}
+
 
 	hamburgerMenu.addEventListener('click', () => {
 		toggleSideNav();
+		fixBody();
 	})
 
+
+	modalBackground.addEventListener('click', () => {
+		toggleSideNav();
+		fixBody();
+	})
+
+	stopResponsiveTransition();
+
+	function stopResponsiveTransition() {
+		const classes = document.body.classList;
+		let timer = null;
+		window.addEventListener('resize', function () {
+			if (timer) {
+				clearTimeout(timer);
+				timer = null;
+			} else {
+				classes.add('stop-transition');
+			}
+			timer = setTimeout(() => {
+				classes.remove('stop-transition');
+				timer = null;
+			}, 100);
+		});
+	}
 
 	// const siteNavigation = document.getElementById('site-navigation');
 

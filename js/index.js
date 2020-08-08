@@ -1,0 +1,1 @@
+const getCompany = require('./navigation.js');

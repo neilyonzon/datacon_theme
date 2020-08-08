@@ -18,3 +18,17 @@
     flex: 30%;
     position: relative;
 }
+
+.main-content {
+    position: relative;
+    top: $header-height;
+
+    @include respond(tab-land) {
+        top: $header-height-m;
+    }
+}
+
+.fixed {
+    overflow: hidden;
+    position: fixed;
+}

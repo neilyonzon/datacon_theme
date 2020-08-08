@@ -1,13 +1,19 @@
 .main-navigation {
     display: flex;
     width: 100vw;
-    height: 12rem;
+    height: 8rem;
     font-size: 1.4rem;
     color: $color-black;
+    background-color: white;
     text-transform: uppercase;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    position: fixed;
+    z-index: 88888;
+
+    & * {
+        list-style: none;
+    }
 
     @include respond(tab-land) {
         height: 5rem;
@@ -118,6 +124,7 @@
         flex-direction: column;
         align-items: center;
         width: 70%;
+        height: 100vh;
         display: block;
         background: white;
         position: fixed;
@@ -125,17 +132,17 @@
         padding-top: 2rem;
         padding-left: 0;
         left: 0%;
-        height: 100vh;
         margin-left: 0;
-        margin-top: 0;
+        margin-top: -.1rem;
         z-index: 9999;
-        transform: translateX(0);
-        transition: transform .3s ease-in;
+        transform: translateX(-100%);
+        transition: opacity .3s, transform .3s;
     }
 
-    &.nav--inactive {
+    &.nav--active {
         @include respond(tab-land) {
-            transform: translateX(-100%);
+            transform: translateX(0);
+            transition: opacity .3s, transform .3s;
         }
     }
 
@@ -265,4 +272,8 @@
     }
 
 
+}
+
+body.stop-transition .nav {
+    transition: none !important;
 }

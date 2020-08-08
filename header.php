@@ -43,7 +43,7 @@
                        wp_nav_menu(array(
                             'theme_location'  => 'main-nav',
                             'container'       => 'ul',
-                            'menu_class'      => 'nav nav--inactive',
+                            'menu_class'      => 'nav',
                             'walker'          => new Walker_Nav_Primary()
                             )
                        );
