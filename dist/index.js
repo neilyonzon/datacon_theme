@@ -111,8 +111,10 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
  * navigation support for dropdown menus.
  */
 (function () {
+  //Variables
   var hamburgerMenu = document.querySelector('#main-navigation-toggle');
   var modalBackground = document.querySelector('#modal-background');
+  var subnavIcon = document.querySelectorAll('.subnav__icon'); //Functions
 
   var toggleSideNav = function toggleSideNav() {
     var sideNav = document.querySelector('ul.nav');
@@ -121,18 +123,41 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
 
   var fixBody = function fixBody() {
     var body = document.querySelector('body');
-    var modalBackground = document.querySelector('#modal-background');
     body.classList.toggle('fixed');
     modalBackground.classList.toggle('active');
   };
+
+  var toggleHamburger = function toggleHamburger() {
+    var hamburger = document.querySelector('#main-navigation-toggle');
+    hamburger.checked == true ? hamburger.checked = false : hamburger.checked = true;
+  };
+
+  var toggleSubnav = function toggleSubnav(e) {
+    var subNav = e.nextElementSibling;
+
+    if (subNav.style.maxHeight == 0 || subNav.style.maxHeight == 0 + "px") {
+      subNav.style.maxHeight = subNav.scrollHeight + "px";
+      subNav.style.opacity = 1;
+    } else {
+      subNav.style.maxHeight = 0;
+      subNav.style.opacity = 0;
+    }
+  }; //Event Listeners and Handlers
+
 
   hamburgerMenu.addEventListener('click', function () {
     toggleSideNav();
     fixBody();
   });
+  subnavIcon.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      toggleSubnav(item);
+    });
+  });
   modalBackground.addEventListener('click', function () {
     toggleSideNav();
     fixBody();
+    toggleHamburger();
   });
   stopResponsiveTransition();
 

@@ -7,10 +7,16 @@
 (function () {
 
 
+
+	//Variables
 	const hamburgerMenu = document.querySelector('#main-navigation-toggle');
 
-	let modalBackground = document.querySelector('#modal-background');
+	const modalBackground = document.querySelector('#modal-background');
 
+	const subnavIcon = document.querySelectorAll('.subnav__icon');
+
+
+	//Functions
 	const toggleSideNav = () => {
 		const sideNav = document.querySelector('ul.nav');
 		sideNav.classList.toggle('nav--active');
@@ -18,21 +24,43 @@
 
 	const fixBody = () => {
 		const body = document.querySelector('body');
-		let modalBackground = document.querySelector('#modal-background');
 		body.classList.toggle('fixed');
 		modalBackground.classList.toggle('active');
 	}
 
+	const toggleHamburger = () => {
+		let hamburger = document.querySelector('#main-navigation-toggle');
+		hamburger.checked == true ? hamburger.checked = false : hamburger.checked = true;
+	}
 
+	const toggleSubnav = (e) => {
+		let subNav = e.nextElementSibling;
+		if (subNav.style.maxHeight == 0 || subNav.style.maxHeight == 0 + "px") {
+			subNav.style.maxHeight = subNav.scrollHeight + "px"
+			subNav.style.opacity = 1;
+		} else {
+			subNav.style.maxHeight = 0;
+			subNav.style.opacity = 0;
+		}
+	}
+
+
+	//Event Listeners and Handlers
 	hamburgerMenu.addEventListener('click', () => {
 		toggleSideNav();
 		fixBody();
 	})
 
+	subnavIcon.forEach(item => {
+		item.addEventListener('click', (e) => {
+			toggleSubnav(item);
+		})
+	})
 
 	modalBackground.addEventListener('click', () => {
 		toggleSideNav();
 		fixBody();
+		toggleHamburger();
 	})
 
 	stopResponsiveTransition();

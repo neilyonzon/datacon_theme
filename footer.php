@@ -10,14 +10,13 @@
  */
 
 ?>
-
+<div id="modal-background"></div>
 <footer id="colophon" class="site-footer">
 
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <datalist></datalist>
 <?php wp_footer(); ?>
-<div id="modal-background"></div>
 </body>
 
 </html>

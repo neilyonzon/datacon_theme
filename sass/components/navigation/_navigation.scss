@@ -123,7 +123,7 @@
     @include respond(tab-land) {
         flex-direction: column;
         align-items: center;
-        width: 70%;
+        width: 70vw;
         height: 100vh;
         display: block;
         background: white;
@@ -136,13 +136,13 @@
         margin-top: -.1rem;
         z-index: 9999;
         transform: translateX(-100%);
-        transition: opacity .3s, transform .3s;
+        transition: opacity .3s, transform 2s;
     }
 
     &.nav--active {
         @include respond(tab-land) {
             transform: translateX(0);
-            transition: opacity .3s, transform .3s;
+            transition: opacity .3s, transform 2s;
         }
     }
 
@@ -184,21 +184,6 @@
     position: relative;
     align-items: center;
 
-    // &:after {
-    //     content: '\002B';
-    //     color: #777;
-    //     padding: 1rem;
-    //     position: absolute;
-    //     top: 0;
-    //     right: 5%;
-    //     cursor: pointer;
-    // }
-
-    // &.active:after {
-    //     content: "\2212";
-    // }
-
-
     &__icon {
         fill: $color-tertiary;
         font-weight: bold;
@@ -208,7 +193,11 @@
         visibility: hidden;
 
         @include respond(tab-land) {
-            display: none;
+            position: absolute;
+            top: 12px;
+            right: 5%;
+            cursor: pointer;
+            visibility: visible;
         }
     }
 
@@ -225,11 +214,11 @@
         visibility: hidden;
 
         @include respond(tab-land) {
-            visibility: hidden;
-            height: 0;
+            visibility: visible;
+            opacity: 0;
+            max-height: 0;
+            transition: opacity 0.2s, max-height 0.2s ease-out;
             position: relative;
-            transform: translate(0, -100%);
-            left: 0%;
             top: 0;
             margin: 0;
             padding: 0;
