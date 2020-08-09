@@ -10,6 +10,7 @@
     align-items: center;
     position: fixed;
     z-index: 88888;
+    top: 0;
 
     & * {
         list-style: none;
@@ -22,6 +23,10 @@
     & a {
         font-weight: bold;
 
+        @include respond(tab-land) {
+            padding: 1rem;
+        }
+
         &:hover {
             color: $color-tertiary;
         }
@@ -30,6 +35,7 @@
     &__logo-img {
         min-width: 20rem;
         max-width: 33rem;
+        padding: 3rem;
 
         @include respond(tab-land) {
             max-width: 20rem;
@@ -136,13 +142,22 @@
         margin-top: -.1rem;
         z-index: 9999;
         transform: translateX(-100%);
-        transition: opacity .3s, transform 2s;
+        transition: opacity .3s, transform .3s;
     }
 
     &.nav--active {
         @include respond(tab-land) {
             transform: translateX(0);
-            transition: opacity .3s, transform 2s;
+            transition: opacity .3s, transform .3s;
+        }
+    }
+
+    &>.nav__item:not(:last-child) {
+        @include respond(tab-land) {
+            border-bottom: 0.1rem solid $color-tertiary;
+            padding-bottom: 0rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
         }
     }
 
@@ -153,6 +168,7 @@
         flex-shrink: 0;
         min-width: 8rem;
         margin: 0 .5rem;
+        position: relative;
 
         &--highlight {
             background: #7DE634;
@@ -194,7 +210,7 @@
 
         @include respond(tab-land) {
             position: absolute;
-            top: 12px;
+            top: 22px;
             right: 5%;
             cursor: pointer;
             visibility: visible;

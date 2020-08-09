@@ -685,6 +685,7 @@ html {
 	align-items: center;
 	position: fixed;
 	z-index: 88888;
+	top: 0;
 }
 
 .main-navigation * {
@@ -701,6 +702,12 @@ html {
 	font-weight: bold;
 }
 
+@media only screen and (max-width: 75em) {
+	.main-navigation a {
+		padding: 1rem;
+	}
+}
+
 .main-navigation a:hover {
 	color: #FFA800;
 }
@@ -708,6 +715,7 @@ html {
 .main-navigation__logo-img {
 	min-width: 20rem;
 	max-width: 33rem;
+	padding: 3rem;
 }
 
 @media only screen and (max-width: 75em) {
@@ -813,14 +821,23 @@ html {
 		margin-top: -.1rem;
 		z-index: 9999;
 		transform: translateX(-100%);
-		transition: opacity .3s, transform 2s;
+		transition: opacity .3s, transform .3s;
 	}
 }
 
 @media only screen and (max-width: 75em) {
 	.nav.nav--active {
 		transform: translateX(0);
-		transition: opacity .3s, transform 2s;
+		transition: opacity .3s, transform .3s;
+	}
+}
+
+@media only screen and (max-width: 75em) {
+	.nav > .nav__item:not(:last-child) {
+		border-bottom: 0.1rem solid #FFA800;
+		padding-bottom: 0rem;
+		padding-left: 0rem;
+		padding-right: 0rem;
 	}
 }
 
@@ -830,6 +847,7 @@ html {
 	flex-shrink: 0;
 	min-width: 8rem;
 	margin: 0 .5rem;
+	position: relative;
 }
 
 .nav__item--highlight {
@@ -876,7 +894,7 @@ html {
 @media only screen and (max-width: 75em) {
 	.subnav__icon {
 		position: absolute;
-		top: 12px;
+		top: 22px;
 		right: 5%;
 		cursor: pointer;
 		visibility: visible;
