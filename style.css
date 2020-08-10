@@ -636,7 +636,7 @@ html {
 # Layouts
 --------------------------------------------------------------*/
 .section-container {
-	padding: 1rem 12rem;
+	padding: 3rem 12rem;
 }
 
 .container-flex {
@@ -1229,30 +1229,12 @@ body.stop-transition .nav {
 .hero {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	width: 100vw;
-	height: 41rem;
-	background: url(img/Los_Angeles.png);
-	background-repeat: no-repeat;
-}
-
-.hero__image {
-	width: 90rem;
-}
-
-.hero__info {
-	font-size: 2.8rem;
-}
-
-.hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: flex-start;
 	width: 100vw;
 	height: 60rem;
-	padding: 10rem;
-	background: url(img/Los_Angeles.png);
+	padding: 6rem 10rem;
+	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5)), url(img/hero_los_angeles.png), url(img/hero_bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -1276,6 +1258,7 @@ body.stop-transition .nav {
 
 .hero__description {
 	font-size: 1.5rem;
+	width: 60%;
 }
 
 #modal-background {
