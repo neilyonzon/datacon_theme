@@ -2,13 +2,23 @@
 
 <!--Main Content -->
 <div class="main-content">
-    <div class="hero">
+    <!-- <div class="hero">
         <div class="hero__image-container">
             <img src="<?php echo THEME_IMG_PATH;?>/logo.png" alt="" class="hero__image">
         </div>
         <div class="hero__info">
             <span>University of Southern California, Los Angeles • March 6, 2020</span>
         </div>
+    </div> -->
+    <div class="hero">
+        <div class="hero__headline">
+            <h1>LA’s Most<br />Data Centric<br />Community</h1>
+        </div>
+        <div class="hero__subline">Tuesday, October 23rd - Thursday, October 25th</div>
+        <div class="hero__description">Join Data Con LA <strong>virtually</strong> and learn from experts in the data
+            and
+            technology professional field. Registration is now available.</div>
+        <button class="btn btn--quaternary">Register Now</button>
     </div>
     <div class="section-container">
         <div class="container-flex">

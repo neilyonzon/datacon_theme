@@ -568,6 +568,10 @@ a:hover, a:active {
 	background: #A452FF;
 }
 
+.btn--quaternary {
+	background: #7DE634;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1238,6 +1242,40 @@ body.stop-transition .nav {
 
 .hero__info {
 	font-size: 2.8rem;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100vw;
+	height: 60rem;
+	padding: 10rem;
+	background: url(img/Los_Angeles.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color: white;
+}
+
+.hero__headline {
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 7rem;
+}
+
+.hero__headline > h1 {
+	margin-bottom: 0;
+}
+
+.hero__subline {
+	font-size: 2rem;
+	color: #FFA800;
+}
+
+.hero__description {
+	font-size: 1.5rem;
 }
 
 #modal-background {
