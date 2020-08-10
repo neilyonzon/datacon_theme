@@ -901,6 +901,10 @@ html {
 	}
 }
 
+.subnav__icon--collapsed {
+	transform: rotate(180deg);
+}
+
 .subnav__nav {
 	list-style: none;
 	position: absolute;

@@ -119,18 +119,21 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
   var toggleSideNav = function toggleSideNav() {
     var sideNav = document.querySelector('ul.nav');
     sideNav.classList.toggle('nav--active');
-  };
+  }; //Function to toggle Modal Background (blue backgroud) visibility
+
 
   var fixBody = function fixBody() {
     var body = document.querySelector('body');
     body.classList.toggle('fixed');
     modalBackground.classList.toggle('active');
-  };
+  }; //Function to toggle input in Hamburger menu from checked to unchecked. This controls animation. 
+
 
   var toggleHamburger = function toggleHamburger() {
     var hamburger = document.querySelector('#main-navigation-toggle');
     hamburger.checked == true ? hamburger.checked = false : hamburger.checked = true;
-  };
+  }; //Function to collapse and uncollapse any subnavigation
+
 
   var toggleSubnav = function toggleSubnav(e) {
     var subNav = e.nextElementSibling;
@@ -142,6 +145,11 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
       subNav.style.maxHeight = 0;
       subNav.style.opacity = 0;
     }
+  }; //Function to rotate chevron svg icon when selected
+
+
+  var rotateChevron = function rotateChevron(e) {
+    e.classList.toggle('subnav__icon--collapsed');
   }; //Event Listeners and Handlers
 
 
@@ -152,6 +160,7 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
   subnavIcon.forEach(function (item) {
     item.addEventListener('click', function (e) {
       toggleSubnav(item);
+      rotateChevron(item);
     });
   });
   modalBackground.addEventListener('click', function () {

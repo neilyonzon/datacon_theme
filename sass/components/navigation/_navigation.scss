@@ -92,6 +92,7 @@
         &::after {
             top: .8rem;
         }
+
     }
 
     &__button:hover &__icon::before {
@@ -214,6 +215,10 @@
             right: 5%;
             cursor: pointer;
             visibility: visible;
+        }
+
+        &--collapsed {
+            transform: rotate(180deg);
         }
     }
 

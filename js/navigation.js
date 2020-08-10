@@ -22,17 +22,20 @@
 		sideNav.classList.toggle('nav--active');
 	}
 
+	//Function to toggle Modal Background (blue backgroud) visibility
 	const fixBody = () => {
 		const body = document.querySelector('body');
 		body.classList.toggle('fixed');
 		modalBackground.classList.toggle('active');
 	}
 
+	//Function to toggle input in Hamburger menu from checked to unchecked. This controls animation. 
 	const toggleHamburger = () => {
 		let hamburger = document.querySelector('#main-navigation-toggle');
 		hamburger.checked == true ? hamburger.checked = false : hamburger.checked = true;
 	}
 
+	//Function to collapse and uncollapse any subnavigation
 	const toggleSubnav = (e) => {
 		let subNav = e.nextElementSibling;
 		if (subNav.style.maxHeight == 0 || subNav.style.maxHeight == 0 + "px") {
@@ -42,6 +45,12 @@
 			subNav.style.maxHeight = 0;
 			subNav.style.opacity = 0;
 		}
+	}
+
+	//Function to rotate chevron svg icon when selected
+
+	const rotateChevron = (e) => {
+		e.classList.toggle('subnav__icon--collapsed');
 	}
 
 
@@ -54,6 +63,7 @@
 	subnavIcon.forEach(item => {
 		item.addEventListener('click', (e) => {
 			toggleSubnav(item);
+			rotateChevron(item);
 		})
 	})
 
