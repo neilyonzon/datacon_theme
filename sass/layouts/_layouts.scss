@@ -7,10 +7,19 @@
     justify-content: space-between;
     width: 100%;
     position: relative;
+    padding: 5rem 10rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    @include respond(phone) {
+        padding: 3rem 5rem;
+    }
 }
 
 .col-1-of-2 {
-    flex: 0 0 47%;
+    flex: 0 0 48%;
     position: relative;
 }
 

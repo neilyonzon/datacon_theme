@@ -25,3 +25,17 @@
 
 	margin-bottom: 1.5em;
 }
+
+.flex {
+
+
+	&-align {
+
+		&--center {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+}

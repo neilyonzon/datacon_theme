@@ -467,8 +467,20 @@ big {
 	line-height: 7rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.callout {
+		font-size: 5rem;
+		line-height: 5rem;
+		letter-spacing: .2rem;
+	}
+}
+
 .callout--primary {
 	color: #169FFF;
+}
+
+.callout--secondary {
+	color: #A452FF;
 }
 
 /* Elements
@@ -519,6 +531,7 @@ p,
 .paragraph {
 	font-size: 1.8rem;
 	color: #000;
+	font-weight: 200;
 }
 
 /* Links
@@ -644,10 +657,23 @@ html {
 	justify-content: space-between;
 	width: 100%;
 	position: relative;
+	padding: 5rem 10rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.container-flex {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.container-flex {
+		padding: 3rem 5rem;
+	}
 }
 
 .col-1-of-2 {
-	flex: 0 0 47%;
+	flex: 0 0 48%;
 	position: relative;
 }
 
@@ -690,6 +716,7 @@ html {
 	position: fixed;
 	z-index: 88888;
 	top: 0;
+	box-shadow: 1px 1px 7px #D0D0D0;
 }
 
 .main-navigation * {
@@ -1151,31 +1178,110 @@ body.stop-transition .nav {
 /* Stats
 ---------------------------------------------- */
 .stats {
-	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	position: relative;
-	color: #FFA800;
-	margin: 8rem 0rem;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 2rem 10rem;
+	color: white;
+	background: #169FFF;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats {
+		flex-direction: column;
+		padding: 2rem 5rem;
+	}
 }
 
 .stats__col {
 	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats__col {
+		width: 100%;
+	}
+}
+
+.stats__content {
+	display: flex;
+	align-items: center;
+	width: 70%;
+	justify-content: space-around;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.stats__content {
+		width: 90%;
+	}
 }
 
 .stats__number {
-	font-size: 4.8rem;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.stats__number {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats__number {
+		font-size: 5rem;
+	}
 }
 
 .stats__detail {
-	font-size: 3.2rem;
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.stats__detail {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats__detail {
+		font-size: 3rem;
+	}
+}
+
+.stats__icon {
+	width: 7rem;
+	fill: white;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.stats__icon {
+		width: 5rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats__icon {
+		width: 7rem;
+	}
 }
 
 .stats__line {
-	width: 30%;
-	position: absolute;
-	height: 5px;
-	background: #FFA800;
+	height: 2px;
+	background: white;
+	width: 70%;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.stats__line {
+		width: 30%;
+		display: none;
+	}
 }
 
 /* Stats
@@ -1241,6 +1347,14 @@ body.stop-transition .nav {
 	color: white;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.hero {
+		align-items: center;
+		text-align: center;
+		padding: 4rem 2rem;
+	}
+}
+
 .hero__headline {
 	font-size: 3rem;
 	font-weight: bold;
@@ -1251,14 +1365,33 @@ body.stop-transition .nav {
 	margin-bottom: 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.hero__headline > h1 {
+		font-size: 5rem;
+		line-height: normal;
+	}
+}
+
 .hero__subline {
 	font-size: 2rem;
 	color: #FFA800;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.hero__subline {
+		font-size: 1.8rem;
+	}
+}
+
 .hero__description {
 	font-size: 1.5rem;
 	width: 60%;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.hero__description {
+		width: 90%;
+	}
 }
 
 #modal-background {
@@ -1361,6 +1494,44 @@ body.stop-transition .nav {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+.flex-align--center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Alignments
+--------------------------------------------- */
+.headspace-l {
+	margin-top: 10rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.headspace-l--m {
+		margin-top: 10rem;
+	}
+}
+
+.headspace-m {
+	margin-top: 7rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.headspace-m--m {
+		margin-top: 7rem;
+	}
+}
+
+.headspace-s {
+	margin-top: 4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.headspace-s--m {
+		margin-top: 4rem;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

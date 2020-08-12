@@ -19,7 +19,17 @@ textarea {
 	font-weight: bold;
 	line-height: 7rem;
 
+	@include respond(phone) {
+		font-size: 5rem;
+		line-height: 5rem;
+		letter-spacing: .2rem;
+	}
+
 	&--primary {
 		color: $color-primary;
+	}
+
+	&--secondary {
+		color: $color-secondary;
 	}
 }

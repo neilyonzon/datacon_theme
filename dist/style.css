@@ -472,6 +472,10 @@ big {
   color: #169FFF;
 }
 
+.callout--secondary {
+  color: #A452FF;
+}
+
 /* Elements
 --------------------------------------------- */
 body {
@@ -1228,6 +1232,47 @@ body.stop-transition .nav {
 
 /* Home Page Hero
 --------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100vw;
+  height: 60rem;
+  padding: 6rem 10rem;
+  background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5)), url(img/hero_los_angeles.png), url(img/hero_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .hero {
+    align-items: center;
+  }
+}
+
+.hero__headline {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 7rem;
+}
+
+.hero__headline > h1 {
+  margin-bottom: 0;
+}
+
+.hero__subline {
+  font-size: 2rem;
+  color: #FFA800;
+}
+
+.hero__description {
+  font-size: 1.5rem;
+  width: 60%;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

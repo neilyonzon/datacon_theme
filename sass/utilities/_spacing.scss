@@ -1,0 +1,31 @@
+.headspace-l {
+    margin-top: $head-space-l;
+
+    &--m {
+        @include respond(phone) {
+            margin-top: $head-space-l;
+        }
+    }
+}
+
+.headspace-m {
+    margin-top: $head-space-m;
+
+    &--m {
+        @include respond(phone) {
+            margin-top: $head-space-m;
+        }
+    }
+
+}
+
+.headspace-s {
+    margin-top: $head-space-s;
+
+    &--m {
+        @include respond(phone) {
+            margin-top: $head-space-s;
+        }
+
+    }
+}
