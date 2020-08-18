@@ -2,15 +2,9 @@
 
 <!--Main Content -->
 <div class="main-content">
-    <!-- <div class="hero">
-        <div class="hero__image-container">
-            <img src="<?php echo THEME_IMG_PATH;?>/logo.png" alt="" class="hero__image">
-        </div>
-        <div class="hero__info">
-            <span>University of Southern California, Los Angeles • March 6, 2020</span>
-        </div>
-    </div> -->
     <div class="hero">
+        <img src="<?php echo THEME_IMG_PATH;?>/hero_los_angeles.png" alt="" class="hero__img">
+        <div class="hero__overlay"></div>
         <div class="hero__headline">
             <h1>Data Con 2020:<br />LA’s Most Data<br />Centric Community</h1>
         </div>
@@ -55,7 +49,6 @@
                     </svg>
                 </div>
             </div>
-            <hr class="stats__line">
         </div>
         <div class="stats__col">
             <div class="stats__content">
@@ -69,7 +62,6 @@
                     </svg>
                 </div>
             </div>
-            <hr class="stats__line">
         </div>
         <div class="stats__col">
             <div class="stats__content">
@@ -83,7 +75,6 @@
                     </svg>
                 </div>
             </div>
-            <hr class="stats__line">
         </div>
     </div>
     <div class="container-flex">
@@ -101,7 +92,7 @@
             <div class="cta-box cta-box--secondary">
                 <div class="cta-box__header">Call For Proposals</div>
                 <div class="cta-box__body">
-                    <p class="paragraph">Interested in speaking at DataCon 2020?Send us your proposal before
+                    <p class="paragraph">Interested in speaking at DataCon 2020? Send us your proposal before
                         January
                         6,
                         2020.</p>
@@ -118,10 +109,10 @@
             <div class="media-banner__intro-text">DATA CON LA 2019</div>
             <div class="media-banner__header">Highlights from Last Year's Event</div>
             <div class="media-banner__cta">Play Video Reel</div>
-            <hr class="media-banner__line">
-            </hr>
+            <div class="media-banner__line">
+                </hr>
+            </div>
         </div>
     </div>
-</div>
 
-<?php get_footer();?>
+    <?php get_footer();?>

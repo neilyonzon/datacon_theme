@@ -1134,7 +1134,7 @@ body.stop-transition .nav {
 /*Call to Action CTA Box 
 ---------------------------------------------- */
 .cta-box {
-	width: 58rem;
+	width: 52rem;
 	height: 30rem;
 	border: solid .8rem;
 	display: flex;
@@ -1146,6 +1146,22 @@ body.stop-transition .nav {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+@media only screen and (max-width: 75em) {
+	.cta-box {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 56.25em) {
+	.cta-box {
+		position: relative;
+		left: 0;
+		top: 0%;
+		transform: translate(0%, 0%);
+	}
 }
 
 .cta-box--primary {
@@ -1164,6 +1180,7 @@ body.stop-transition .nav {
 	font-weight: bold;
 	position: relative;
 	top: 2rem;
+	padding: 1.5rem;
 }
 
 .cta-box__body {
@@ -1173,6 +1190,7 @@ body.stop-transition .nav {
 .cta-box__cta {
 	position: relative;
 	bottom: 1.3rem;
+	padding-bottom: 1rem;
 }
 
 /* Stats
@@ -1292,6 +1310,7 @@ body.stop-transition .nav {
 	height: 52rem;
 	color: white;
 	text-transform: uppercase;
+	overflow: hidden;
 }
 
 .media-banner__img {
@@ -1300,16 +1319,25 @@ body.stop-transition .nav {
 	left: 0;
 	z-index: -10;
 	object-fit: cover;
-	height: 100%;
+	width: 1400px;
+	max-width: none;
 }
 
 .media-banner__overlay {
-	background: rgba(22, 159, 255, 0.7);
+	background: rgba(22, 159, 255, 0.8);
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 8rem 10rem 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.media-banner__overlay {
+		align-items: center;
+		text-align: center;
+	}
 }
 
 .media-banner__intro-text {
@@ -1323,6 +1351,8 @@ body.stop-transition .nav {
 
 .media-banner__line {
 	width: 50%;
+	height: 2px;
+	background: white;
 }
 
 .media-banner__cta {
@@ -1340,19 +1370,43 @@ body.stop-transition .nav {
 	width: 100vw;
 	height: 60rem;
 	padding: 6rem 10rem;
-	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5)), url(img/hero_los_angeles.png), url(img/hero_bg.png);
-	background-repeat: no-repeat;
-	background-size: cover;
 	position: relative;
 	color: white;
+	overflow: hidden;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
 	.hero {
 		align-items: center;
 		text-align: center;
 		padding: 4rem 2rem;
 	}
+}
+
+.hero__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: contain;
+	z-index: -10;
+	max-width: none;
+	width: 100%;
+}
+
+@media only screen and (max-width: 75em) {
+	.hero__img {
+		width: 1200px;
+	}
+}
+
+.hero__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.7));
+	z-index: -7;
 }
 
 .hero__headline {
@@ -1367,7 +1421,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
 	.hero__headline > h1 {
-		font-size: 5rem;
+		font-size: 4rem;
 		line-height: normal;
 	}
 }

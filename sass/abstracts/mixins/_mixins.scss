@@ -10,6 +10,8 @@
 	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
+
+//Center Element in parent
 @mixin center-self {
 	position: absolute;
 	left: 50%;
@@ -17,6 +19,14 @@
 	transform: translate(-50%, -50%);
 }
 
+//Remove Center Element in parent
+
+@mixin remove-center-self {
+	position: relative;
+	left: 0;
+	top: 0%;
+	transform: translate(0%, 0%);
+}
 
 /*Media Query Manager
 This theme is desktop first and media queries will use max-width 
