@@ -6,7 +6,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    @include center-self;
     text-align: center;
 
     @include respond(tab-land) {

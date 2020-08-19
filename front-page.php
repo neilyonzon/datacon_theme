@@ -81,14 +81,14 @@
         <div class="col-1-of-2">
             <p class="paragraph">Our 2020 session tracks will include:</p>
             <ul class="callout-list callout-list--secondary">
-                <li class="callout-list__item">Data</li>
-                <li class="callout-list__item">AI/ ML/ Data Science</li>
-                <li class="callout-list__item">Emerging Tech</li>
-                <li class="callout-list__item">Visualizations/ UI/ Use Cases</li>
-                <li class="callout-list__item">Infrastructure & Security</li>
+                <li class="callout-list__item">&#8226; Data</li>
+                <li class="callout-list__item">&#8226; AI/ ML/ Data Science</li>
+                <li class="callout-list__item">&#8226; Emerging Tech</li>
+                <li class="callout-list__item">&#8226; Visualizations/ UI/ Use Cases</li>
+                <li class="callout-list__item">&#8226; Infrastructure & Security</li>
             </ul>
         </div>
-        <div class="col-1-of-2">
+        <div class="col-1-of-2 flex-align--center">
             <div class="cta-box cta-box--secondary">
                 <div class="cta-box__header">Call For Proposals</div>
                 <div class="cta-box__body">
@@ -111,6 +111,43 @@
             <div class="media-banner__cta">Play Video Reel</div>
             <div class="media-banner__line">
                 </hr>
+            </div>
+        </div>
+    </div>
+    <div class="container-flex">
+        <div class="col-1-of-2 flex-align--center">
+            <div class="cta-box cta-box--primary">
+                <div class="cta-box__header">Sponsor Inquiry</div>
+                <div class="cta-box__body">
+                    <p class="paragraph">If you wish to sponsor Data Con 2020 click here to request a sponsor pack.</p>
+                </div>
+                <div class="cta-box__cta">
+                    <button class="btn btn--primary">Request Sponsor Pack</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-of-2 flex-align--center">
+            <div class="countdown">
+                <div class="countdown__subtitle">Save the Date</div>
+                <div class="countdown__title">March 5, 2020</div>
+                <div class="countdown__timer timer">
+                    <div class="timer__item">
+                        <div class="timer__number timer__number--days">5</div>
+                        <div class="timer__detail timer__detail--days">Days</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__number timer__number--hours">23</div>
+                        <div class="timer__detail timer__detail--hours">Hours</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__number timer__number--minutes">30</div>
+                        <div class="timer__detail timer__detail--minutes">minutes</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__number timer__number--seconds">43</div>
+                        <div class="timer__detail timer__detail--seconds">seconds</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

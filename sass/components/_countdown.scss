@@ -1,0 +1,78 @@
+.countdown {
+    width: 48rem;
+    height: 30rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+
+    @include respond(tab-port) {
+        width: 80%;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        text-transform: uppercase;
+        position: relative;
+        top: -2.7rem;
+
+        @include respond(phone) {
+            top: 0;
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        position: relative;
+        top: -2.7rem;
+
+        @include respond(phone) {
+            top: 0;
+        }
+    }
+
+    &__timer {
+        display: flex;
+        justify-content: center;
+        padding: 0 1.5rem;
+
+        @include respond(phone) {
+            position: relative;
+            top: 1rem;
+        }
+    }
+}
+
+
+.timer {
+
+    &__item {
+        padding: 2.2rem;
+        text-align: center;
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
+    }
+
+    &__item:not(:last-child) {
+        border-right: .1rem black;
+        border-top: 0rem;
+        border-left: 0rem;
+        border-bottom: 0rem;
+        border-style: solid;
+    }
+
+    &__number {
+        font-size: 2.5rem;
+    }
+
+    &__detail {
+        font-size: 2rem;
+        text-transform: lowercase;
+        font-weight: 400;
+    }
+
+}

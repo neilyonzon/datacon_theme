@@ -656,6 +656,7 @@ html {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	height: auto;
 	position: relative;
 	padding: 5rem 10rem;
 }
@@ -1141,10 +1142,6 @@ body.stop-transition .nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
 }
 
@@ -1307,10 +1304,22 @@ body.stop-transition .nav {
 .media-banner {
 	width: 100%;
 	position: relative;
-	height: 52rem;
+	height: 46rem;
 	color: white;
 	text-transform: uppercase;
 	overflow: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+	.media-banner {
+		height: 40rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.media-banner {
+		height: 50rem;
+	}
 }
 
 .media-banner__img {
@@ -1319,8 +1328,14 @@ body.stop-transition .nav {
 	left: 0;
 	z-index: -10;
 	object-fit: cover;
-	width: 1400px;
+	width: 100%;
 	max-width: none;
+}
+
+@media only screen and (max-width: 75em) {
+	.media-banner__img {
+		width: 1200px;
+	}
 }
 
 .media-banner__overlay {
@@ -1344,9 +1359,22 @@ body.stop-transition .nav {
 	font-size: 2.4rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.media-banner__intro-text {
+		height: 2rem;
+	}
+}
+
 .media-banner__header {
 	font-size: 5rem;
 	width: 50rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.media-banner__header {
+		font-size: 3rem;
+		width: 100%;
+	}
 }
 
 .media-banner__line {
@@ -1405,7 +1433,7 @@ body.stop-transition .nav {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.7));
+	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5));
 	z-index: -7;
 }
 
@@ -1446,6 +1474,92 @@ body.stop-transition .nav {
 	.hero__description {
 		width: 90%;
 	}
+}
+
+/* Countdown
+--------------------------------------------- */
+.countdown {
+	width: 48rem;
+	height: 30rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.countdown {
+		width: 80%;
+	}
+}
+
+.countdown__subtitle {
+	font-size: 2rem;
+	text-transform: uppercase;
+	position: relative;
+	top: -2.7rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.countdown__subtitle {
+		top: 0;
+	}
+}
+
+.countdown__title {
+	font-size: 4rem;
+	text-transform: uppercase;
+	position: relative;
+	top: -2.7rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.countdown__title {
+		top: 0;
+	}
+}
+
+.countdown__timer {
+	display: flex;
+	justify-content: center;
+	padding: 0 1.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.countdown__timer {
+		position: relative;
+		top: 1rem;
+	}
+}
+
+.timer__item {
+	padding: 2.2rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.timer__item {
+		padding: 1rem;
+	}
+}
+
+.timer__item:not(:last-child) {
+	border-right: .1rem black;
+	border-top: 0rem;
+	border-left: 0rem;
+	border-bottom: 0rem;
+	border-style: solid;
+}
+
+.timer__number {
+	font-size: 2.5rem;
+}
+
+.timer__detail {
+	font-size: 2rem;
+	text-transform: lowercase;
+	font-weight: 400;
 }
 
 #modal-background {
@@ -1554,6 +1668,7 @@ body.stop-transition .nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 /* Alignments
