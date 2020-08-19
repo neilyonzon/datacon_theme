@@ -11,7 +11,7 @@
     }
 
     @include respond(phone) {
-        height: 50rem;
+        height: 38rem;
     }
 
     &__img {
@@ -40,6 +40,11 @@
         @include respond(tab-port) {
             align-items: center;
             text-align: center;
+        }
+
+        @include respond(phone) {
+            align-items: center;
+            padding: 8rem 4rem;
         }
     }
 

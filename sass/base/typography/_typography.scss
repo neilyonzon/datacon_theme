@@ -20,7 +20,7 @@ textarea {
 	line-height: 7rem;
 
 	@include respond(phone) {
-		font-size: 5rem;
+		font-size: 3rem;
 		line-height: 5rem;
 		letter-spacing: .2rem;
 	}

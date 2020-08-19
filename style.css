@@ -469,7 +469,7 @@ big {
 
 @media only screen and (max-width: 37.5em) {
 	.callout {
-		font-size: 5rem;
+		font-size: 3rem;
 		line-height: 5rem;
 		letter-spacing: .2rem;
 	}
@@ -669,7 +669,7 @@ html {
 
 @media only screen and (max-width: 37.5em) {
 	.container-flex {
-		padding: 3rem 5rem;
+		padding: 3rem 2.5rem;
 	}
 }
 
@@ -678,9 +678,21 @@ html {
 	position: relative;
 }
 
+@media only screen and (max-width: 56.25em) {
+	.col-1-of-2 {
+		margin: 1rem 0;
+	}
+}
+
 .col-1-of-3 {
 	flex: 30%;
 	position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.col-1-of-3 {
+		margin: 1rem 0;
+	}
 }
 
 .main-content {
@@ -1318,7 +1330,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
 	.media-banner {
-		height: 50rem;
+		height: 38rem;
 	}
 }
 
@@ -1352,6 +1364,13 @@ body.stop-transition .nav {
 	.media-banner__overlay {
 		align-items: center;
 		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.media-banner__overlay {
+		align-items: center;
+		padding: 8rem 4rem;
 	}
 }
 

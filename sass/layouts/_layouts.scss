@@ -15,18 +15,26 @@
     }
 
     @include respond(phone) {
-        padding: 3rem 5rem;
+        padding: 3rem 2.5rem;
     }
 }
 
 .col-1-of-2 {
     flex: 0 0 48%;
     position: relative;
+
+    @include respond(tab-port) {
+        margin: 1rem 0;
+    }
 }
 
 .col-1-of-3 {
     flex: 30%;
     position: relative;
+
+    @include respond(tab-port) {
+        margin: 1rem 0;
+    }
 }
 
 .main-content {
