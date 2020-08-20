@@ -1,0 +1,39 @@
+.footer {
+    width: 100vw;
+    height: 7rem;
+    background: $color-primary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    &__social-link,
+    &__social-link:visited {
+        text-decoration: none;
+        color: white;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+
+    &__social-icon {
+        fill: white;
+        width: 4rem;
+        height: 4rem;
+
+        &--circle {
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        &--mail {
+            fill: $color-primary;
+            width: 2rem;
+            height: 2rem;
+            @include center-self;
+        }
+    }
+}

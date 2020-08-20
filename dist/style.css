@@ -989,6 +989,7 @@ html {
 }
 
 @media only screen and (min-width: 75em) {
+  .subnav:focus-within .subnav__nav,
   .subnav:hover .subnav__nav,
   .subnav:hover .subnav__icon {
     visibility: visible;
@@ -1010,6 +1011,48 @@ html {
 
 body.stop-transition .nav {
   transition: none !important;
+}
+
+.footer {
+  width: 100vw;
+  height: 7rem;
+  background: #169FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.footer__social-link, .footer__social-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__social-link:not(:last-child), .footer__social-link:visited:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.footer__social-icon {
+  fill: white;
+  width: 4rem;
+  height: 4rem;
+}
+
+.footer__social-icon--circle {
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.footer__social-icon--mail {
+  fill: #169FFF;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Posts and pages
