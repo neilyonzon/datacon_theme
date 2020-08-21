@@ -15,7 +15,7 @@
 
     <div class="footer__contact">
         <span class="footer__question">Have a question?</span>
-        <button class="footer__cta">Contact Us</button>
+        <button class="footer__btn btn btn--white">Contact Us</button>
     </div>
     <div class="footer__social">
         <a class="footer__social-link" href="https://www.linkedin.com/company/dataconla/">

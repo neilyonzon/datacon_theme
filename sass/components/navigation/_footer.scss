@@ -6,6 +6,37 @@
     justify-content: space-around;
     align-items: center;
     padding: 1.5rem 0;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+        height: auto;
+        flex-direction: column;
+    }
+
+    &__contact {
+        width: 35rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+
+    }
+
+
+    &__question {
+        font-size: 1.8rem;
+        color: white;
+        font-weight: bold;
+
+        @include respond(tab-port) {
+            margin-bottom: 1rem;
+        }
+    }
+
 
     &__social-link,
     &__social-link:visited {

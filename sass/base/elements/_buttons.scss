@@ -45,4 +45,9 @@
 	&--quaternary {
 		background: $color-quaternary;
 	}
+
+	&--white {
+		background: white;
+		color: $color-primary;
+	}
 }
