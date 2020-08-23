@@ -29,7 +29,7 @@
 
         <header id="masthead" class="site-header">
             <nav id="site-navigation" class="main-navigation">
-                <input id="main-navigation-toggle" type="checkbox" class="main-navigation__checkbox">
+                <input id="main-navigation-toggle" type="checkbox" autocomplete='off' class="main-navigation__checkbox">
                 <label for="main-navigation-toggle" class="main-navigation__button">
                     <span class="main-navigation__icon">&nbsp;</span>
                 </label>

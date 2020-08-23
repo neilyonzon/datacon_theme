@@ -140,6 +140,7 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+		
 
 		/**
 		 * Add support for core custom logo.
@@ -251,3 +252,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if( !defined($THEME_IMG_PATH)){
     define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/img' );
    }
+
+
+/* Require the Admin Page function 
+*/
+
+require get_template_directory() . '/inc/function-admin.php';

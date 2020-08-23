@@ -8,14 +8,22 @@
  *
  * @package Datacon_Refresh
  */
+$ctaPrompt = esc_attr(get_option( 'cta_promp_text'));
+$btnText = esc_attr(get_option( 'btn_text'));
+$btnUrl = esc_attr(get_option('btn_url'));
 
 ?>
 <div id="modal-background"></div>
 <footer id="colophon" class="site-footer footer">
-
     <div class="footer__contact">
-        <span class="footer__question">Have a question?</span>
-        <button class="footer__btn btn btn--white">Contact Us</button>
+        <?php 
+
+    if($ctaPrompt !== '') {
+        echo '
+        <span class="footer__question">'.$ctaPrompt.'</span>';
+        }
+        ;?>
+        <a class="footer__btn btn btn--white" href="<?php echo $btnUrl;?>"><?php echo $btnText;?></a>
     </div>
     <div class="footer__social">
         <a class="footer__social-link" href="https://www.linkedin.com/company/dataconla/">

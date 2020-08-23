@@ -586,6 +586,11 @@ a:hover, a:active {
   background: #7DE634;
 }
 
+.btn--white {
+  background: white;
+  color: #169FFF;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1021,6 +1026,44 @@ body.stop-transition .nav {
   justify-content: space-around;
   align-items: center;
   padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.footer__contact {
+  width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__contact {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.footer__question {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__question {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__btn {
+  text-decoration: none;
 }
 
 .footer__social-link, .footer__social-link:visited {
@@ -1526,7 +1569,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
   .hero__subline {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 

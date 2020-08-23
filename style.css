@@ -1061,6 +1061,10 @@ body.stop-transition .nav {
 	}
 }
 
+.footer__btn {
+	text-decoration: none;
+}
+
 .footer__social-link, .footer__social-link:visited {
 	text-decoration: none;
 	color: white;
@@ -1562,7 +1566,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
 	.hero__subline {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 }
 
