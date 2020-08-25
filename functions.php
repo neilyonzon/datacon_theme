@@ -100,7 +100,7 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 				$item_output .= ($depth == 0 && $args-> walker-> has_children) ? '</a>
 				<svg class="subnav__icon">
 					<use
-						xlink:href="https://data-con-la.local/wp-content/themes/datacon-refresh/img/sprite.svg#icon-chevron-thin-down">
+						xlink:href="' .  get_template_directory_uri() . '/img/sprite.svg#icon-chevron-thin-down">
 					</use>
 				</svg>' : '</a>';
 				$item_output .= $args -> after;
