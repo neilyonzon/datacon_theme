@@ -4,6 +4,7 @@ function datacon_footer_settings() {
 
     //Call to Action Settings Group
     add_settings_section('datacon-cta-options', 'Call to Action Settings', 'datacon_cta_options', 'datacon_refresh' );
+    add_settings_section('datacon-social-links', 'Social URLs', 'datacon_social_links', 'datacon_refresh');
     
     register_setting('datacon-footer-settings-group', 'cta_promp_text');
     add_settings_field('cta-prompt', 'Call to Action Prompt', 'footer_cta_prompt', 'datacon_refresh', 'datacon-cta-options');
@@ -15,8 +16,6 @@ function datacon_footer_settings() {
     add_settings_field('btn-url', 'Button URL', 'footer_btn_url','datacon_refresh', 'datacon-cta-options');
 
     //Social URL Settings Group
-    add_settings_section('datacon-social-links', 'Social URLs', 'datacon_social_links', 'datacon_refresh');
-
     register_setting('datacon-footer-settings-group', 'ln_link');
     add_settings_field('ln-link', 'LinkedIn URL', 'footer_ln_url','datacon_refresh', 'datacon-social-links');
 
@@ -87,7 +86,7 @@ function footer_ig_url() {
     echo '<input type="text" name="ig_link" value="'. $ig .'" placeholder=""/>';
 }
 
-function footer_ig_url() {
-    $ig = esc_attr(get_option('ig_link'));
-    echo '<input type="text" name="ig_link" value="'. $ig .'" placeholder=""/>';
+function footer_youtube_url() {
+    $ty = esc_attr(get_option('youtube_link'));
+    echo '<input type="text" name="youtube_link" value="'. $ty .'" placeholder=""/>';
 }
