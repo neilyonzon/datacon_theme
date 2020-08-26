@@ -11,6 +11,7 @@
 $ctaPrompt = esc_attr(get_option( 'cta_promp_text'));
 $btnText = esc_attr(get_option( 'btn_text'));
 $btnUrl = esc_attr(get_option('btn_url'));
+$lnUrl = esc_attr(get_option('ln_link'));
 
 ?>
 <div id="modal-background"></div>
@@ -26,11 +27,18 @@ $btnUrl = esc_attr(get_option('btn_url'));
         <a class="footer__btn btn btn--white" href="<?php echo $btnUrl;?>"><?php echo $btnText;?></a>
     </div>
     <div class="footer__social">
-        <a class="footer__social-link" href="https://www.linkedin.com/company/dataconla/">
+        <?php
+
+        if($lnUrl !== '') {
+            echo '
+            <a class="footer__social-link" href="'. $lnUrl.'">
             <svg class="footer__social-icon">
-                <use xlink:href="<?php echo THEME_IMG_PATH;?>/sprite.svg#icon-linkedin-with-circle" />
-            </svg>
-        </a>
+                <use xlink:href="'. THEME_IMG_PATH .'/sprite.svg#icon-linkedin-with-circle" />
+        </svg>
+        </a>';};
+
+        ?>
+
         <a class="footer__social-link" href="https://twitter.com/dataconla/">
             <svg class="footer__social-icon">
                 <use xlink:href="<?php echo THEME_IMG_PATH;?>/sprite.svg#icon-twitter-with-circle" />
