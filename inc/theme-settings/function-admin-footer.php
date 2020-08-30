@@ -39,6 +39,9 @@ function datacon_footer_settings() {
 
     register_setting('datacon-footer-settings-group', 'youtube_link');
     add_settings_field('youtube-link', 'YouTube URL', 'footer_youtube_url', 'datacon_refresh', 'datacon-social-links');
+
+    register_setting('datacon-footer-settings-group', 'mail_link');
+    add_settings_field('mail-link', 'Mail Link', 'footer_mail_url', 'datacon_refresh', 'datacon-social-links');
 }
 
 //Call to Action Functions
@@ -89,4 +92,9 @@ function footer_ig_url() {
 function footer_youtube_url() {
     $ty = esc_attr(get_option('youtube_link'));
     echo '<input type="text" name="youtube_link" value="'. $ty .'" placeholder=""/>';
+}
+
+function footer_mail_url() {
+    $mail = esc_attr(get_option('mail_link'));
+    echo '<input type="text" name="mail_link" value="'.$mail.'" placeholder = ""/>';
 }

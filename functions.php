@@ -54,60 +54,16 @@ if ( ! function_exists( 'datacon_refresh_setup' ) ) :
 			)
 		);
 
-		// Create Class to extend Walker_Nav_Menu class to customize/override Menu
-
-		
-
-		class Walker_Nav_Primary extends Walker_Nav_Menu {
-			function start_lvl( &$output, $depth = 0, $args = array()) { // handles the ul
-				//Variable that is used to create indents in the HTML code
-				$indent = str_repeat("\t",$depth);
-				$submenu = ($depth > 0 ) ? 'subnav': '';
-				$output  .= "\n$indent<ul class=\"subnav__nav$submenu depth_$depth\">\n";
-			}
-
-			function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) { //li a span (manages the markup of the li a)
-				$indent = ($depth) ? str_repeat("\t",$depth) : '';
-
-				$li_attributes = '';
-
-				//Create variable that will hold all classes for each li element
-				$class_names = $value = '';
+		// Require function with Class to extend Walker_Nav_Menu class to customize/override Menu
 
 
-				$classes = empty($item -> classes) ? 'array()' : (array) $item -> classes;
-				
-				$classes[] = ($args -> walker-> has_children) ? 'subnav' : '';
-				$classes[] = ($item -> current || $item -> current_item_ancestor) ? 'active' : '';
-				$classes[] = 'nav__item';
-		
+		require get_template_directory() . '/inc/function-walker.php';
 
-				$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
-				$class_names = 'class = "' . esc_attr($class_names) . '"';
 
-				//The commented code below creates an id variable that would be used for the LI. This is not needed so commenting out.
-				// $id = apply_filters('nav_menu_item_id', 'menu-item-'. $item-> ID, $item, $args);
-				// $id = strlen( $id ) ? ' id="' . esc_attr($id) . '"' : '';
-				$output .= $indent . '<li ' . $value . $class_names . $li_attributes . '>';
-				$attributes = ! empty( $item -> attr_title ) ? ' title = "' . esc_attr($item -> attr_title) . '"' : '';
-				$attributes .= ! empty ($item -> target) ? ' target= "' . esc_attr($item -> target) . '"' : '';
-				$attributes .= ! empty ($item -> xfn) ? ' rel= "' . esc_attr($item -> xfn) . '"' : '';
-				$attributes .= ! empty ($item -> url) ? ' href= "' . esc_attr($item -> url) . '"' : '';
-				$attributes .= 'class = "nav__link"';
-				$item_output  = $args-> before;
-				$item_output .= '<a' . $attributes .'>';
-				$item_output .= $args-> link_before . apply_filters( 'the_title', $item -> title, $item-> ID) . $args -> link_after;
-				$item_output .= ($depth == 0 && $args-> walker-> has_children) ? '</a>
-				<svg class="subnav__icon">
-					<use
-						xlink:href="' .  get_template_directory_uri() . '/img/sprite.svg#icon-chevron-thin-down">
-					</use>
-				</svg>' : '</a>';
-				$item_output .= $args -> after;
+		// Require function with WP Bakery Components
 
-				$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-			}
-		}
+
+		require get_template_directory() . '/inc/function-wpb-components.php';
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -258,3 +214,50 @@ if( !defined($THEME_IMG_PATH)){
 */
 
 require get_template_directory() . '/inc/function-admin.php';
+
+
+/* 
+Add additional dropdown styles in editor 
+*/
+
+function add_style_select_buttons( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+// Register our callback to the appropriate filter
+add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
+
+
+//add custom styles to the WordPress editor
+function my_custom_styles( $init_array ) {  
+
+    $style_formats = array(  
+        // These are the custom styles
+        array(  
+            'title' => 'Primary Button',  
+            'block' => 'button',  
+            'classes' => 'btn btn-primary',
+            'wrapper' => true,
+        ),  
+        array(  
+            'title' => 'Content Block',  
+            'block' => 'span',  
+            'classes' => 'content-block',
+            'wrapper' => true,
+        ),
+        array(  
+            'title' => 'Highlighter',  
+            'block' => 'span',  
+            'classes' => 'highlighter',
+            'wrapper' => true,
+        ),
+    );  
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats'] = json_encode( $style_formats );  
+    
+    return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
