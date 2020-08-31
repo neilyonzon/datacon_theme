@@ -704,6 +704,7 @@ html {
 .main-content {
   position: relative;
   top: 8rem;
+  min-height: 50rem;
 }
 
 @media only screen and (max-width: 75em) {

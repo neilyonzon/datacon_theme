@@ -40,6 +40,7 @@
 .main-content {
     position: relative;
     top: $header-height;
+    min-height: 50rem;
 
     @include respond(tab-land) {
         top: $header-height-m;
