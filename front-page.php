@@ -6,7 +6,7 @@
         <img src="<?php echo THEME_IMG_PATH;?>/hero_los_angeles.png" alt="" class="hero__img">
         <div class="hero__overlay"></div>
         <div class="hero__headline">
-            <h1>Data Con 2020:<br />LA’s Most Data<br />Centric Community</h1>
+            <h1>Data Con 2020:<br /><?php echo get_header_image();?>LA’s Most Data<br />Centric Community</h1>
         </div>
         <div class="hero__subline">Tuesday, October 23rd - Thursday, October 25th</div>
         <div class="hero__description">Join Data Con LA <strong>virtually</strong> and learn from experts in the data
