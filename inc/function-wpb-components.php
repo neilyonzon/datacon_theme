@@ -97,9 +97,9 @@ function output_hp_hero($atts, $content = null)
         $output .= '<img src="' . $image_src . '" alt="' . $image_alt . '" class="hero__img">';
     }
     $output .= '
-<div class="hero__overlay"></div>
-<div class="hero__headline">
-    <h1>';
+        <div class="hero__overlay"></div>
+        <div class="hero__headline">
+            <h1>';
 
     $output .= $header1;
     if ($header2 != '') {
@@ -113,7 +113,7 @@ function output_hp_hero($atts, $content = null)
     }
 
     $output .= '</h1>
-</div>';
+        </div>';
     $output .= '<div class="hero__subline">';
     if ($sub_heading != '') {
         $output .= $sub_heading;
