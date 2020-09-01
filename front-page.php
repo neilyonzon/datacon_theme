@@ -3,10 +3,10 @@
 <!--Main Content -->
 <div class="main-content">
     <div class="hero">
-        <img src="<?php echo THEME_IMG_PATH;?>/hero_los_angeles.png" alt="" class="hero__img">
+        <img src="<?php echo THEME_IMG_PATH; ?>/hero_los_angeles.png" alt="" class="hero__img">
         <div class="hero__overlay"></div>
         <div class="hero__headline">
-            <h1>Data Con 2020:<br /><?php echo get_header_image();?>LA’s Most Data<br />Centric Community</h1>
+            <h1>Data Con 2020:<br />LA’s Most Data<br />Centric Community</h1>
         </div>
         <div class="hero__subline">Tuesday, October 23rd - Thursday, October 25th</div>
         <div class="hero__description">Join Data Con LA <strong>virtually</strong> and learn from experts in the data
@@ -45,7 +45,7 @@
                 </div>
                 <div class="stats__icon">
                     <svg class="stats__icon">
-                        <use xlink:href="<?php echo THEME_IMG_PATH;?>/sprite.svg#icon-group"></use>
+                        <use xlink:href="<?php echo THEME_IMG_PATH; ?>/sprite.svg#icon-group"></use>
                     </svg>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="stats__icon">
                     <svg class="stats__icon">
-                        <use xlink:href="<?php echo THEME_IMG_PATH;?>/sprite.svg#icon-mic"></use>
+                        <use xlink:href="<?php echo THEME_IMG_PATH; ?>/sprite.svg#icon-mic"></use>
                     </svg>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="stats__icon">
                     <svg class="stats__icon">
-                        <use xlink:href="<?php echo THEME_IMG_PATH;?>/sprite.svg#icon-movie"></use>
+                        <use xlink:href="<?php echo THEME_IMG_PATH; ?>/sprite.svg#icon-movie"></use>
                     </svg>
                 </div>
             </div>
@@ -104,7 +104,7 @@
         </div>
     </div>
     <div class="media-banner">
-        <img src="<?php echo THEME_IMG_PATH;?>/conference.png" alt="" class="media-banner__img">
+        <img src="<?php echo THEME_IMG_PATH; ?>/conference.png" alt="" class="media-banner__img">
         <div class="media-banner__overlay">
             <div class="media-banner__intro-text">DATA CON LA 2019</div>
             <div class="media-banner__header">Highlights from Last Year's Event</div>
