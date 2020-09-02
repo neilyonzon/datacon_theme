@@ -558,10 +558,12 @@ a:hover, a:active {
 
 /* Forms
 --------------------------------------------- */
-.btn {
+.btn,
+a.btn {
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: white;
 	background: #169FFF;
 	border: none;
@@ -569,23 +571,28 @@ a:hover, a:active {
 	cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+a.btn:hover {
 	opacity: .8;
 }
 
-.btn--primary {
+.btn--primary,
+a.btn--primary {
 	background: #169FFF;
 }
 
-.btn--secondary {
+.btn--secondary,
+a.btn--secondary {
 	background: #A452FF;
 }
 
-.btn--quaternary {
+.btn--quaternary,
+a.btn--quaternary {
 	background: #7DE634;
 }
 
-.btn--white {
+.btn--white,
+a.btn--white {
 	background: white;
 	color: #169FFF;
 }
@@ -1027,6 +1034,8 @@ body.stop-transition .nav {
 	align-items: center;
 	padding: 1.5rem 0;
 	text-transform: uppercase;
+	top: 5rem;
+	position: rleative;
 }
 
 @media only screen and (max-width: 56.25em) {

@@ -7,6 +7,8 @@
     align-items: center;
     padding: 1.5rem 0;
     text-transform: uppercase;
+    top: 5rem;
+    position: rleative;
 
     @include respond(tab-port) {
         height: auto;

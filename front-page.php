@@ -12,7 +12,7 @@
         <div class="hero__description">Join Data Con LA <strong>virtually</strong> and learn from experts in the data
             and
             technology field. Registration is now available.</div>
-        <button class="btn btn--quaternary">Register Now</button>
+        <a class="btn btn--quaternary" href="">Register Now</a>
     </div>
     <div class="container-flex">
         <div class="col-1-of-2">

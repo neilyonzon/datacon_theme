@@ -20,10 +20,13 @@
 // 	}
 // }
 
-.btn {
+
+.btn,
+a.btn {
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: white;
 	background: $color-primary;
 	border: none;

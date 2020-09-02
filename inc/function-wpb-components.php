@@ -88,7 +88,7 @@ function output_hp_hero($atts, $content = null)
     $header3 = esc_attr($atts['header_3']);
     $sub_heading = esc_attr($atts['sub_heading']);
     $description = wpb_js_remove_wpautop($atts['description'], true);
-    $cta = $atts['cta'];
+    $cta = vc_build_link($atts['cta']);
     $image_src = wp_get_attachment_image_src($atts['bg_image'], 'full')[0];
     $image_alt = get_post_meta($atts['bg_image'], '_wp_attachment_image_alt', true);
     $output = '';
@@ -125,7 +125,10 @@ function output_hp_hero($atts, $content = null)
         $output .= $description;
     }
     $output .= '</div>';
-    $output .= ' <button class="btn btn--quaternary">Register Now</button>';
+    if ($cta['url'] != '') {
+        $output .= ' <a href="' . $cta['url'] . '" class="btn btn--quaternary">' . $cta['title'] . '</a>';
+    }
+    $output .= $cta['url'];
     $output .= '</div>';
     return $output;
 }
