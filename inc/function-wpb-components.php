@@ -154,6 +154,7 @@ function callout_integrateWithVC()
                     "param_name" => "callout", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
                     "value" => __("Enter Text", "my-text-domain"),
                     "description" => __("Enter callout content.", "my-text-domain"),
+                    'save_always' => true,
                 ),
                 array(
                     "type" => "dropdown",
@@ -165,15 +166,17 @@ function callout_integrateWithVC()
                         __('Purple', "my-text-domain") => 'callout--secondary',
                         __('Orange', "my-text-domain") => 'callout--tertiary',
                     ),
+                    'save_always' => true,
                 ),
                 array(
                     "type" => "textarea_html",
                     "holder" => "div",
                     "class" => "",
                     "heading" => __("Description", "my-text-domain"),
-                    "param_name" => "description", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "param_name" => "content", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
                     "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
                     "description" => __("Enter your content.", "my-text-domain"),
+                    'save_always' => true,
                 ),
             ),
         )
@@ -182,11 +185,18 @@ function callout_integrateWithVC()
 
 add_shortcode('callout_desc', 'output_callout_desc');
 
-function output_callout_desc($atts, $content = null)
+function output_callout_desc($atts, $content, $tag)
 {
+    $atts = vc_map_get_attributes($tag, $atts);
     $callout = $atts['callout'];
     $calloutColor = $atts['callout-color'];
-    $description = wpb_js_remove_wpautop($atts['description'], true);
-    $output = "<p>{$callout}{$calloutColor}{$description}</p>";
+    $description = $content;
+    $output .= "<div class=\"container-flex\">";
+    $output .= "<div class=\"col-1-of-2\">";
+    $output .= "<div class=\"callout {$calloutColor}\">{$callout}</div>";
+    $output .= "{$calloutColor}";
+    $output .= $description;
+    $output .= "</div>";
+    $output .= "</div>";
     return $output;
 }

@@ -1,7 +1,7 @@
 .main-navigation {
     display: flex;
     width: 100vw;
-    height: 8rem;
+    height: $header-height;
     font-size: 1.4rem;
     color: $color-black;
     background-color: white;
@@ -18,7 +18,7 @@
     }
 
     @include respond(tab-land) {
-        height: 5rem;
+        height: $header-height-m;
     }
 
     & a {

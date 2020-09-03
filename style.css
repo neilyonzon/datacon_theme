@@ -483,6 +483,10 @@ big {
 	color: #A452FF;
 }
 
+.callout--secondary {
+	color: #FFA800;
+}
+
 /* Elements
 --------------------------------------------- */
 body {
@@ -1034,8 +1038,14 @@ body.stop-transition .nav {
 	align-items: center;
 	padding: 1.5rem 0;
 	text-transform: uppercase;
-	top: 5rem;
-	position: rleative;
+	top: 8rem;
+	position: relative;
+}
+
+@media only screen and (max-width: 75em) {
+	.footer {
+		top: 5rem;
+	}
 }
 
 @media only screen and (max-width: 56.25em) {

@@ -7,8 +7,12 @@
     align-items: center;
     padding: 1.5rem 0;
     text-transform: uppercase;
-    top: 5rem;
-    position: rleative;
+    top: $header-height;
+    position: relative;
+
+    @include respond(tab-land) {
+        top: $header-height-m;
+    }
 
     @include respond(tab-port) {
         height: auto;
