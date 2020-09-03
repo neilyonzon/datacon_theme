@@ -1,6 +1,7 @@
 <?php
 
 //Hero Banner Component
+
 add_action('vc_before_init', 'hp_hero_integrateWithVC');
 function hp_hero_integrateWithVC()
 {
@@ -130,5 +131,62 @@ function output_hp_hero($atts, $content = null)
     }
     $output .= $cta['url'];
     $output .= '</div>';
+    return $output;
+}
+
+//Callout with Description
+add_action('vc_before_init', 'callout_integrateWithVC');
+
+function callout_integrateWithVC()
+{
+    vc_map(
+        array(
+            "name" => __("Callout with Description", "my-text-domain"),
+            "base" => "callout_desc",
+            "class" => "",
+            "category" => __("Content", "my-text-domain"),
+            "params" => array(
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Callout", "my-text-domain"),
+                    "param_name" => "callout", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter callout content.", "my-text-domain"),
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "heading" => __('Callout Color', "my-text-domain"),
+                    "param_name" => "callout-color",
+                    "value" => array(
+                        __('Blue', "my-text-domain") => 'callout--primary',
+                        __('Purple', "my-text-domain") => 'callout--secondary',
+                        __('Orange', "my-text-domain") => 'callout--tertiary',
+                    ),
+                ),
+                array(
+                    "type" => "textarea_html",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Description", "my-text-domain"),
+                    "param_name" => "description", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
+                    "description" => __("Enter your content.", "my-text-domain"),
+                ),
+            ),
+        )
+    );
+}
+
+add_shortcode('callout_desc', 'output_callout_desc');
+
+function output_callout_desc($atts, $content = null)
+{
+    $callout = $atts['callout'];
+    $calloutColor = $atts['callout-color'];
+    $description = wpb_js_remove_wpautop($atts['description'], true);
+    $output = "<p>{$callout}{$calloutColor}{$description}</p>";
     return $output;
 }
