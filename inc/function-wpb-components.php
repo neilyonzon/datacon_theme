@@ -10,7 +10,7 @@ function hp_hero_integrateWithVC()
             "name" => __("Hero Banner", "my-text-domain"),
             "base" => "hero_banner",
             "class" => "",
-            "category" => __("Content", "my-text-domain"),
+            "category" => __("Component", "my-text-domain"),
             "params" => array(
                 array(
                     "type" => "textfield",
@@ -150,7 +150,7 @@ function callout_integrateWithVC()
             "name" => __("Callout with Description", "my-text-domain"),
             "base" => "callout_desc",
             "class" => "",
-            "category" => __("Content", "my-text-domain"),
+            "category" => __("Component", "my-text-domain"),
             "params" => array(
                 array(
                     "type" => "textarea",
@@ -212,5 +212,139 @@ function output_callout_desc($atts, $content, $tag)
 
     //start of parent div
     $output .= "</div>";
+    return $output;
+}
+
+//Stats Component
+
+add_action('vc_before_init', 'stats_integrateWithVC');
+
+function stats_integrateWithVC()
+{
+    vc_map(
+        array(
+            "name" => __("Stats", "my-text-domain"),
+            "base" => "stats",
+            "class" => "",
+            "category" => __("Component", "my-text-domain"),
+            "params" => array(
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 1",
+                    "heading" => __("Stat 1 Number", "my-text-domain"),
+                    "param_name" => "stat_num_1", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat number.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 1",
+                    "heading" => __("Stat 1 Name", "my-text-domain"),
+                    "param_name" => "stat_name_1", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat name.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "group" => "Stat 1",
+                    "heading" => __('Stat 1 Icon', "my-text-domain"),
+                    "param_name" => "stat_icon_1",
+                    "value" => array(
+                        __('Audience', "my-text-domain") => 'icon-group',
+                        __('Mic', "my-text-domain") => 'icon-mic',
+                        __('Film', "my-text-domain") => 'icon-movie',
+                    ),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 2",
+                    "heading" => __("Stat 2 Number", "my-text-domain"),
+                    "param_name" => "stat_num_2", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat number.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 2",
+                    "heading" => __("Stat 2 Name", "my-text-domain"),
+                    "param_name" => "stat_name_2", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat name.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "group" => "Stat 2",
+                    "heading" => __('Stat 2 Icon', "my-text-domain"),
+                    "param_name" => "stat_icon_2",
+                    "value" => array(
+                        __('Audience', "my-text-domain") => 'icon-group',
+                        __('Mic', "my-text-domain") => 'icon-mic',
+                        __('Film', "my-text-domain") => 'icon-movie',
+                    ),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 3",
+                    "heading" => __("Stat 3 Number", "my-text-domain"),
+                    "param_name" => "stat_num_3", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat number.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "group" => "Stat 3",
+                    "heading" => __("Stat 3 Name", "my-text-domain"),
+                    "param_name" => "stat_name_3", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter stat name.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "group" => "Stat 3",
+                    "heading" => __('Stat 3 Icon', "my-text-domain"),
+                    "param_name" => "stat_icon_3",
+                    "value" => array(
+                        __('Audience', "my-text-domain") => 'icon-group',
+                        __('Mic', "my-text-domain") => 'icon-mic',
+                        __('Film', "my-text-domain") => 'icon-movie',
+                    ),
+                    'save_always' => true,
+                ),
+            ),
+        )
+    );
+}
+
+add_shortcode('stats', 'output_stats');
+
+function output_stats($atts, $content, $tag)
+{
+    $atts = vc_map_get_attributes($tag, $atts);
+    $stat1 = $atts['stat_num_1'];
+    $output = "";
+    $output = "<p>{$stat1}</p>";
     return $output;
 }
