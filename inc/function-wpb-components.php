@@ -184,6 +184,19 @@ function callout_integrateWithVC()
                     "description" => __("Enter your content.", "my-text-domain"),
                     'save_always' => true,
                 ),
+                array(
+                    "type" => "checkbox",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Reverse Content", "my-text-domain"),
+                    "param_name" => "reverse", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => array(
+                        __('True', "my-text-domain") => 'true',
+                    ),
+                    "description" => __("Check to have Callout on the right column.", "my-text-domain"),
+                    'save_always' => true,
+                    'std' => "",
+                ),
             ),
         )
     );
@@ -193,12 +206,18 @@ add_shortcode('callout_desc', 'output_callout_desc');
 
 function output_callout_desc($atts, $content, $tag)
 {
-    $atts = vc_map_get_attributes($tag, $atts);
     $callout = $atts['callout'];
     $calloutColor = $atts['callout-color'];
     $description = $content;
+    $reverse = "container-flex--reverse";
+
     //start of parent div
-    $output .= "<div class=\"container-flex\">";
+
+    if ($atts['reverse'] == 'true') {
+        $output .= "<div class=\"container-flex $reverse\">";
+    } else {
+        $output .= "<div class=\"container-flex\">";
+    }
 
     //start of child div
     $output .= "<div class=\"col-1-of-2\">";
@@ -342,7 +361,6 @@ add_shortcode('stats', 'output_stats');
 
 function output_stats($atts, $content, $tag)
 {
-    $atts = vc_map_get_attributes($tag, $atts);
     $stat1 = $atts['stat_num_1'];
     $output = "";
 

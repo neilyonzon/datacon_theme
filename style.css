@@ -695,6 +695,16 @@ html {
 	}
 }
 
+.container-flex--reverse {
+	flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.container-flex--reverse {
+		flex-direction: column-reverse;
+	}
+}
+
 .col-1-of-2 {
 	flex: 0 0 48%;
 	position: relative;

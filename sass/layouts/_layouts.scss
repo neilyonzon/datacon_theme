@@ -17,6 +17,14 @@
     @include respond(phone) {
         padding: 3rem 2.5rem;
     }
+
+    &--reverse {
+        flex-direction: row-reverse;
+
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 .col-1-of-2 {
