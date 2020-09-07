@@ -80,12 +80,12 @@
     <div class="container-flex">
         <div class="col-1-of-2">
             <p class="paragraph">Our 2020 session tracks will include:</p>
-            <ul class="callout-list callout-list--secondary">
-                <li class="callout-list__item">&#8226; Data</li>
-                <li class="callout-list__item">&#8226; AI/ ML/ Data Science</li>
-                <li class="callout-list__item">&#8226; Emerging Tech</li>
-                <li class="callout-list__item">&#8226; Visualizations/ UI/ Use Cases</li>
-                <li class="callout-list__item">&#8226; Infrastructure & Security</li>
+            <ul class="callout-2 callout-2--secondary">
+                <li>Data</li>
+                <li>AI/ ML/ Data Science</li>
+                <li>Emerging Tech</li>
+                <li>Visualizations/ UI/ Use Cases</li>
+                <li>Infrastructure & Security</li>
             </ul>
         </div>
         <div class="col-1-of-2 flex-align--center">

@@ -37,3 +37,20 @@ textarea {
 		color: $color-tertiary;
 	}
 }
+
+
+.callout-2 {
+	font-size: 4rem;
+
+	&--primary {
+		color: $color-primary;
+	}
+
+	&--secondary {
+		color: $color-secondary;
+	}
+
+	&--tertiary {
+		color: $color-tertiary;
+	}
+}

@@ -487,6 +487,22 @@ big {
 	color: #FFA800;
 }
 
+.callout-2 {
+	font-size: 4rem;
+}
+
+.callout-2--primary {
+	color: #169FFF;
+}
+
+.callout-2--secondary {
+	color: #A452FF;
+}
+
+.callout-2--tertiary {
+	color: #FFA800;
+}
+
 /* Elements
 --------------------------------------------- */
 body {
@@ -498,16 +514,6 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
-}
-
-.callout-list {
-	list-style: none;
-	font-size: 4rem;
-	padding-left: 0;
-}
-
-.callout-list--secondary {
-	color: #A452FF;
 }
 
 /* Make sure embeds and iframes fit their containers. */

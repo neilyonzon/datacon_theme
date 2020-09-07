@@ -229,7 +229,7 @@ function stats_integrateWithVC()
             "category" => __("Component", "my-text-domain"),
             "params" => array(
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 1",
@@ -240,7 +240,7 @@ function stats_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 1",
@@ -264,7 +264,7 @@ function stats_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 2",
@@ -275,7 +275,7 @@ function stats_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 2",
@@ -299,7 +299,7 @@ function stats_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 3",
@@ -310,7 +310,7 @@ function stats_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "group" => "Stat 3",
@@ -397,14 +397,25 @@ function callout_cta_integrateWithVC()
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Callout Introduction", "my-text-domain"),
+                    "param_name" => "callout-intro", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Callout Column",
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter callout introduction.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea_html",
                     "holder" => "div",
                     "class" => "",
                     "heading" => __("Callout", "my-text-domain"),
-                    "param_name" => "callout", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "param_name" => "content", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
                     "group" => "Callout Column",
-                    "value" => __("Enter Text", "my-text-domain"),
-                    "description" => __("Enter callout content.", "my-text-domain"),
+                    "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
+                    "description" => __("Enter your content.", "my-text-domain"),
                     'save_always' => true,
                 ),
                 array(
@@ -421,7 +432,7 @@ function callout_cta_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "heading" => __("Title", "my-text-domain"),
@@ -432,23 +443,14 @@ function callout_cta_integrateWithVC()
                     'save_always' => true,
                 ),
                 array(
-                    "type" => "textarea",
+                    "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
                     "heading" => __("Details", "my-text-domain"),
-                    "param_name" => "cta-details", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "param_name" => "cta-details",
                     "group" => "Call to Action Section",
+                    "value" => __("Enter Text", "my-text-domain"),
                     "description" => __("Enter Details.", "my-text-domain"),
-                    'save_always' => true,
-                ),
-                array(
-                    "type" => "textarea",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Button Text", "my-text-domain"),
-                    "param_name" => "cta-btn", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
-                    "group" => "Call to Action Section",
-                    "description" => __("Enter Button Text.", "my-text-domain"),
                     'save_always' => true,
                 ),
                 array(
@@ -457,6 +459,7 @@ function callout_cta_integrateWithVC()
                     "class" => "",
                     "heading" => __("Button Link", "my-text-domain"),
                     "param_name" => "cta-link",
+                    "group" => "Call to Action Section",
                     "value" => __("Enter Link", "my-text-domain"),
                     "description" => __("Enter link for call to action button.", "my-text-domain"),
                     'save_always' => true,
@@ -466,10 +469,11 @@ function callout_cta_integrateWithVC()
                     "holder" => "div",
                     "heading" => __('Color Theme', "my-text-domain"),
                     "param_name" => "cta-color",
+                    "group" => "Call to Action Section",
                     "value" => array(
-                        __('Blue', "my-text-domain") => 'callout--primary',
-                        __('Purple', "my-text-domain") => 'callout--secondary',
-                        __('Orange', "my-text-domain") => 'callout--tertiary',
+                        __('Blue', "my-text-domain") => 'callout-2--primary',
+                        __('Purple', "my-text-domain") => 'callout-2--secondary',
+                        __('Orange', "my-text-domain") => 'callout-2--tertiary',
                     ),
                     'save_always' => true,
                 ),
@@ -480,9 +484,50 @@ function callout_cta_integrateWithVC()
 
 //Create shortcut and function
 
-add_shortcut('callout_cta', "output_callout_cta");
+add_shortcode('callout_cta', "output_callout_cta");
 
-function output_callout_cta($atts,, $content, $tags)
+function output_callout_cta($atts, $content, $tags)
 {
 
+    //Callout Section Variables
+    $coIntro = $atts['callout-intro'];
+    $coText = $content;
+    $coColor = $atts['callout-color'];
+
+    //Call to Action Section Variables
+    $ctaTitle = $atts['cta-title'];
+    $ctaDetails = $atts['cta-details'];
+    $ctaBtn = vc_build_link($atts['cta-link']);
+    $ctaColor = $atts['cta-color'];
+
+    //Start Parent Div
+    $output .= "<div class=\"container-flex\">";
+
+    //Start Child Div
+    $output .= "<div class=\"col-1-of-2\">";
+    if ($coIntro != '') {
+        $output .= "<p class=\"paragraph\">{$coIntro}</p>";
+    }
+    if ($coText != '') {
+        $output .= "<div class=\"callout-2 {$coColor}\">{$coText}</div>";
+    }
+    $output .= "</div>";
+
+    //Start Child Div
+    $output .= "<div class=\"col-1-of-2 flex-align--center\">";
+    $output .= "<div class=\"cta-box cta-box--secondary\">";
+    $output .= "<div class=\"cta-box__header\">{$ctaTitle}</div>";
+    $output .= "<div class=\"cta-box__body\">";
+    $output .= " <p class=\"paragraph\">{$ctaDetails}</p>";
+    $output .= "</div>";
+    $output .= "<div class=\"cta-box__cta\">";
+    if ($ctaBtn['url'] != '') {
+        $output .= "<a href=\"{$ctaBtn['url']}\" class=\"btn btn--secondary\">{$ctaBtn['title']}</a>";
+    }
+    $output .= "</div>";
+    $output .= "</div>";
+
+    //End Parent Div
+    $output .= "</div>";
+    return $output;
 }
