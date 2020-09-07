@@ -345,6 +345,144 @@ function output_stats($atts, $content, $tag)
     $atts = vc_map_get_attributes($tag, $atts);
     $stat1 = $atts['stat_num_1'];
     $output = "";
-    $output = "<p>{$stat1}</p>";
+
+    //Start of Parent Div
+    $output .= "<div class=\"stats\">";
+
+    for ($x = 1; $x <= 3; $x++) {
+        //Start of Child Div
+        $output .= "<div class=\"stats__col\">";
+
+        //Start of Grandchild Div
+        $output .= "<div class=\"stats__content\">";
+
+        //Start of Great Grandchild
+        $output .= "<div class=\"stats__info\">";
+        $output .= "<div class=\"stats__number\">{$atts['stat_num_' . $x]}</div>";
+        $output .= "<div class=\"stats__detail\">{$atts['stat_name_' . $x]}</div>";
+        $output .= "</div>";
+
+        //Start of Great Grandchild
+        $output .= "<div class=\"stats__icon\">";
+        $output .= "<svg class=\"stats__icon\">";
+        $output .= "<use xlink:href=" . THEME_IMG_PATH . "/sprite.svg#" . $atts['stat_icon_' . $x] . "></use>";
+        $output .= "</svg>";
+        $output .= "</div>";
+
+        //End of Grandchild  Div
+        $output .= "</div>";
+
+        //End of Child Div
+        $output .= "</div>";
+    }
+
+//End of Parent Div
+    $output .= "</div>";
+
     return $output;
+}
+
+//Callout with Call to Action Box
+
+//Add hook and function
+
+add_action("vc_before_init", "callout_cta_integrateWithVC");
+
+function callout_cta_integrateWithVC()
+{
+    vc_map(
+        array(
+            "name" => __("Callout with Call to Action Box", "my-text-domain"),
+            "base" => "callout_cta",
+            "category" => __("Components", "my-text-domain"),
+            "params" => array(
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Callout", "my-text-domain"),
+                    "param_name" => "callout", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Callout Column",
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter callout content.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "heading" => __('Callout Color', "my-text-domain"),
+                    "param_name" => "callout-color",
+                    "group" => "Callout Column",
+                    "value" => array(
+                        __('Blue', "my-text-domain") => 'callout--primary',
+                        __('Purple', "my-text-domain") => 'callout--secondary',
+                        __('Orange', "my-text-domain") => 'callout--tertiary',
+                    ),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Title", "my-text-domain"),
+                    "param_name" => "cta-title", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Call to Action Section",
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter Title.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Details", "my-text-domain"),
+                    "param_name" => "cta-details", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Call to Action Section",
+                    "description" => __("Enter Details.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textarea",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Button Text", "my-text-domain"),
+                    "param_name" => "cta-btn", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Call to Action Section",
+                    "description" => __("Enter Button Text.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "vc_link",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Button Link", "my-text-domain"),
+                    "param_name" => "cta-link",
+                    "value" => __("Enter Link", "my-text-domain"),
+                    "description" => __("Enter link for call to action button.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "heading" => __('Color Theme', "my-text-domain"),
+                    "param_name" => "cta-color",
+                    "value" => array(
+                        __('Blue', "my-text-domain") => 'callout--primary',
+                        __('Purple', "my-text-domain") => 'callout--secondary',
+                        __('Orange', "my-text-domain") => 'callout--tertiary',
+                    ),
+                    'save_always' => true,
+                ),
+            ),
+        )
+    );
+}
+
+//Create shortcut and function
+
+add_shortcut('callout_cta', "output_callout_cta");
+
+function output_callout_cta($atts,, $content, $tags)
+{
+
 }

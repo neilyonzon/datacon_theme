@@ -1446,7 +1446,6 @@ body.stop-transition .nav {
 	left: 0;
 	z-index: -10;
 	object-fit: cover;
-	width: 100%;
 	max-width: none;
 }
 
