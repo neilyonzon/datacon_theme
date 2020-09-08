@@ -495,6 +495,20 @@ function callout_cta_integrateWithVC()
                     ),
                     'save_always' => true,
                 ),
+                array(
+                    "type" => "checkbox",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Reverse Content", "my-text-domain"),
+                    "param_name" => "reverse", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "General",
+                    "value" => array(
+                        __('True', "my-text-domain") => 'true',
+                    ),
+                    "description" => __("Check to have Callout on the right column.", "my-text-domain"),
+                    'save_always' => true,
+                    'std' => "",
+                ),
             ),
         )
     );
@@ -517,9 +531,14 @@ function output_callout_cta($atts, $content, $tags)
     $ctaDetails = $atts['cta-details'];
     $ctaBtn = vc_build_link($atts['cta-link']);
     $ctaColor = $atts['cta-color'];
+    $reverse = "container-flex--reverse";
 
-    //Start Parent Div
-    $output .= "<div class=\"container-flex\">";
+    //Start of Parent Div
+    if ($atts['reverse'] == 'true') {
+        $output .= "<div class=\"container-flex $reverse\">";
+    } else {
+        $output .= "<div class=\"container-flex\">";
+    }
 
     //Start Child Div
     $output .= "<div class=\"col-1-of-2\">";
