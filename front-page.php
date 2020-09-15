@@ -113,6 +113,7 @@
                 </hr>
             </div>
         </div>
+        <div class="media-player__video-url">https://youtu.be/CWR3n8Ifsv0?autoplay=1</div>
     </div>
     <div class="container-flex">
         <div class="col-1-of-2 flex-align--center">

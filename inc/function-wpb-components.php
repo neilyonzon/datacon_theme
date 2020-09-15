@@ -135,7 +135,6 @@ function output_hp_hero($atts, $content, $tag)
     if ($cta['url'] != '') {
         $output .= ' <a href="' . $cta['url'] . '" class="btn btn--quaternary">' . $cta['title'] . '</a>';
     }
-    $output .= $cta['url'];
     $output .= '</div>';
     return $output;
 }
