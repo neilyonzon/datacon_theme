@@ -68,9 +68,12 @@
 	})
 
 	modalBackground.addEventListener('click', () => {
-		toggleSideNav();
+		const sideNav = document.querySelector('ul.nav');
+		if (sideNav.classList.contains('nav--active')) {
+			toggleSideNav();
+			toggleHamburger();
+		}
 		fixBody();
-		toggleHamburger();
 	})
 
 	stopResponsiveTransition();

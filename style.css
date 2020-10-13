@@ -596,6 +596,11 @@ a.btn--secondary {
 	background: #A452FF;
 }
 
+.btn--tertiary,
+a.btn--tertiary {
+	background: #FFA800;
+}
+
 .btn--quaternary,
 a.btn--quaternary {
 	background: #7DE634;
@@ -741,7 +746,6 @@ html {
 
 .fixed {
 	overflow: hidden;
-	position: fixed;
 }
 
 /*--------------------------------------------------------------

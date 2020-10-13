@@ -1,1 +1,2 @@
-const getCompany = require('./navigation.js');
+const getNavigation = require('./navigation.js');
+const getMediaplayer = require('./media-player.js');

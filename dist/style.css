@@ -484,6 +484,26 @@ big {
   color: #A452FF;
 }
 
+.callout--tertiary {
+  color: #FFA800;
+}
+
+.callout-2 {
+  font-size: 4rem;
+}
+
+.callout-2--primary {
+  color: #169FFF;
+}
+
+.callout-2--secondary {
+  color: #A452FF;
+}
+
+.callout-2--tertiary {
+  color: #FFA800;
+}
+
 /* Elements
 --------------------------------------------- */
 body {
@@ -495,16 +515,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
-}
-
-.callout-list {
-  list-style: none;
-  font-size: 4rem;
-  padding-left: 0;
-}
-
-.callout-list--secondary {
-  color: #A452FF;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -559,10 +569,12 @@ a:hover, a:active {
 
 /* Forms
 --------------------------------------------- */
-.btn {
+.btn,
+a.btn {
   font-size: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   color: white;
   background: #169FFF;
   border: none;
@@ -570,23 +582,33 @@ a:hover, a:active {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+a.btn:hover {
   opacity: .8;
 }
 
-.btn--primary {
+.btn--primary,
+a.btn--primary {
   background: #169FFF;
 }
 
-.btn--secondary {
+.btn--secondary,
+a.btn--secondary {
   background: #A452FF;
 }
 
-.btn--quaternary {
+.btn--tertiary,
+a.btn--tertiary {
+  background: #FFA800;
+}
+
+.btn--quaternary,
+a.btn--quaternary {
   background: #7DE634;
 }
 
-.btn--white {
+.btn--white,
+a.btn--white {
   background: white;
   color: #169FFF;
 }
@@ -679,6 +701,16 @@ html {
   }
 }
 
+.container-flex--reverse {
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container-flex--reverse {
+    flex-direction: column-reverse;
+  }
+}
+
 .col-1-of-2 {
   flex: 0 0 48%;
   position: relative;
@@ -715,7 +747,6 @@ html {
 
 .fixed {
   overflow: hidden;
-  position: fixed;
 }
 
 /*--------------------------------------------------------------
@@ -1028,6 +1059,14 @@ body.stop-transition .nav {
   align-items: center;
   padding: 1.5rem 0;
   text-transform: uppercase;
+  top: 8rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 75em) {
+  .footer {
+    top: 5rem;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1429,7 +1468,6 @@ body.stop-transition .nav {
   z-index: -10;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   max-width: none;
 }
 
@@ -1577,6 +1615,12 @@ body.stop-transition .nav {
 .hero__description {
   font-size: 1.5rem;
   width: 60%;
+}
+
+.hero__description > * {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 37.5em) {

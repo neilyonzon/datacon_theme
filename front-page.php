@@ -108,12 +108,14 @@
         <div class="media-banner__overlay">
             <div class="media-banner__intro-text">DATA CON LA 2019</div>
             <div class="media-banner__header">Highlights from Last Year's Event</div>
-            <div class="media-banner__cta">Play Video Reel</div>
+            <div class="media-banner__cta">
+                <button class="btn btn--secondary media-banner__btn">Play Video Reel</button>
+            </div>
+            <div class="media-player__video-url" data-url="https://youtu.be/CWR3n8Ifsv0?autoplay=1"></div>
             <div class="media-banner__line">
                 </hr>
             </div>
         </div>
-        <div class="media-player__video-url">https://youtu.be/CWR3n8Ifsv0?autoplay=1</div>
     </div>
     <div class="container-flex">
         <div class="col-1-of-2 flex-align--center">

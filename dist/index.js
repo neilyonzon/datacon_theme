@@ -93,7 +93,32 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js");
+var getNavigation = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js");
+
+var getMediaplayer = __webpack_require__(/*! ./media-player.js */ "./js/media-player.js");
+
+/***/ }),
+
+/***/ "./js/media-player.js":
+/*!****************************!*\
+  !*** ./js/media-player.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var mediaButton = document.querySelector('.media-banner__btn');
+var modalBackground = document.querySelector('#modal-background'); //Function to toggle Modal Background (blue backgroud) visibility
+
+var fixBody = function fixBody() {
+  var body = document.querySelector('body');
+  body.classList.toggle('fixed');
+  modalBackground.classList.toggle('active');
+};
+
+mediaButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log("Test"); // fixBody();
+});
 
 /***/ }),
 
@@ -164,9 +189,14 @@ var getCompany = __webpack_require__(/*! ./navigation.js */ "./js/navigation.js"
     });
   });
   modalBackground.addEventListener('click', function () {
-    toggleSideNav();
+    var sideNav = document.querySelector('ul.nav');
+
+    if (sideNav.classList.contains('nav--active')) {
+      toggleSideNav();
+      toggleHamburger();
+    }
+
     fixBody();
-    toggleHamburger();
   });
   stopResponsiveTransition();
 
