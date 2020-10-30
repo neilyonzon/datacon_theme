@@ -488,9 +488,9 @@ function callout_cta_integrateWithVC()
                     "param_name" => "cta-color",
                     "group" => "Call to Action Section",
                     "value" => array(
-                        __('Blue', "my-text-domain") => 'callout-2--primary',
-                        __('Purple', "my-text-domain") => 'callout-2--secondary',
-                        __('Orange', "my-text-domain") => 'callout-2--tertiary',
+                        __('Blue', "my-text-domain") => 'primary',
+                        __('Purple', "my-text-domain") => 'secondary',
+                        __('Orange', "my-text-domain") => 'tertiary',
                     ),
                     'save_always' => true,
                 ),
@@ -551,14 +551,14 @@ function output_callout_cta($atts, $content, $tags)
 
     //Start Child Div
     $output .= "<div class=\"col-1-of-2 flex-align--center\">";
-    $output .= "<div class=\"cta-box cta-box--secondary\">";
+    $output .= "<div class=\"cta-box cta-box--{$ctaColor}\">";
     $output .= "<div class=\"cta-box__header\">{$ctaTitle}</div>";
     $output .= "<div class=\"cta-box__body\">";
     $output .= " <p class=\"paragraph\">{$ctaDetails}</p>";
     $output .= "</div>";
     $output .= "<div class=\"cta-box__cta\">";
     if ($ctaBtn['url'] != '') {
-        $output .= "<a href=\"{$ctaBtn['url']}\" class=\"btn btn--secondary\">{$ctaBtn['title']}</a>";
+        $output .= "<a href=\"{$ctaBtn['url']}\" class=\"btn btn--{$ctaColor}\">{$ctaBtn['title']}</a>";
     }
     $output .= "</div>";
     $output .= "</div>";
@@ -579,8 +579,8 @@ function video_player_integrateWithVC()
 {
     vc_map(
         array(
-            "name" => __("Callout with Call to Action Box", "my-text-domain"),
-            "base" => "callout_cta",
+            "name" => __("Video Player Full-Width", "my-text-domain"),
+            "base" => "video_player",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -617,10 +617,20 @@ function video_player_integrateWithVC()
                     "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
-                    "heading" => __("Button text", "my-text-domain"),
+                    "heading" => __("YouTube URL", "my-text-domain"),
                     "param_name" => "video-url", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
-                    "value" => __("Enter YouTube URL (e.g. https://www.youtube.com/watch?v=CWR3n8Ifsv0)", "my-text-domain"),
-                    "description" => __("Enter button text.", "my-text-domain"),
+                    "value" => __("", "my-text-domain"),
+                    "description" => __("Enter YouTube URL (e.g. https://www.youtube.com/watch?v=CWR3n8Ifsv0)", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "attach_image",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Background Image", "my-text-domain"),
+                    "param_name" => "bg_image",
+                    'admin_label' => true,
+                    "description" => __("Choose image for background.", "my-text-domain"),
                     'save_always' => true,
                 ),
             ),
@@ -636,6 +646,27 @@ function output_video_player($atts, $content, $tags)
 {
     $intro = $atts['video-intro'];
     $header = $atts['video-header'];
-    $buttonText = $atts['video-button-text"'];
-    $url = $atts['video-url'];
+    $buttonText = $atts['video-button-text'];
+    $image_src = wp_get_attachment_image_src($atts['bg_image'], 'full')[0];
+    $image_alt = get_post_meta($atts['bg_image'], '_wp_attachment_image_alt', true);
+    if ($atts['video-url'] != '') {
+        $url = $atts['video-url'];
+    } else {
+        $url = 'https://www.youtube.com/watch?v=CWR3n8Ifsv0';
+    }
+    $output = '';
+    $output .= '<div class="media-banner">';
+    $output .= '<img src="' . $image_src . '" alt="' . $image_alt . '" class="media-banner__img">';
+    $output .= '<div class="media-banner__overlay">';
+    $output .= '<div class="media-banner__intro-text">' . $intro . '</div>';
+    $output .= '<div class="media-banner__header">' . $header . '</div>';
+    $output .= '<div class="media-banner__cta">';
+    $output .= '<a class="btn btn--secondary media-banner__btn" href="' . $url . '">' . $buttonText . '</a>';
+    $output .= '</div>';
+    $output .= '<div class="media-banner__line">';
+    $output .= '</hr>';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+    return $output;
 }
