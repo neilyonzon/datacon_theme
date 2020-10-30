@@ -567,3 +567,75 @@ function output_callout_cta($atts, $content, $tags)
     $output .= "</div>";
     return $output;
 }
+
+//Callout with Call to Action Box
+
+//Add action hook to hook on vc_before_init and pass function to create shortcut
+
+add_action("vc_before_init", "video_player_integrateWithVC");
+
+//Create Function to Build VC Custom Settings Page
+function video_player_integrateWithVC()
+{
+    vc_map(
+        array(
+            "name" => __("Callout with Call to Action Box", "my-text-domain"),
+            "base" => "callout_cta",
+            "category" => __("Components", "my-text-domain"),
+            "params" => array(
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Intro Text", "my-text-domain"),
+                    "param_name" => "video-intro", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter introduction text.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Header", "my-text-domain"),
+                    "param_name" => "video-header", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter header text.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Button text", "my-text-domain"),
+                    "param_name" => "video-button-text", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter Text", "my-text-domain"),
+                    "description" => __("Enter button text.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Button text", "my-text-domain"),
+                    "param_name" => "video-url", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "value" => __("Enter YouTube URL (e.g. https://www.youtube.com/watch?v=CWR3n8Ifsv0)", "my-text-domain"),
+                    "description" => __("Enter button text.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+            ),
+        )
+    );
+}
+
+//Use add_shortcode function to add new shortcode and pass parameters to it
+
+add_shortcode("video_player", "output_video_player");
+
+function output_video_player($atts, $content, $tags)
+{
+    $intro = $atts['video-intro'];
+    $header = $atts['video-header'];
+    $buttonText = $atts['video-button-text"'];
+    $url = $atts['video-url'];
+}
