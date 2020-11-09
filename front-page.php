@@ -135,19 +135,19 @@
                 <div class="countdown__title">March 5, 2020</div>
                 <div class="countdown__timer timer">
                     <div class="timer__item">
-                        <div class="timer__number timer__number--days">5</div>
+                        <div class="timer__number timer__number--days"></div>
                         <div class="timer__detail timer__detail--days">Days</div>
                     </div>
                     <div class="timer__item">
-                        <div class="timer__number timer__number--hours">23</div>
+                        <div class="timer__number timer__number--hours"></div>
                         <div class="timer__detail timer__detail--hours">Hours</div>
                     </div>
                     <div class="timer__item">
-                        <div class="timer__number timer__number--minutes">30</div>
+                        <div class="timer__number timer__number--minutes"></div>
                         <div class="timer__detail timer__detail--minutes">minutes</div>
                     </div>
                     <div class="timer__item">
-                        <div class="timer__number timer__number--seconds">43</div>
+                        <div class="timer__number timer__number--seconds"></div>
                         <div class="timer__detail timer__detail--seconds">seconds</div>
                     </div>
                 </div>

@@ -670,3 +670,18 @@ function output_video_player($atts, $content, $tags)
     $output .= '</div>';
     return $output;
 }
+
+//Call to Action box with Countdown
+
+//Add action hook to hook on to vc_before_init and pass function to create shortcut
+
+// add_action("vc_before_init", "callout_cta_integrateWithVC");
+
+// function callout_cta_integrateWithVC()
+// {
+//     vc_map(
+//         array(
+//             "name" =>
+//         )
+//     )
+// }
