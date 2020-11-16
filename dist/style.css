@@ -678,7 +678,13 @@ html {
 # Layouts
 --------------------------------------------------------------*/
 .section-container {
-  padding: 3rem 12rem;
+  padding: 2rem 8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-container {
+    padding: 1rem 2rem;
+  }
 }
 
 .container-flex {

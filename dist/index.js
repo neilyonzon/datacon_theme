@@ -96,28 +96,30 @@
 //Set date we're counting down to
 var countDownDate = new Date("Nov 9, 2021 00:00:00").getTime(); //Update the count down every 1 second
 
-var start = setInterval(function () {
-  var now = new Date().getTime(); //Find difference between now and the count down date
+if (document.querySelector(".timer__number--days")) {
+  var start = setInterval(function () {
+    var now = new Date().getTime(); //Find difference between now and the count down date
 
-  var difference = countDownDate - now; //Time calculation for days, hours minutes and seconds
+    var difference = countDownDate - now; //Time calculation for days, hours minutes and seconds
 
-  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  var hours = Math.floor(difference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-  var minutes = Math.floor(difference % (1000 * 60 * 60) / (1000 * 60));
-  var seconds = Math.floor(difference % (1000 * 60) / 1000);
-  document.querySelector(".timer__number--days").innerText = days;
-  document.querySelector(".timer__number--hours").innerText = hours;
-  document.querySelector(".timer__number--minutes").innerText = minutes;
-  document.querySelector(".timer__number--seconds").innerText = seconds;
+    var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(difference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    var minutes = Math.floor(difference % (1000 * 60 * 60) / (1000 * 60));
+    var seconds = Math.floor(difference % (1000 * 60) / 1000);
+    document.querySelector(".timer__number--days").innerText = days;
+    document.querySelector(".timer__number--hours").innerText = hours;
+    document.querySelector(".timer__number--minutes").innerText = minutes;
+    document.querySelector(".timer__number--seconds").innerText = seconds;
 
-  if (difference < 0) {
-    clearInterval(start);
-    document.querySelector(".timer__number--days").innerText = 0;
-    document.querySelector(".timer__number--hours").innerText = 0;
-    document.querySelector(".timer__number--minutes").innerText = 0;
-    document.querySelector(".timer__number--seconds").innerText = 0;
-  }
-}, 1000);
+    if (difference < 0) {
+      clearInterval(start);
+      document.querySelector(".timer__number--days").innerText = 0;
+      document.querySelector(".timer__number--hours").innerText = 0;
+      document.querySelector(".timer__number--minutes").innerText = 0;
+      document.querySelector(".timer__number--seconds").innerText = 0;
+    }
+  }, 1000);
+}
 
 /***/ }),
 

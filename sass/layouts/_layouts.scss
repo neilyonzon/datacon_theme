@@ -1,5 +1,9 @@
 .section-container {
-    padding: 3rem 12rem;
+    padding: 2rem 8rem;
+
+    @include respond(phone) {
+        padding: 1rem 2rem;
+    }
 }
 
 .container-flex {
