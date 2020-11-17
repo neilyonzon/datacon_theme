@@ -10,7 +10,7 @@ function hp_hero_integrateWithVC()
             "name" => __("Hero Banner", "my-text-domain"),
             "base" => "hero_banner",
             "class" => "",
-            "category" => __("Component", "my-text-domain"),
+            "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
                     "type" => "textfield",
@@ -149,7 +149,7 @@ function callout_integrateWithVC()
             "name" => __("Callout with Description", "my-text-domain"),
             "base" => "callout_desc",
             "class" => "",
-            "category" => __("Component", "my-text-domain"),
+            "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
                     "type" => "textarea",
@@ -244,7 +244,7 @@ function stats_integrateWithVC()
             "name" => __("Stats", "my-text-domain"),
             "base" => "stats",
             "class" => "",
-            "category" => __("Component", "my-text-domain"),
+            "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
                     "type" => "textfield",
@@ -810,6 +810,46 @@ function output_cta_countdown($atts, $content, $tags)
 </div>";
 
 //End Parent Div
+    $output .= "</div>";
+    return $output;
+}
+
+//Add Action hook onto visual composer hook to add visual composer option.
+
+add_action("vc_before_init", "section_integrateWithVC");
+
+function section_integrateWithVC()
+{
+    vc_map(
+        array(
+            "name" => __("Content Section", "my-text-domain"),
+            "base" => "content_section",
+            "category" => __("Components", "my-text-domain"),
+            "params" => array(
+                array(
+                    "type" => "textarea_html",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Content", "my-text-domain"),
+                    "param_name" => "content", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    "group" => "Content",
+                    "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
+                    "description" => __("Enter your content.", "my-text-domain"),
+                    'save_always' => true,
+                ),
+            ),
+        )
+    );
+}
+
+//Add shortcode by passing function that outputs html
+
+add_shortcode("content_section", "output_section");
+
+function output_section($atts, $content, $tags)
+{
+    $output .= "<div class=\"section-container\">";
+    $output .= $content;
     $output .= "</div>";
     return $output;
 }

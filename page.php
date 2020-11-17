@@ -15,8 +15,17 @@
 get_header();
 ?>
 <main id="primary" class="main-content">
-    <div class="section-container">
-        <?php
+
+    <?php if (has_post_thumbnail($post->ID)):
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
+    <div class="interior-banner" style="background-image: url('<?php echo $image[0]; ?>')">
+        <h1 class="interior-banner__header"><?php single_post_title();?></h1>
+    </div>
+    <?php else: ?>
+    <div class="interior-banner">
+        <h1 class=" interior-banner__header"><?php single_post_title();?></h1>
+    </div>
+    <?php endif;
 while (have_posts()):
     the_post();
 
@@ -24,7 +33,6 @@ while (have_posts()):
 
 endwhile; // End of the loop.
 ?>
-    </div>
 </main><!-- #main -->
 
 <?php
