@@ -1,0 +1,5 @@
+//Remove featured image from post 
+.single-post .blogimage,
+.post-thumbnail {
+    display: none;
+}

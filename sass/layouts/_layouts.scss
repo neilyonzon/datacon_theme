@@ -62,3 +62,24 @@
 .fixed {
     overflow: hidden;
 }
+
+.interior-banner {
+    width: 100vw;
+    height: 25rem;
+    position: relative;
+    // overflow: hidden;
+
+    &__header {
+        font-size: 6rem;
+        color: white;
+        z-index: 999;
+        position: absolute;
+    }
+
+    &__img {
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

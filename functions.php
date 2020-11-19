@@ -265,3 +265,6 @@ function my_custom_styles($init_array)
 }
 // Attach callback to 'tiny_mce_before_init'
 add_filter('tiny_mce_before_init', 'my_custom_styles');
+
+//Custom Page Attributes
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');

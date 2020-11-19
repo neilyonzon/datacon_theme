@@ -755,6 +755,26 @@ html {
 	overflow: hidden;
 }
 
+.interior-banner {
+	width: 100vw;
+	height: 25rem;
+	position: relative;
+}
+
+.interior-banner__header {
+	font-size: 6rem;
+	color: white;
+	z-index: 999;
+	position: absolute;
+}
+
+.interior-banner__img {
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1864,6 +1884,13 @@ body.stop-transition .nav {
 	.headspace-s--m {
 		margin-top: 4rem;
 	}
+}
+
+/* Override Settings
+--------------------------------------------- */
+.single-post .blogimage,
+.post-thumbnail {
+	display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
