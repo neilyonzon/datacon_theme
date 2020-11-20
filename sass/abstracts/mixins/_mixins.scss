@@ -19,6 +19,14 @@
 	transform: translate(-50%, -50%);
 }
 
+//Vertically Center Element in Parent
+@mixin vertical-center-self {
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 //Remove Center Element in parent
 
 @mixin remove-center-self {

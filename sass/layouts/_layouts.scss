@@ -1,4 +1,5 @@
 .section-container {
+    width: 100%;
     padding: 2rem 8rem;
 
     @include respond(phone) {
@@ -65,15 +66,15 @@
 
 .interior-banner {
     width: 100vw;
-    height: 25rem;
+    height: 20rem;
     position: relative;
-    // overflow: hidden;
 
     &__header {
+        left: 8rem;
         font-size: 6rem;
         color: white;
         z-index: 999;
-        position: absolute;
+        @include vertical-center-self;
     }
 
     &__img {
@@ -81,5 +82,22 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        position: absolute;
     }
+
+    &__overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 444;
+
+        &--primary {
+            background: linear-gradient(to right, rgba(22, 159, 255, 1), rgba(22, 140, 255, .5));
+        }
+
+        &--secondary {
+            background: linear-gradient(to right, rgba(164, 82, 255, 1), rgba(164, 82, 255, .5));
+        }
+    }
+
 }

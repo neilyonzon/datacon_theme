@@ -677,6 +677,7 @@ html {
 # Layouts
 --------------------------------------------------------------*/
 .section-container {
+	width: 100%;
 	padding: 2rem 8rem;
 }
 
@@ -757,15 +758,19 @@ html {
 
 .interior-banner {
 	width: 100vw;
-	height: 25rem;
+	height: 20rem;
 	position: relative;
 }
 
 .interior-banner__header {
+	left: 8rem;
 	font-size: 6rem;
 	color: white;
 	z-index: 999;
 	position: absolute;
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .interior-banner__img {
@@ -773,6 +778,22 @@ html {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+	position: absolute;
+}
+
+.interior-banner__overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 444;
+}
+
+.interior-banner__overlay--primary {
+	background: linear-gradient(to right, #169fff, rgba(22, 140, 255, 0.5));
+}
+
+.interior-banner__overlay--secondary {
+	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5));
 }
 
 /*--------------------------------------------------------------
@@ -1499,6 +1520,7 @@ body.stop-transition .nav {
 	left: 0;
 	z-index: -10;
 	object-fit: cover;
+	width: 100%;
 	max-width: none;
 }
 
