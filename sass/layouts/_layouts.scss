@@ -69,13 +69,23 @@
     height: 20rem;
     position: relative;
 
+    @include respond(phone) {
+        height: 7rem;
+    }
+
     &__header {
         left: 8rem;
         font-size: 6rem;
         color: white;
         z-index: 999;
         @include vertical-center-self;
+
+        @include respond(phone) {
+            font-size: 2rem;
+            @include center-self;
+        }
     }
+
 
     &__img {
         z-index: 0;
@@ -92,11 +102,11 @@
         z-index: 444;
 
         &--primary {
-            background: linear-gradient(to right, rgba(22, 159, 255, 1), rgba(22, 140, 255, .5));
+            background: $color-primary-gradient;
         }
 
         &--secondary {
-            background: linear-gradient(to right, rgba(164, 82, 255, 1), rgba(164, 82, 255, .5));
+            background: $color-secondary-gradient;
         }
     }
 

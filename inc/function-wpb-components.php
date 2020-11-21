@@ -633,6 +633,19 @@ function video_player_integrateWithVC()
                     "description" => __("Choose image for background.", "my-text-domain"),
                     'save_always' => true,
                 ),
+                array(
+                    "type" => "dropdown",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __('Background Color', "my-text-domain"),
+                    "param_name" => "bg-color",
+                    "value" => array(
+                        __('Blue', "my-text-domain") => 'primary',
+                        __('Purple', "my-text-domain") => 'secondary',
+                    ),
+                    "description" => __("Select the background color.", "my-text-domain"),
+                    'save_always' => true,
+                ),
             ),
         )
     );
@@ -654,14 +667,21 @@ function output_video_player($atts, $content, $tags)
     } else {
         $url = 'https://www.youtube.com/watch?v=CWR3n8Ifsv0';
     }
+    if ($atts['bg-color'] == 'primary') {
+        $bg_color = 'primary';
+        $btn_color = 'secondary';
+    } else {
+        $bg_color = 'secondary';
+        $btn_color = 'primary';
+    }
     $output = '';
     $output .= '<div class="media-banner">';
     $output .= '<img src="' . $image_src . '" alt="' . $image_alt . '" class="media-banner__img">';
-    $output .= '<div class="media-banner__overlay">';
+    $output .= '<div class="media-banner__overlay media-banner__overlay--' . $bg_color . '">';
     $output .= '<div class="media-banner__intro-text">' . $intro . '</div>';
     $output .= '<div class="media-banner__header">' . $header . '</div>';
     $output .= '<div class="media-banner__cta">';
-    $output .= '<a class="btn btn--secondary media-banner__btn" href="' . $url . '">' . $buttonText . '</a>';
+    $output .= '<a class="btn btn--' . $btn_color . ' media-banner__btn" href="' . $url . '">' . $buttonText . '</a>';
     $output .= '</div>';
     $output .= '<div class="media-banner__line">';
     $output .= '</hr>';
