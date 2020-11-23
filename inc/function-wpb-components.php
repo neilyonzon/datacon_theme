@@ -10,6 +10,7 @@ function hp_hero_integrateWithVC()
             "name" => __("Hero Banner", "my-text-domain"),
             "base" => "hero_banner",
             "class" => "",
+            "icon" => get_template_directory_uri() . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -149,6 +150,7 @@ function callout_integrateWithVC()
             "name" => __("Callout with Description", "my-text-domain"),
             "base" => "callout_desc",
             "class" => "",
+            "icon" => get_template_directory_uri() . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -244,6 +246,7 @@ function stats_integrateWithVC()
             "name" => __("Stats", "my-text-domain"),
             "base" => "stats",
             "class" => "",
+            "icon" => get_template_directory_uri . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -411,6 +414,7 @@ function callout_cta_integrateWithVC()
         array(
             "name" => __("Callout with Call to Action Box", "my-text-domain"),
             "base" => "callout_cta",
+            "icon" => get_template_directory_uri() . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -581,6 +585,7 @@ function video_player_integrateWithVC()
         array(
             "name" => __("Video Player Full-Width", "my-text-domain"),
             "base" => "video_player",
+            "icon" => get_template_directory_uri . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -703,6 +708,7 @@ function cta_countdown_integrateWithVC()
         array(
             "name" => __("Call to Action with Countdown Feature", "my-text-domain"),
             "base" => "cta_countdown",
+            "icon" => get_template_directory_uri() . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
@@ -844,6 +850,7 @@ function section_integrateWithVC()
         array(
             "name" => __("Content Section", "my-text-domain"),
             "base" => "content_section",
+            "icon" => get_template_directory_uri() . "",
             "category" => __("Components", "my-text-domain"),
             "params" => array(
                 array(
