@@ -812,6 +812,28 @@ html {
 	background: linear-gradient(to right, #a452ff, rgba(164, 82, 255, 0.5));
 }
 
+/* Profile Grid
+--------------------------------------------- */
+.profile-grid {
+	flex: none;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.profile-item {
+	width: 20%;
+}
+
+.profile-item__name,
+.profile-item__name > * {
+	font-weight: bold;
+	font-size: 3.6rem;
+	padding: 0;
+	line-height: 3.5rem;
+	text-decoration: none;
+	margin-top: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1797,7 +1819,7 @@ body.stop-transition .nav {
 	z-index: 999;
 	background: rgba(22, 159, 255, 0.7);
 	opacity: 0;
-	transition: opacity .3s;
+	transition: opacity 0.3s;
 }
 
 #modal-background.active {

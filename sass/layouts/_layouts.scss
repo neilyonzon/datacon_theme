@@ -1,113 +1,116 @@
 .section-container {
-    width: 100%;
-    padding: 2rem 8rem;
+  width: 100%;
+  padding: 2rem 8rem;
 
-    @include respond(phone) {
-        padding: 1rem 2rem;
-    }
+  @include respond(phone) {
+    padding: 1rem 2rem;
+  }
 }
 
 .container-flex {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 5rem 10rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 2.5rem;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
 
     @include respond(tab-port) {
-        flex-direction: column;
+      flex-direction: column-reverse;
     }
-
-    @include respond(phone) {
-        padding: 3rem 2.5rem;
-    }
-
-    &--reverse {
-        flex-direction: row-reverse;
-
-        @include respond(tab-port) {
-            flex-direction: column-reverse;
-        }
-    }
+  }
 }
 
 .col-1-of-2 {
-    flex: 0 0 48%;
-    position: relative;
+  flex: 0 0 48%;
+  position: relative;
 
-    @include respond(tab-port) {
-        margin: 1rem 0;
-    }
+  @include respond(tab-port) {
+    margin: 1rem 0;
+  }
 }
 
 .col-1-of-3 {
-    flex: 30%;
-    position: relative;
+  flex: 30%;
+  position: relative;
 
-    @include respond(tab-port) {
-        margin: 1rem 0;
-    }
+  @include respond(tab-port) {
+    margin: 1rem 0;
+  }
 }
 
 .main-content {
-    position: relative;
-    top: $header-height;
-    min-height: 50rem;
+  position: relative;
+  top: $header-height;
+  min-height: 50rem;
 
-    @include respond(tab-land) {
-        top: $header-height-m;
-    }
+  @include respond(tab-land) {
+    top: $header-height-m;
+  }
 }
 
 .fixed {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .interior-banner {
-    width: 100vw;
-    height: 20rem;
-    position: relative;
+  width: 100vw;
+  height: 20rem;
+  position: relative;
+
+  @include respond(phone) {
+    height: 7rem;
+  }
+
+  &__header {
+    left: 8rem;
+    font-size: 6rem;
+    color: white;
+    z-index: 999;
+    @include vertical-center-self;
 
     @include respond(phone) {
-        height: 7rem;
+      font-size: 2rem;
+      @include center-self;
+    }
+  }
+
+  &__img {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 444;
+
+    &--primary {
+      background: $color-primary-gradient;
     }
 
-    &__header {
-        left: 8rem;
-        font-size: 6rem;
-        color: white;
-        z-index: 999;
-        @include vertical-center-self;
-
-        @include respond(phone) {
-            font-size: 2rem;
-            @include center-self;
-        }
+    &--secondary {
+      background: $color-secondary-gradient;
     }
-
-
-    &__img {
-        z-index: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        position: absolute;
-    }
-
-    &__overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: 444;
-
-        &--primary {
-            background: $color-primary-gradient;
-        }
-
-        &--secondary {
-            background: $color-secondary-gradient;
-        }
-    }
-
+  }
 }
+
+/* Profile Grid
+--------------------------------------------- */
+
+@import "_profile-grid";

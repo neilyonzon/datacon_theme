@@ -1,0 +1,19 @@
+.profile-grid {
+  flex: none;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.profile-item {
+  width: 20%;
+
+  &__name,
+  &__name > * {
+    font-weight: bold;
+    font-size: 3.6rem;
+    padding: 0;
+    line-height: 3.5rem;
+    text-decoration: none;
+    margin-top: 3rem;
+  }
+}
