@@ -815,23 +815,62 @@ html {
 /* Profile Grid
 --------------------------------------------- */
 .profile-grid {
-	flex: none;
+	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
+	height: auto;
 }
 
 .profile-item {
-	width: 20%;
+	width: 20rem;
+	height: 50rem;
+	flex-grow: 0;
+	margin-right: 2.5rem;
+	position: relative;
 }
 
-.profile-item__name,
+.profile-item__img {
+	width: 50rem;
+}
+
 .profile-item__name > * {
 	font-weight: bold;
 	font-size: 3.6rem;
-	padding: 0;
 	line-height: 3.5rem;
 	text-decoration: none;
-	margin-top: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	position: absolute;
+	top: 20rem;
+}
+
+.profile-item__title {
+	margin-bottom: 0.5rem;
+	margin-top: 12rem;
+}
+
+.profile-item__social-icons-container {
+	display: flex;
+	height: 3rem;
+}
+
+.profile-item__social-icon {
+	width: 3rem;
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.profile-item__social-symbol {
+	height: 3rem;
+	width: 100%;
+	fill: #169FFF;
+}
+
+.profile-item__social-symbol:hover {
+	opacity: 0.7;
+}
+
+.profile-item__social-icon > a {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
