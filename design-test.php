@@ -97,7 +97,7 @@ get_header();
                 <a href="https://www.facebook.com/" class="profile-item__name">
                     <h4 class="profile-item__name">Nilesh Tiloda</h4>
                 </a>
-                <p class="profile-item__title">Director Of Partnerships & Field Operations At Helping Hands Community
+                <p class="profile-item__title">Marketing Manager
                 </p>
                 <div class="profile-item__social-icons-container">
                     <div class="profile-item__social-icon">
@@ -178,7 +178,7 @@ get_header();
                 <a href="https://www.facebook.com/" class="profile-item__name">
                     <h4 class="profile-item__name">Nilesh Tiloda</h4>
                 </a>
-                <p class="profile-item__title">Director Of Partnerships & Field Operations At Helping Hands Community
+                <p class="profile-item__title">Web Developer
                 </p>
                 <div class="profile-item__social-icons-container">
                     <div class="profile-item__social-icon">
