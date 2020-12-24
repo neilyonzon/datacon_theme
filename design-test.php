@@ -42,7 +42,7 @@ get_header();
                         src="https://www.dataconla.com/wp-content/uploads/2019/07/Annie_linkedin_small-Annie-Flippo-e1562092059167.jpg"
                         alt="placeholder" /></a>
                 <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4>Jennifer Conley Lee Lee</h4>
+                    <h4>Jennifer Conley Hernandez</h4>
                 </a>
                 <p class="profile-item__title">Web Developer Developer Developer</p>
                 <div class="profile-item__social-icons-container">
