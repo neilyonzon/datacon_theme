@@ -38,9 +38,11 @@ get_header();
     <div class="section-container">
         <div class="profile-grid">
             <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
+                <a href="https://www.facebook.com/">
+                    <img class="profile-item__img"
                         src="https://www.dataconla.com/wp-content/uploads/2019/07/Annie_linkedin_small-Annie-Flippo-e1562092059167.jpg"
-                        alt="placeholder" /></a>
+                        alt="placeholder" />
+                </a>
                 <a href="https://www.facebook.com/" class="profile-item__name">
                     <h4>Jennifer Conley Hernandez</h4>
                 </a>
