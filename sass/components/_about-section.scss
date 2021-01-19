@@ -1,0 +1,49 @@
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 5rem 10rem;
+
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 2.5rem;
+  }
+
+  &__img-column {
+    flex: 0 0 40%;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin: 1rem 0;
+    }
+
+    & > img {
+      @include center-self;
+
+      @include respond(tab-land) {
+        width: 75%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      @include respond(phone) {
+        width: 60%;
+      }
+    }
+  }
+
+  &__text-column {
+    flex: 0 0 55%;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin: 1rem 0;
+    }
+  }
+}

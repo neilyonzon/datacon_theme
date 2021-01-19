@@ -35,171 +35,21 @@ get_header();
 4. Integrate PHP Scripts. 
 5. Add to Plugin 
 -->
-    <div class="section-container">
-        <div class="profile-grid">
-            <div class="profile-item">
-                <a href="https://www.facebook.com/">
-                    <img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2019/07/Annie_linkedin_small-Annie-Flippo-e1562092059167.jpg"
-                        alt="placeholder" />
-                </a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4>Jennifer Conley Hernandez</h4>
-                </a>
-                <p class="profile-item__title">Web Developer Developer Developer</p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2020/10/Nilesh-Tiloda.jpg"
-                        alt="placeholder" /></a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4 class="profile-item__name">Nilesh Tiloda</h4>
-                </a>
-                <p class="profile-item__title">Director Of Partnerships & Field Operations At Helping Hands Community
-                </p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2020/10/Nilesh-Tiloda.jpg"
-                        alt="placeholder" /></a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4 class="profile-item__name">Nilesh Tiloda</h4>
-                </a>
-                <p class="profile-item__title">Marketing Manager
-                </p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2020/10/Nilesh-Tiloda.jpg"
-                        alt="placeholder" /></a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4 class="profile-item__name">Nilesh Tiloda</h4>
-                </a>
-                <p class="profile-item__title">Director Of Partnerships & Field Operations At Helping Hands Community
-                </p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2020/10/Nilesh-Tiloda.jpg"
-                        alt="placeholder" /></a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4 class="profile-item__name">Nilesh Tiloda</h4>
-                </a>
-                <p class="profile-item__title">Director Of Partnerships & Field Operations At Helping Hands Community
-                </p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-item">
-                <a href="https://www.facebook.com/"><img class="profile-item__img"
-                        src="https://www.dataconla.com/wp-content/uploads/2020/10/Nilesh-Tiloda.jpg"
-                        alt="placeholder" /></a>
-                <a href="https://www.facebook.com/" class="profile-item__name">
-                    <h4 class="profile-item__name">Nilesh Tiloda</h4>
-                </a>
-                <p class="profile-item__title">Web Developer
-                </p>
-                <div class="profile-item__social-icons-container">
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.facebook.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH ?>/sprite.svg#icon-linkedin-with-circle">
-                                </use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="profile-item__social-icon">
-                        <a href="https://www.twitter.com/" class="profile-item__social-link">
-                            <svg class="profile-item__social-symbol">
-                                <use xlink:href="<?php echo THEME_IMG_PATH?>/sprite.svg#icon-twitter-with-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="about-section">
+        <div class="about-section__img-column">
+            <img src="https://blush.design/api/download?shareUri=3dr9Rpj9C&s=0.3%7Ec68e80&w=800&h=800&fm=png"
+                alt="Conference Graphic" />
+        </div>
+        <div class="about-section__text-column flex-align--center headspace-s--m">
+            <div class="callout callout--secondary">Data Con LA is the largest, of its kind, data conference in Southern
+                California.</div>
+            <p>Spearheaded by Subash D’Souza and organized and supported by a community of volunteers, sponsors and
+                speakers, Data Con LA features the most vibrant gathering of data and technology enthusiasts in Los
+                Angeles.</p>
+            <p>Data Con LA began as Big Data Day LA in 2013, with just over 250 attendees. We have since grown to over
+                550 attendees in 2014, 950+ attendees in 2015, 1200+ attendees in 2016, and 1550+ attendees in 2017. In
+                2018, we re-branded ourselves from Big Data Day LA to Data Con LA. We also had over 1800+ attendees
+                attend. This year we expect that tally to be over 2000.</p>
         </div>
     </div>
 </main>

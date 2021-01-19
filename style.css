@@ -1852,7 +1852,7 @@ body.stop-transition .nav {
 }
 
 .timer__item:not(:last-child) {
-	border-right: .1rem black;
+	border-right: 0.1rem black;
 	border-top: 0rem;
 	border-left: 0rem;
 	border-bottom: 0rem;
@@ -1867,6 +1867,73 @@ body.stop-transition .nav {
 	font-size: 2rem;
 	text-transform: lowercase;
 	font-weight: 400;
+}
+
+/* About Section
+--------------------------------------------- */
+.about-section {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 5rem 10rem;
+}
+
+@media only screen and (max-width: 75em) {
+	.about-section {
+		flex-direction: column-reverse;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.about-section {
+		padding: 3rem 2.5rem;
+	}
+}
+
+.about-section__img-column {
+	flex: 0 0 40%;
+	position: relative;
+}
+
+@media only screen and (max-width: 75em) {
+	.about-section__img-column {
+		margin: 1rem 0;
+	}
+}
+
+.about-section__img-column > img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 75em) {
+	.about-section__img-column > img {
+		width: 75%;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.about-section__img-column > img {
+		width: 60%;
+	}
+}
+
+.about-section__text-column {
+	flex: 0 0 55%;
+	position: relative;
+}
+
+@media only screen and (max-width: 75em) {
+	.about-section__text-column {
+		margin: 1rem 0;
+	}
 }
 
 #modal-background {
