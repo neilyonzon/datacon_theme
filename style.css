@@ -516,6 +516,21 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+.line {
+	height: 2px;
+	width: 50rem;
+	margin: 2rem 0rem;
+	align-self: start;
+}
+
+.line--primary {
+	background-color: #169FFF;
+}
+
+.line--secondary {
+	background-color: #A452FF;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1878,6 +1893,10 @@ body.stop-transition .nav {
 	height: auto;
 	position: relative;
 	padding: 5rem 10rem;
+}
+
+.about-section--reverse {
+	flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 75em) {

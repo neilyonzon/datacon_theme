@@ -35,14 +35,15 @@ get_header();
 4. Integrate PHP Scripts. 
 5. Add to Plugin 
 -->
-    <div class="about-section">
+    <div class="about-section about-section--reverse">
         <div class="about-section__img-column">
             <img src="https://blush.design/api/download?shareUri=3dr9Rpj9C&s=0.3%7Ec68e80&w=800&h=800&fm=png"
                 alt="Conference Graphic" />
         </div>
         <div class="about-section__text-column flex-align--center headspace-s--m">
-            <div class="callout callout--secondary">Data Con LA is the largest, of its kind, data conference in Southern
+            <div class="callout callout--primary">Data Con LA is the largest, of its kind, data conference in Southern
                 California.</div>
+            <hr class="line line--primary" />
             <p>Spearheaded by Subash D’Souza and organized and supported by a community of volunteers, sponsors and
                 speakers, Data Con LA features the most vibrant gathering of data and technology enthusiasts in Los
                 Angeles.</p>
