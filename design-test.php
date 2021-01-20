@@ -53,6 +53,51 @@ get_header();
                 attend. This year we expect that tally to be over 2000.</p>
         </div>
     </div>
+
+    <div class="stats">
+        <h1 class="stats__header header header--white">Data Con 2020 By The numbers</h1>
+        <div class="stats__container">
+            <div class="stats__col">
+                <div class="stats__content">
+                    <div class="stats__info">
+                        <div class="stats__number">200</div>
+                        <div class="stats__detail">Attendees</div>
+                    </div>
+                    <div class="stats__icon"><svg class="stats__icon">
+                            <use
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
+                            </use>
+                        </svg></div>
+                </div>
+            </div>
+            <div class="stats__col">
+                <div class="stats__content">
+                    <div class="stats__info">
+                        <div class="stats__number">75</div>
+                        <div class="stats__detail">Speakers</div>
+                    </div>
+                    <div class="stats__icon"><svg class="stats__icon">
+                            <use
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-mic>
+                            </use>
+                        </svg></div>
+                </div>
+            </div>
+            <div class="stats__col">
+                <div class="stats__content">
+                    <div class="stats__info">
+                        <div class="stats__number">24</div>
+                        <div class="stats__detail">panels</div>
+                    </div>
+                    <div class="stats__icon"><svg class="stats__icon">
+                            <use
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-movie>
+                            </use>
+                        </svg></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php

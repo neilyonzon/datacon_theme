@@ -6,6 +6,10 @@
   position: relative;
   padding: 5rem 10rem;
 
+  & .line {
+    width: 70%;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
   }
@@ -30,14 +34,10 @@
       @include center-self;
 
       @include respond(tab-land) {
-        width: 75%;
+        width: 60%;
         position: relative;
         left: 50%;
         transform: translate(-50%, 0%);
-      }
-
-      @include respond(phone) {
-        width: 60%;
       }
     }
   }

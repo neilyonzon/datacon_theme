@@ -122,17 +122,17 @@ $output .= $header3;
 
 $output .= '</h1>
 </div>';
-$output .= '<div class="hero__subline">';
 if ($sub_heading != '') {
+$output .= '<div class="hero__subline">';
 $output .= $sub_heading;
-}
 $output .= '</div>';
+}
 
-$output .= '<div class="hero__description">';
 if ($content != '') {
+$output .= '<div class="hero__description">';
 $output .= $content;
-}
 $output .= '</div>';
+}
 if ($cta['url'] != '') {
 $output .= ' <a href="' . $cta['url'] . '" class="btn btn--quaternary">' . $cta['title'] . '</a>';
 }
@@ -253,7 +253,16 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 1",
+            "heading" => __("Heading", "my-text-domain"),
+            "param_name" => "heading", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+            "value" => __("Enter Text", "my-text-domain"),
+            "description" => __("Enter heading text.", "my-text-domain"),
+            'save_always' => true,
+        ),
+        array(
+            "type" => "textfield",
+            "holder" => "div",
+            "class" => "",
             "heading" => __("Stat 1 Number", "my-text-domain"),
             "param_name" => "stat_num_1", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -264,7 +273,6 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 1",
             "heading" => __("Stat 1 Name", "my-text-domain"),
             "param_name" => "stat_name_1", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -274,7 +282,6 @@ array(
         array(
             "type" => "dropdown",
             "holder" => "div",
-            "group" => "Stat 1",
             "heading" => __('Stat 1 Icon', "my-text-domain"),
             "param_name" => "stat_icon_1",
             "value" => array(
@@ -288,7 +295,6 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 2",
             "heading" => __("Stat 2 Number", "my-text-domain"),
             "param_name" => "stat_num_2", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -299,7 +305,6 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 2",
             "heading" => __("Stat 2 Name", "my-text-domain"),
             "param_name" => "stat_name_2", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -309,7 +314,6 @@ array(
         array(
             "type" => "dropdown",
             "holder" => "div",
-            "group" => "Stat 2",
             "heading" => __('Stat 2 Icon', "my-text-domain"),
             "param_name" => "stat_icon_2",
             "value" => array(
@@ -323,7 +327,6 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 3",
             "heading" => __("Stat 3 Number", "my-text-domain"),
             "param_name" => "stat_num_3", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -334,7 +337,6 @@ array(
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "group" => "Stat 3",
             "heading" => __("Stat 3 Name", "my-text-domain"),
             "param_name" => "stat_name_3", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
             "value" => __("Enter Text", "my-text-domain"),
@@ -344,7 +346,6 @@ array(
         array(
             "type" => "dropdown",
             "holder" => "div",
-            "group" => "Stat 3",
             "heading" => __('Stat 3 Icon', "my-text-domain"),
             "param_name" => "stat_icon_3",
             "value" => array(
@@ -363,11 +364,17 @@ add_shortcode('stats', 'output_stats');
 
 function output_stats($atts, $content, $tag)
 {
+$heading = $atts['heading'];
 $stat1 = $atts['stat_num_1'];
 $output = "";
 
 //Start of Parent Div
 $output .= "<div class=\"stats\">";
+
+$output .= "<h1 class=\"stats__header header header--white\">{$atts['heading']}</h1>";
+
+//Start of Stat Container Div
+$output .= "<div class=\"stats__container\">";
 
 for ($x = 1; $x <= 3; $x++) {
 //Start of Child Div
@@ -395,6 +402,9 @@ $output .= "</div>";
 //End of Child Div
 $output .= "</div>";
 }
+
+//End of Stat Container
+$output .= "</div>";
 
 //End of Parent Div
 $output .= "</div>";

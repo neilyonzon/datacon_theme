@@ -4,53 +4,62 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	font-size: 1rem;
-	line-height: $font__line-height-body;
+  color: $color__text-main;
+  font-family: $font__main;
+  font-size: 1rem;
+  line-height: $font__line-height-body;
 }
 
 @import "headings";
 @import "copy";
 
+.header {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 7rem;
 
-.callout {
-	font-size: 6rem;
-	font-weight: bold;
-	line-height: 7rem;
-
-	@include respond(phone) {
-		font-size: 3rem;
-		line-height: 5rem;
-		letter-spacing: .2rem;
-	}
-
-	&--primary {
-		color: $color-primary;
-	}
-
-	&--secondary {
-		color: $color-secondary;
-	}
-
-	&--tertiary {
-		color: $color-tertiary;
-	}
+  @include respond(phone) {
+    font-size: 4rem;
+    line-height: unset;
+  }
 }
 
+.callout {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 7rem;
+
+  @include respond(phone) {
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--secondary {
+    color: $color-secondary;
+  }
+
+  &--tertiary {
+    color: $color-tertiary;
+  }
+}
 
 .callout-2 {
-	font-size: 4rem;
+  font-size: 4rem;
 
-	&--primary {
-		color: $color-primary;
-	}
+  &--primary {
+    color: $color-primary;
+  }
 
-	&--secondary {
-		color: $color-secondary;
-	}
+  &--secondary {
+    color: $color-secondary;
+  }
 
-	&--tertiary {
-		color: $color-tertiary;
-	}
+  &--tertiary {
+    color: $color-tertiary;
+  }
 }

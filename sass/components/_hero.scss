@@ -1,81 +1,81 @@
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100vw;
-    height: 60rem;
-    padding: 6rem 10rem;
-    position: relative;
-    color: white;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100vw;
+  height: 60rem;
+  padding: 6rem 10rem;
+  position: relative;
+  color: white;
+  overflow: hidden;
 
-    @include respond(tab-port) {
-        align-items: center;
-        text-align: center;
-        padding: 4rem 2rem;
+  @include respond(tab-port) {
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    z-index: -10;
+    max-width: none;
+    width: 100%;
+
+    @include respond(tab-land) {
+      width: 1200px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-primary-gradient;
+    z-index: -7;
+  }
+
+  &__headline {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 7rem;
+
+    & > h1 {
+      margin-bottom: 0;
+
+      @include respond(phone) {
+        font-size: 4rem;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__subline {
+    font-size: 2rem;
+    color: $color-tertiary;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    width: 60%;
+
+    & > * {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: normal;
     }
 
-    &__img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: contain;
-        z-index: -10;
-        max-width: none;
-        width: 100%;
-
-        @include respond(tab-land) {
-            width: 1200px;
-        }
+    @include respond(phone) {
+      width: 90%;
     }
-
-    &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: $color-primary-gradient;
-        z-index: -7;
-    }
-
-    &__headline {
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 7rem;
-
-        &>h1 {
-            margin-bottom: 0;
-
-            @include respond(phone) {
-                font-size: 4rem;
-                line-height: normal;
-            }
-        }
-    }
-
-    &__subline {
-        font-size: 2rem;
-        color: #FFA800;
-
-        @include respond(phone) {
-            font-size: 1.6rem;
-        }
-    }
-
-    &__description {
-        font-size: 1.5rem;
-        width: 60%;
-
-        &>* {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: normal;
-        }
-
-        @include respond(phone) {
-            width: 90%;
-        }
-    }
+  }
 }
