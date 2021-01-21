@@ -35,65 +35,62 @@ get_header();
 4. Integrate PHP Scripts. 
 5. Add to Plugin 
 -->
-    <div class="about-section about-section--reverse">
-        <div class="about-section__img-column">
-            <img src="https://blush.design/api/download?shareUri=3dr9Rpj9C&s=0.3%7Ec68e80&w=800&h=800&fm=png"
-                alt="Conference Graphic" />
-        </div>
-        <div class="about-section__text-column flex-align--center headspace-s--m">
-            <div class="callout callout--primary">Data Con LA is the largest, of its kind, data conference in Southern
-                California.</div>
-            <hr class="line line--primary" />
-            <p>Spearheaded by Subash D’Souza and organized and supported by a community of volunteers, sponsors and
-                speakers, Data Con LA features the most vibrant gathering of data and technology enthusiasts in Los
-                Angeles.</p>
-            <p>Data Con LA began as Big Data Day LA in 2013, with just over 250 attendees. We have since grown to over
-                550 attendees in 2014, 950+ attendees in 2015, 1200+ attendees in 2016, and 1550+ attendees in 2017. In
-                2018, we re-branded ourselves from Big Data Day LA to Data Con LA. We also had over 1800+ attendees
-                attend. This year we expect that tally to be over 2000.</p>
-        </div>
-    </div>
 
-    <div class="stats">
-        <h1 class="stats__header header header--white">Data Con 2020 By The numbers</h1>
-        <div class="stats__container">
-            <div class="stats__col">
-                <div class="stats__content">
-                    <div class="stats__info">
-                        <div class="stats__number">200</div>
-                        <div class="stats__detail">Attendees</div>
-                    </div>
-                    <div class="stats__icon"><svg class="stats__icon">
+    <div class="topics-section">
+        <div class="topics-section__text-area">
+            <div class="topics-section__header-area">
+                <h1 class="header header--white">This Year’s Conference Topics</h1>
+            </div>
+            <span class="header header--white">=</span>
+            <div class="topics-section__topics">
+                <ul class="topics-section__list">
+                    <li>
+                        <svg class="topics-section__icon">
                             <use
                                 xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
                             </use>
-                        </svg></div>
-                </div>
-            </div>
-            <div class="stats__col">
-                <div class="stats__content">
-                    <div class="stats__info">
-                        <div class="stats__number">75</div>
-                        <div class="stats__detail">Speakers</div>
-                    </div>
-                    <div class="stats__icon"><svg class="stats__icon">
+                        </svg><span>Lorem ipsum dolor sit amet adipiscing elit</span>
+                    </li>
+                    <li> <svg class="topics-section__icon">
                             <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-mic>
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
                             </use>
-                        </svg></div>
-                </div>
-            </div>
-            <div class="stats__col">
-                <div class="stats__content">
-                    <div class="stats__info">
-                        <div class="stats__number">24</div>
-                        <div class="stats__detail">panels</div>
-                    </div>
-                    <div class="stats__icon"><svg class="stats__icon">
+                        </svg><span>Lorem ipsum dolor sit</span></li>
+                    <li>
+                        <svg class="topics-section__icon">
                             <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-movie>
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
                             </use>
-                        </svg></div>
+                        </svg>
+                        <span>Lorem adipiscing elit</span>
+                    </li>
+                    <li>
+                        <svg class="topics-section__icon">
+                            <use
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
+                            </use>
+                        </svg>
+                        <span>Lorem adipiscing elit</span>
+                    </li>
+                    <li>
+                        <svg class="topics-section__icon">
+                            <use
+                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
+                            </use>
+                        </svg>
+                        <span>Lorem adipiscing elit</span>
+                    </li>
+                </ul>
+                <p class="disclaimer">Finalized list of panels will be available</p>
+            </div>
+        </div>
+        <div class="topics-section__cta-box-area">
+            <div class="topics-section__cta-box cta-box cta-box--secondary">
+                <div class="cta-box__body">
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cta-box__cta">
+                    <a href="#" class="btn btn--secondary">BE A SPEAKER</a>
                 </div>
             </div>
         </div>

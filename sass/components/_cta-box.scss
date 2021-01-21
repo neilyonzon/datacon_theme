@@ -1,49 +1,48 @@
 .cta-box {
-    width: 52rem;
-    height: 30rem;
-    border: solid .8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+  width: 52rem;
+  height: 30rem;
+  border: solid 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 
-    @include respond(tab-land) {
-        width: 100%;
-        height: auto;
-    }
+  @include respond(tab-land) {
+    width: 100%;
+    height: auto;
+  }
 
-    @include respond(tab-port) {
-        @include remove-center-self;
-    }
+  @include respond(tab-port) {
+    @include remove-center-self;
+  }
 
-    &--primary {
-        border-color: $color-primary;
-        color: $color-primary;
-    }
+  &--primary {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
 
-    &--secondary {
-        border-color: $color-secondary;
-        color: $color-secondary;
-    }
+  &--secondary {
+    border-color: $color-secondary;
+    color: $color-secondary;
+  }
 
-    &__header {
-        font-size: 3.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        position: relative;
-        top: 2rem;
-        padding: 1.5rem;
-    }
+  &__header {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: 2rem;
+    padding: 1.5rem;
+  }
 
-    &__body {
-        width: 75%;
-    }
+  &__body {
+    width: 75%;
+  }
 
-    &__cta {
-        position: relative;
-        bottom: 1.3rem;
-        padding-bottom: 1rem;
-    }
-
+  &__cta {
+    position: relative;
+    bottom: 1.3rem;
+    padding-bottom: 1rem;
+  }
 }
