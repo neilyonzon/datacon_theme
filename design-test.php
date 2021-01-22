@@ -40,7 +40,7 @@ get_header();
         <img src="http://localhost:10003/wp-content/themes/datacon_theme/img/conference-image.jpg" alt="Conference"
             class="topics-section__image">
         <div class="topics-section__overlay"></div>
-        <hr class="topics-section--line line" />
+        <hr class="topics-section__line line" />
         <div class="topics-section__text-area">
             <div class="topics-section__header-area">
                 <h1 class="header header--white">This Year’s Conference Topics</h1>
@@ -121,6 +121,17 @@ get_header();
                     </li>
                 </ul>
                 <p class="disclaimer">Finalized list of panels will be available</p>
+            </div>
+            <hr class="line topics-section__line--mobile " />
+            <div class="topics-section__cta-box-area--mobile">
+                <div class="topics-section__cta-box cta-box cta-box--secondary">
+                    <div class="cta-box__body">
+                        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="cta-box__cta">
+                        <a href="#" class="btn btn--secondary">BE A SPEAKER</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
