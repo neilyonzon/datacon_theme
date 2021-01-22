@@ -1,80 +1,77 @@
 .footer {
-    width: 100vw;
-    height: 7rem;
-    background: $color-primary;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1.5rem 0;
-    text-transform: uppercase;
-    top: $header-height;
-    position: relative;
+  width: 100vw;
+  height: 7rem;
+  background: $color-primary;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+  top: $header-height;
+  position: relative;
 
-    @include respond(tab-land) {
-        top: $header-height-m;
-    }
+  @include respond(tab-land) {
+    top: $header-height-m;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    flex-direction: column;
+  }
+
+  &__contact {
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include respond(tab-port) {
-        height: auto;
-        flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__question {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+
+    @include respond(tab-port) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+  }
+
+  &__social-link,
+  &__social-link:visited {
+    text-decoration: none;
+    color: white;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__social-icon {
+    fill: white;
+    width: 4rem;
+    height: 4rem;
+
+    &--circle {
+      background: white;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
     }
 
-    &__contact {
-        width: 35rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include respond(tab-port) {
-            flex-direction: column;
-            margin-bottom: 1.5rem;
-        }
-
+    &--mail {
+      fill: $color-primary;
+      width: 2rem;
+      height: 2rem;
+      @include center-self;
     }
-
-
-    &__question {
-        font-size: 1.8rem;
-        color: white;
-        font-weight: bold;
-
-        @include respond(tab-port) {
-            margin-bottom: 1rem;
-        }
-    }
-
-    &__btn {
-        text-decoration: none;
-    }
-
-
-    &__social-link,
-    &__social-link:visited {
-        text-decoration: none;
-        color: white;
-
-        &:not(:last-child) {
-            margin-right: .5rem;
-        }
-    }
-
-    &__social-icon {
-        fill: white;
-        width: 4rem;
-        height: 4rem;
-
-        &--circle {
-            background: white;
-            border-radius: 50%;
-            display: inline-block;
-            position: relative;
-        }
-
-        &--mail {
-            fill: $color-primary;
-            width: 2rem;
-            height: 2rem;
-            @include center-self;
-        }
-    }
+  }
 }

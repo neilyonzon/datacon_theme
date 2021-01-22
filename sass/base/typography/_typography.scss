@@ -67,3 +67,7 @@ textarea {
     color: $color-tertiary;
   }
 }
+
+.disclaimer:before {
+  content: "*";
+}

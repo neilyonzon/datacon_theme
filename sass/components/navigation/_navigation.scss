@@ -1,295 +1,284 @@
 .main-navigation {
-    display: flex;
-    width: 100vw;
-    height: $header-height;
-    font-size: 1.4rem;
-    color: $color-black;
-    background-color: white;
-    text-transform: uppercase;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 88888;
-    top: 0;
-    box-shadow: 1px 1px 7px #D0D0D0;
+  display: flex;
+  width: 100vw;
+  height: $header-height;
+  font-size: 1.4rem;
+  color: $color-black;
+  background-color: white;
+  text-transform: uppercase;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 88888;
+  top: 0;
+  box-shadow: 1px 1px 7px #d0d0d0;
 
-    & * {
-        list-style: none;
-    }
+  & * {
+    list-style: none;
+  }
+
+  @include respond(tab-land) {
+    height: $header-height-m;
+  }
+
+  & a {
+    font-weight: bold;
 
     @include respond(tab-land) {
-        height: $header-height-m;
+      padding: 1rem;
     }
 
-    & a {
-        font-weight: bold;
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
 
-        @include respond(tab-land) {
-            padding: 1rem;
-        }
+  &__logo-img {
+    min-width: 20rem;
+    max-width: 33rem;
+    padding: 3rem;
 
-        &:hover {
-            color: $color-tertiary;
-        }
+    @include respond(tab-land) {
+      max-width: 20rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: white;
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    top: 45%;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-primary;
+      display: inline-block;
     }
 
-    &__logo-img {
-        min-width: 20rem;
-        max-width: 33rem;
-        padding: 3rem;
-
-        @include respond(tab-land) {
-            max-width: 20rem;
-        }
-
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
     }
 
-    &__checkbox {
-        display: none;
+    &::before {
+      top: -0.8rem;
     }
 
-    &__button {
-        background-color: white;
-        height: 5rem;
-        width: 5rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2000;
-        text-align: center;
-        cursor: pointer;
-        display: none;
-
-        @include respond(tab-land) {
-            display: block;
-        }
+    &::after {
+      top: 0.8rem;
     }
+  }
 
-    &__icon {
-        position: relative;
-        top: 45%;
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
 
-        &,
-        &::before,
-        &::after {
-            width: 3rem;
-            height: 2px;
-            background-color: $color-primary;
-            display: inline-block;
-        }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            transition: all .2s;
-        }
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
 
-        &::before {
-            top: -.8rem;
-        }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
 
-        &::after {
-            top: .8rem;
-        }
-
-    }
-
-    &__button:hover &__icon::before {
-        top: -1rem;
-    }
-
-    &__button:hover &__icon::after {
-        top: 1rem;
-    }
-
-    &__checkbox:checked+&__button &__icon {
-        background-color: transparent;
-    }
-
-    &__checkbox:checked+&__button &__icon::before {
-        top: 0;
-        transform: rotate(135deg);
-    }
-
-    &__checkbox:checked+&__button &__icon::after {
-        top: 0;
-        transform: rotate(-135deg);
-    }
-
-
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
 
 .nav {
-    display: flex;
-    flex: .8;
-    justify-content: space-evenly;
-    list-style: none;
+  display: flex;
+  flex: 0.8;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+
+  @include respond(tab-land) {
+    flex-direction: column;
     align-items: center;
+    width: 70vw;
+    height: 100vh;
+    display: block;
+    background: white;
+    position: fixed;
+    top: 5rem;
+    padding-top: 2rem;
+    padding-left: 0;
+    left: 0%;
+    margin-left: 0;
+    margin-top: -0.1rem;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &.nav--active {
+    @include respond(tab-land) {
+      transform: translateX(0);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+  }
+
+  & > .nav__item:not(:last-child) {
+    @include respond(tab-land) {
+      border-bottom: 0.1rem solid $color-tertiary;
+      padding-bottom: 0rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+
+  &__item {
+    height: auto;
+    text-align: center;
+    flex-shrink: 0;
+    min-width: 8rem;
+    margin: 0 0.5rem;
+    position: relative;
+
+    &--highlight {
+      background: #7de634;
+      padding: 0.7rem 1.5rem;
+    }
 
     @include respond(tab-land) {
-        flex-direction: column;
-        align-items: center;
-        width: 70vw;
-        height: 100vh;
-        display: block;
-        background: white;
-        position: fixed;
-        top: 5rem;
-        padding-top: 2rem;
-        padding-left: 0;
-        left: 0%;
-        margin-left: 0;
-        margin-top: -.1rem;
-        z-index: 9999;
-        transform: translateX(-100%);
-        transition: opacity .3s, transform .3s;
+      width: 100%;
+      margin: 0;
+      min-height: 3rem;
+      padding: 1rem;
     }
 
-    &.nav--active {
-        @include respond(tab-land) {
-            transform: translateX(0);
-            transition: opacity .3s, transform .3s;
-        }
+    @include respond(tab-port) {
+      padding: 0.5rem;
     }
+  }
 
-    &>.nav__item:not(:last-child) {
-        @include respond(tab-land) {
-            border-bottom: 0.1rem solid $color-tertiary;
-            padding-bottom: 0rem;
-            padding-left: 0rem;
-            padding-right: 0rem;
-        }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    @include respond(tab-land) {
+      width: 70%;
+      height: 100%;
+      display: inline-block;
     }
-
-
-    &__item {
-        height: auto;
-        text-align: center;
-        flex-shrink: 0;
-        min-width: 8rem;
-        margin: 0 .5rem;
-        position: relative;
-
-        &--highlight {
-            background: #7DE634;
-            padding: .7rem 1.5rem;
-        }
-
-        @include respond(tab-land) {
-            width: 100%;
-            margin: 0;
-            min-height: 3rem;
-            padding: 1rem;
-        }
-
-        @include respond(tab-port) {
-            padding: .50rem;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        color: inherit;
-
-        @include respond(tab-land) {
-            width: 70%;
-            height: 100%;
-            display: inline-block;
-        }
-    }
-
+  }
 }
 
 .subnav {
-    position: relative;
-    align-items: center;
+  position: relative;
+  align-items: center;
 
-    &__icon {
-        fill: $color-tertiary;
-        font-weight: bold;
-        margin-left: .5rem;
-        width: 1rem;
-        height: 1rem;
-        visibility: hidden;
+  &__icon {
+    fill: $color-tertiary;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    visibility: hidden;
 
-        @include respond(tab-land) {
-            position: absolute;
-            top: 22px;
-            right: 5%;
-            cursor: pointer;
-            visibility: visible;
-        }
-
-        &--collapsed {
-            transform: rotate(180deg);
-        }
+    @include respond(tab-land) {
+      position: absolute;
+      top: 22px;
+      right: 5%;
+      cursor: pointer;
+      visibility: visible;
     }
 
+    &--collapsed {
+      transform: rotate(180deg);
+    }
+  }
 
-    &__nav {
-        list-style: none;
-        position: absolute;
-        padding: 1rem;
-        transform: translateX(-50%);
-        left: 50%;
-        top: 2rem;
-        background-color: $color-tertiary;
-        background-clip: content-box;
-        visibility: hidden;
+  &__nav {
+    list-style: none;
+    position: absolute;
+    padding: 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 2rem;
+    background-color: $color-tertiary;
+    background-clip: content-box;
+    visibility: hidden;
 
-        @include respond(tab-land) {
-            visibility: visible;
-            opacity: 0;
-            max-height: 0;
-            transition: opacity 0.2s, max-height 0.2s ease-out;
-            position: relative;
-            top: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        &.subnav__nav--active {
-            @include respond(tab-land) {
-                visibility: visible;
-                height: initial;
-                position: relative;
-                transform: translate(0, 0);
-                left: 0%;
-                top: 0;
-                margin: 0;
-                padding: 0;
-            }
-        }
-
+    @include respond(tab-land) {
+      visibility: visible;
+      opacity: 0;
+      max-height: 0;
+      transition: opacity 0.2s, max-height 0.2s ease-out;
+      position: relative;
+      top: 0;
+      margin: 0;
+      padding: 0;
     }
 
-    &:focus-within .subnav__nav,
-    &:hover .subnav__nav,
-    &:hover .subnav__icon {
-        @media only screen and (min-width: 75em) {
-            visibility: visible;
-        }
+    &.subnav__nav--active {
+      @include respond(tab-land) {
+        visibility: visible;
+        height: initial;
+        position: relative;
+        transform: translate(0, 0);
+        left: 0%;
+        top: 0;
+        margin: 0;
+        padding: 0;
+      }
     }
+  }
 
-    &:hover>.nav__link {
-        color: $color-tertiary;
+  &:focus-within .subnav__nav,
+  &:hover .subnav__nav,
+  &:hover .subnav__icon {
+    @media only screen and (min-width: 75em) {
+      visibility: visible;
     }
+  }
 
+  &:hover > .nav__link {
+    color: $color-tertiary;
+  }
 
-    &__nav .nav__link {
-        padding: .6rem 1rem;
-        display: inline-block;
+  &__nav .nav__link {
+    padding: 0.6rem 1rem;
+    display: inline-block;
 
-        &:hover {
-            color: white;
-        }
+    &:hover {
+      color: white;
     }
-
-
+  }
 }
 
 body.stop-transition .nav {
-    transition: none !important;
+  transition: none !important;
 }

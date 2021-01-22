@@ -1,25 +1,113 @@
 .topics-section {
   background: $color-tertiary;
   width: 100%;
-  min-height: 70rem;
-  padding: 1rem 10rem;
+  min-height: 80rem;
+  padding-bottom: 10rem;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(phone) {
+    min-height: 20rem;
+  }
+
+  &__overlay {
+    background: $color-tertiary-bg;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--line {
+    background: white;
+    z-index: 20;
+    top: 5rem;
+    width: 90%;
+    @include horizontally-center-self;
+    position: relative;
+  }
 
   &__text-area {
     display: flex;
     justify-content: space-around;
     position: relative;
     top: 8rem;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     & > span {
       position: relative;
-      top: 10rem;
+      top: 15rem;
+      height: max-content;
+
+      @include respond(tab-port) {
+        top: 0rem;
+      }
     }
   }
 
   &__header-area {
     width: 30rem;
     text-align: center;
-    text-transform: uppercase;
+    position: relative;
+    top: 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      top: 0rem;
+    }
+
+    & > h1 {
+      text-transform: uppercase;
+    }
+
+    & > .line {
+      background: white;
+      width: 60%;
+      @include horizontally-center-self;
+      position: relative;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__cta-box-area {
+    position: relative;
+    top: 10rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__cta-box {
+    width: 40rem;
+    height: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    & p {
+      color: white;
+      font-size: 1.8;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 1;
+    top: 0rem;
+    left: 45%;
+    min-width: 120rem;
   }
 
   &__topics {
@@ -29,8 +117,9 @@
   &__list {
     padding: 0;
     list-style: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $color-secondary--dark;
+    position: relative;
 
     & > li {
       margin: 1rem;
@@ -39,27 +128,14 @@
     }
   }
 
+  & p.disclaimer {
+    color: white;
+  }
+
   &__icon {
-    flex: 0 0 7rem;
+    flex: 0 0 6rem;
     margin-right: 2rem;
     height: 7rem;
     fill: $color-secondary--dark;
-  }
-
-  &__cta-box-area {
-    position: absolute;
-    padding-right: 10rem;
-    top: 45rem;
-    left: 15rem;
-  }
-
-  &__cta-box {
-    width: 30rem;
-    height: 20rem;
-
-    & p {
-      color: white;
-      font-size: 1.8;
-    }
   }
 }
