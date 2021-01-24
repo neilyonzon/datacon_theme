@@ -835,6 +835,7 @@ html {
 .section-container {
 	width: 100%;
 	padding: 2rem 8rem;
+	margin: 0rem;
 }
 
 @media only screen and (max-width: 37.5em) {
