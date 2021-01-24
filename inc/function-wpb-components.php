@@ -1,5 +1,30 @@
 <?php
 
+
+//Icons
+
+function icons()
+{
+    return
+        array(
+        __('Audience', "my-text-domain") => 'icon-group',
+        __('Book', "my-text-domain") => 'icon-book',
+        __('Bullhorn', "my-text-domain") => 'icon-bullhorn',
+        __('Eye', "my-text-domain") => 'icon-eye',
+        __('Film', "my-text-domain") => 'icon-movie',
+        __('Hour Glass', "my-text-domain") => 'icon-hour-glass',
+        __('Man', "my-text-domain") => 'icon-man',
+        __('Message Bubble', "my-text-domain") => 'con-bubbles2',
+        __('Mic', "my-text-domain") => 'icon-mic',
+        __('Office', "my-text-domain") => 'icon-office',
+        __('Pie Chart', "my-text-domain") => 'icon-pie-chart',
+        __('Stats', "my-text-domain") => 'icon-stats-dots',
+        __('Rocket', "my-text-domain") => 'icon-rocket',
+        __('Woman', "my-text-domain") => 'icon-woman',
+        __('Users', "my-text-domain") => 'icon-users',
+        );
+}
+
 //**HERO BANNER COMPONENT
 
 add_action('vc_before_init', 'hp_hero_integrateWithVC');
@@ -871,7 +896,6 @@ array(
         "heading" => __("Content", "my-text-domain"),
         "param_name" => "content", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
         "group" => "Content",
-        "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
         "description" => __("Enter your content.", "my-text-domain"),
         'save_always' => true,
     ),
@@ -886,6 +910,7 @@ add_shortcode("content_section", "output_section");
 
 function output_section($atts, $content, $tags)
 {
+$content = wpb_js_remove_wpautop($content, true);
 $output .= "<div class=\"section-container\">";
 $output .= $content;
 $output .= "</div>";
@@ -1033,6 +1058,23 @@ add_action("vc_before_init", "topicsSection_integrateWithVC");
 
 function topicsSection_integrateWithVC() 
 {
+$icons = array(
+    __('Audience', "my-text-domain") => 'icon-group',
+    __('Book', "my-text-domain") => 'icon-book',
+    __('Bullhorn', "my-text-domain") => 'icon-bullhorn',
+    __('Eye', "my-text-domain") => 'icon-eye',
+    __('Film', "my-text-domain") => 'icon-movie',
+    __('Hour Glass', "my-text-domain") => 'icon-hour-glass',
+    __('Man', "my-text-domain") => 'icon-man',
+    __('Message Bubble', "my-text-domain") => 'con-bubbles2',
+    __('Mic', "my-text-domain") => 'icon-mic',
+    __('Office', "my-text-domain") => 'icon-office',
+    __('Pie Chart', "my-text-domain") => 'icon-pie-chart',
+    __('Stats', "my-text-domain") => 'icon-stats-dots',
+    __('Rocket', "my-text-domain") => 'icon-rocket',
+    __('Woman', "my-text-domain") => 'icon-woman',
+    __('Users', "my-text-domain") => 'icon-users',
+);
 vc_map(
 array(
 "name" => __("Topics Section", "my-text-domain"),
@@ -1108,11 +1150,7 @@ array(
         "holder" => "div",
         "heading" => __('Topic 1 Icon', "my-text-domain"),
         "param_name" => "topic_icon_1",
-        "value" => array(
-            __('Audience', "my-text-domain") => 'icon-group',
-            __('Mic', "my-text-domain") => 'icon-mic',
-            __('Film', "my-text-domain") => 'icon-movie',
-        ),
+        "value" => icons(),
         'save_always' => true,
     ),
     array(
@@ -1130,11 +1168,7 @@ array(
         "holder" => "div",
         "heading" => __('Topic 2 Icon', "my-text-domain"),
         "param_name" => "topic_icon_2",
-        "value" => array(
-            __('Audience', "my-text-domain") => 'icon-group',
-            __('Mic', "my-text-domain") => 'icon-mic',
-            __('Film', "my-text-domain") => 'icon-movie',
-        ),
+        "value" => icons(),
         'save_always' => true,
     ),
     array(
@@ -1152,11 +1186,7 @@ array(
         "holder" => "div",
         "heading" => __('Topic 3 Icon', "my-text-domain"),
         "param_name" => "topic_icon_3",
-        "value" => array(
-            __('Audience', "my-text-domain") => 'icon-group',
-            __('Mic', "my-text-domain") => 'icon-mic',
-            __('Film', "my-text-domain") => 'icon-movie',
-        ),
+        "value" => icons(),
         'save_always' => true,
     ),
     array(
@@ -1174,11 +1204,7 @@ array(
         "holder" => "div",
         "heading" => __('Topic 4 Icon', "my-text-domain"),
         "param_name" => "topic_icon_4",
-        "value" => array(
-            __('Audience', "my-text-domain") => 'icon-group',
-            __('Mic', "my-text-domain") => 'icon-mic',
-            __('Film', "my-text-domain") => 'icon-movie',
-        ),
+        "value" => icons(),
         'save_always' => true,
     ),
     array(
@@ -1196,11 +1222,7 @@ array(
         "holder" => "div",
         "heading" => __('Topic 5 Icon', "my-text-domain"),
         "param_name" => "topic_icon_5",
-        "value" => array(
-            __('Audience', "my-text-domain") => 'icon-group',
-            __('Mic', "my-text-domain") => 'icon-mic',
-            __('Film', "my-text-domain") => 'icon-movie',
-        ),
+        "value" => icons(),
         'save_always' => true,
     ),
     array(
@@ -1259,7 +1281,7 @@ if ($ctaDescription !='' && $ctaLink['url'] !='') {
 
     if ($ctaLink['url'] != '') {
         $output .= '<div class="cta-box__cta">';
-        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--quaternary">' . $ctaLink['title'] . '</a>';
+        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary">' . $ctaLink['title'] . '</a>';
         $output .= '</div>';
     }
 
@@ -1297,7 +1319,7 @@ if ($ctaDescription !='' && $ctaLink['url'] !='') {
 
     if ($ctaLink['url'] != '') {
         $output .= '<div class="cta-box__cta">';
-        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary>' . $ctaLink['title'] . '</a>';
+        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary">' . $ctaLink['title'] . '</a>';
         $output .= '</div>';
     }
 
