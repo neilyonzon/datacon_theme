@@ -23,8 +23,36 @@ textarea {
     line-height: unset;
   }
 
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
   &--white {
     color: #fff;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--secondary {
+    color: $color-secondary;
+  }
+
+  &--dark {
+    color: $color__text-main;
+  }
+
+  &--solo {
+    padding: 0.5rem 8rem 0.2rem 8rem;
+
+    @include respond(phone) {
+      padding: 0.5rem 2rem 0.1rem 2rem;
+    }
   }
 }
 
