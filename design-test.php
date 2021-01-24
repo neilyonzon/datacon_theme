@@ -37,11 +37,18 @@ get_header();
 -->
 
     <div class="topics-section">
+
+
         <img src="http://localhost:10003/wp-content/themes/datacon_theme/img/conference-image.jpg" alt="Conference"
             class="topics-section__image">
         <div class="topics-section__overlay"></div>
+
+
         <hr class="topics-section__line line" />
+
         <div class="topics-section__text-area">
+
+            <!-- Header -->
             <div class="topics-section__header-area">
                 <h1 class="header header--white">This Year’s Conference Topics</h1>
                 <hr class="line" />
@@ -56,7 +63,11 @@ get_header();
                     </div>
                 </div>
             </div>
+
+
             <span class="header header--white">=</span>
+
+            <!-- Topics -->
             <div class="topics-section__topics">
                 <ul class="topics-section__list">
                     <li>
@@ -64,7 +75,8 @@ get_header();
                             <use
                                 xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
                             </use>
-                        </svg><span>Lorem ipsum dolor sit amet adipiscing elit</span>
+                        </svg>
+                        <span>Lorem ipsum dolor sit amet adipiscing elit</span>
                     </li>
                     <li> <svg class="topics-section__icon">
                             <use
@@ -122,7 +134,11 @@ get_header();
                 </ul>
                 <p class="disclaimer">Finalized list of panels will be available</p>
             </div>
+
             <hr class="line topics-section__line--mobile " />
+
+
+            <!-- CTA -->
             <div class="topics-section__cta-box-area--mobile">
                 <div class="topics-section__cta-box cta-box cta-box--secondary">
                     <div class="cta-box__body">
@@ -133,8 +149,14 @@ get_header();
                     </div>
                 </div>
             </div>
+
+
         </div>
+
     </div>
+
+
+
 </main>
 
 <?php
