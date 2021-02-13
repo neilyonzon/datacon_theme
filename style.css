@@ -644,14 +644,13 @@ a.btn {
 	color: white;
 	background: #169fff;
 	border: none;
-	border-radius: 7px;
 	padding: 1rem 1.5rem;
 	cursor: pointer;
 }
 
 .btn:hover,
 a.btn:hover {
-	opacity: .8;
+	opacity: 0.8;
 }
 
 .btn--primary,

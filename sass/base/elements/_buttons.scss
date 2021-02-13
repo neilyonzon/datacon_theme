@@ -20,42 +20,40 @@
 // 	}
 // }
 
-
 .btn,
 a.btn {
-	font-size: 1.6rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: white;
-	background: $color-primary;
-	border: none;
-	border-radius: 7px;
-	padding: 1rem 1.5rem;
-	cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background: $color-primary;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
 
-	&:hover {
-		opacity: .8;
-	}
+  &:hover {
+    opacity: 0.8;
+  }
 
-	&--primary {
-		background: $color-primary;
-	}
+  &--primary {
+    background: $color-primary;
+  }
 
-	&--secondary {
-		background: $color-secondary;
-	}
+  &--secondary {
+    background: $color-secondary;
+  }
 
-	&--tertiary {
-		background: $color-tertiary;
-	}
+  &--tertiary {
+    background: $color-tertiary;
+  }
 
-	&--quaternary {
-		background: $color-quaternary;
-	}
+  &--quaternary {
+    background: $color-quaternary;
+  }
 
-	&--white {
-		background: white;
-		color: $color-primary;
-	}
+  &--white {
+    background: white;
+    color: $color-primary;
+  }
 }

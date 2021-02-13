@@ -56,12 +56,14 @@ function footer_cta_prompt() {
 
 function footer_btn_text() {
     $btnText = esc_attr(get_option( 'btn_text'));
-    echo '<input type="text" name="btn_text" value="'.$btnText.'" placeholder=""/>';
+    echo '<input type="text" name="btn_text" value="'.$btnText.'" placeholder="">';
 }
 
 function footer_btn_url() {
     $btnurl = esc_attr(get_option('btn_url'));
-    echo '<input type="text" name="btn_url" value="'.$btnurl.'" placeholder=""/>';
+    echo '<input type="text" name="btn_url" value="'.$btnurl.'" placeholder="" aria-describedby="btn-url-helper-text"/>
+         <p class="btn-url-helper-text" aria-hidden="true">If using an email, prepend email with "mailto" e.g. mailto:mailto:subash@dataconla.com</p>'
+            ;
 }
 
 //Social URL Functions
