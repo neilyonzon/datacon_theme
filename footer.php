@@ -19,6 +19,7 @@ $youtubeUrl = esc_attr(get_option('youtube_link'));
 $mailUrl = esc_attr(get_option('mail_link'));
 
 ?>
+<div class="footer-spacer"></div>
 <div id="modal-background"></div>
 <footer id="colophon" class="site-footer footer">
     <div class="footer__contact">

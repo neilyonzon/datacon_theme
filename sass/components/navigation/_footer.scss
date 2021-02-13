@@ -8,12 +8,7 @@
   padding: 1.5rem 0;
   text-transform: uppercase;
   bottom: 0;
-  top: $header-height;
-  position: relative;
-
-  @include respond(tab-land) {
-    top: $header-height-m;
-  }
+  position: absolute;
 
   @include respond(tab-port) {
     height: auto;
@@ -77,5 +72,13 @@
       height: 2rem;
       @include center-self;
     }
+  }
+}
+
+.footer-spacer {
+  height: 15rem;
+
+  @include respond(tab-port) {
+    height: 15rem;
   }
 }

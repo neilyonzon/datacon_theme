@@ -560,6 +560,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+	height: 100%;
 }
 
 .body-container {
@@ -905,6 +906,7 @@ html {
 .profile-grid {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	height: auto;
 	width: 100%;
 }
@@ -1296,14 +1298,7 @@ body.stop-transition .nav {
 	padding: 1.5rem 0;
 	text-transform: uppercase;
 	bottom: 0;
-	top: 8rem;
-	position: relative;
-}
-
-@media only screen and (max-width: 75em) {
-	.footer {
-		top: 5rem;
-	}
+	position: absolute;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1376,6 +1371,16 @@ body.stop-transition .nav {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.footer-spacer {
+	height: 15rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.footer-spacer {
+		height: 15rem;
+	}
 }
 
 /* Posts and pages
