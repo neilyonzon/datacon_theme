@@ -61,7 +61,7 @@ if (!function_exists('datacon_refresh_setup')):
 
         // Require function with WP Bakery Components
 
-        require get_template_directory() . '/inc/function-wpb-components.php';
+        require get_template_directory() . '/inc/vc-components/index.php';
 
         /*
          * Switch default core markup for search form, comment form, and comments
