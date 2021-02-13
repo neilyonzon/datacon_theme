@@ -103,10 +103,20 @@
 
     &--primary {
       background: $color-primary-gradient;
+
+      @include respond(phone) {
+        background: $color-primary;
+        opacity: 0.9;
+      }
     }
 
     &--secondary {
       background: $color-secondary-gradient;
+
+      @include respond(phone) {
+        background: $color-secondary;
+        opacity: 0.9;
+      }
     }
   }
 }

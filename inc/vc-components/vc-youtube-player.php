@@ -7,12 +7,12 @@ function video_player_integrateWithVC()
 {
 vc_map(
 array(
-"name" => __("Video Player Full-Width", "my-text-domain"),
+"name" => __("YouTube Video Player", "my-text-domain"),
 "base" => "video_player",
 "icon" => get_template_directory_uri . "",
 "category" => __("Components", "my-text-domain"),
 "params" => array(
-    array(
+    array(  
         "type" => "textfield",
         "holder" => "div",
         "class" => "",

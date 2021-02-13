@@ -7,6 +7,7 @@
   align-items: center;
   padding: 1.5rem 0;
   text-transform: uppercase;
+  bottom: 0;
   top: $header-height;
   position: relative;
 
@@ -60,8 +61,11 @@
     width: 4rem;
     height: 4rem;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     &--circle {
-      background: white;
       border-radius: 50%;
       display: inline-block;
       position: relative;
