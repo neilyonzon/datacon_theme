@@ -906,7 +906,7 @@ html {
 .profile-grid {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	height: auto;
 	width: 100%;
 }
