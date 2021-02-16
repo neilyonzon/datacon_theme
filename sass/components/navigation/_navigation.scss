@@ -231,6 +231,7 @@
     background-color: $color-tertiary;
     background-clip: content-box;
     visibility: hidden;
+    white-space: nowrap;
 
     @include respond(tab-land) {
       visibility: visible;
