@@ -211,7 +211,7 @@ if ($ctaDescription !='' && $ctaLink['url'] !='') {
 
     if ($ctaLink['url'] != '') {
         $output .= '<div class="cta-box__cta">';
-        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary">' . $ctaLink['title'] . '</a>';
+        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary-dark">' . $ctaLink['title'] . '</a>';
         $output .= '</div>';
     }
 
@@ -241,7 +241,7 @@ $output .= '</div>';
 //Mobile CTA
 if ($ctaDescription !='' && $ctaLink['url'] !='') {
     $output .= '<div class="topics-section__cta-box-area--mobile">';
-    $output .= '<div class="topics-section__cta-box cta-box cta-box--secondary">';
+    $output .= '<div class="topics-section__cta-box cta-box cta-box--secondary ">';
     
     $output .= '<div class="cta-box__body">';
     $output .= '<p class="paragraph">'.$ctaDescription.'</p>';
@@ -249,7 +249,7 @@ if ($ctaDescription !='' && $ctaLink['url'] !='') {
 
     if ($ctaLink['url'] != '') {
         $output .= '<div class="cta-box__cta">';
-        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary">' . $ctaLink['title'] . '</a>';
+        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary-dark">' . $ctaLink['title'] . '</a>';
         $output .= '</div>';
     }
 

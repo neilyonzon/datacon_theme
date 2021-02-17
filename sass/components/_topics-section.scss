@@ -125,10 +125,7 @@
     & p {
       color: white;
       font-size: 1.8;
-
-      @include respond(tab-port) {
-        font-weight: bold;
-      }
+      font-weight: 400;
     }
   }
 
@@ -175,6 +172,7 @@
 
   & p.disclaimer {
     color: white;
+    font-weight: 400;
 
     @include respond(tab-port) {
       text-align: center;

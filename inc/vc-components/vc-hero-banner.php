@@ -134,7 +134,7 @@ $output .= $content;
 $output .= '</div>';
 }
 if ($cta['url'] != '') {
-$output .= ' <a href="' . $cta['url'] . '" class="btn btn--quaternary">' . $cta['title'] . '</a>';
+$output .= ' <a href="' . $cta['url'] . '" class="btn btn--secondary">' . $cta['title'] . '</a>';
 }
 $output .= '</div>';
 return $output;

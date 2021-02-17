@@ -44,6 +44,10 @@ a.btn {
     background: $color-secondary;
   }
 
+  &--secondary-dark {
+    background: $color-secondary--dark;
+  }
+
   &--tertiary {
     background: $color-tertiary;
   }

@@ -19,7 +19,8 @@
   position: relative;
 
   @include respond(phone) {
-    width: 17rem;
+    width: 16rem;
+    margin-right: 3.5rem;
   }
 
   &__img {
@@ -38,6 +39,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
+
+    @include respond(phone) {
+      top: 13rem;
+    }
   }
 
   &__title {
