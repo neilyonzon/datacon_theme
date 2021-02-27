@@ -1,5 +1,5 @@
 .topics-section {
-  background: $color-tertiary;
+  background: white;
   width: 100%;
   min-height: 80rem;
   padding-bottom: 10rem;
@@ -11,7 +11,7 @@
   }
 
   &__overlay {
-    background: $color-tertiary-bg;
+    background: $color-gray-bg;
     z-index: 10;
     position: absolute;
     width: 100%;
@@ -19,7 +19,7 @@
   }
 
   &__line {
-    background: white;
+    background: $color-black;
     z-index: 20;
     top: 5rem;
     width: 90%;
@@ -35,7 +35,7 @@
         width: 90%;
         @include horizontally-center-self;
         position: relative;
-        background: white;
+        background: $color-black;
       }
     }
   }
@@ -83,7 +83,7 @@
     }
 
     & > .line {
-      background: white;
+      background: $color-black;
       width: 60%;
       @include horizontally-center-self;
       position: relative;
@@ -123,7 +123,7 @@
     position: relative;
 
     & p {
-      color: white;
+      color: $color-black;
       font-size: 1.8;
       font-weight: 400;
     }
@@ -171,7 +171,7 @@
   }
 
   & p.disclaimer {
-    color: white;
+    color: $color-black;
     font-weight: 400;
 
     @include respond(tab-port) {

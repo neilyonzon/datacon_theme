@@ -50,7 +50,7 @@ get_header();
 
             <!-- Header -->
             <div class="topics-section__header-area">
-                <h1 class="header header--white">This Year’s Conference Topics</h1>
+                <h1 class="header header--dark">This Year’s Conference Topics</h1>
                 <hr class="line" />
                 <div class="topics-section__cta-box-area">
                     <div class="topics-section__cta-box cta-box cta-box--secondary">

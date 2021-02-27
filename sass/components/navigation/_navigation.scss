@@ -29,7 +29,7 @@
     }
 
     &:hover {
-      color: $color-tertiary;
+      color: $color-primary;
     }
   }
 
@@ -152,7 +152,7 @@
 
   & > .nav__item:not(:last-child) {
     @include respond(tab-land) {
-      border-bottom: 0.1rem solid $color-tertiary;
+      border-bottom: 0.1rem solid $color-primary;
       padding-bottom: 0rem;
       padding-left: 0rem;
       padding-right: 0rem;
@@ -201,7 +201,7 @@
   align-items: center;
 
   &__icon {
-    fill: $color-tertiary;
+    fill: $color-primary;
     font-weight: bold;
     margin-left: 0.5rem;
     width: 1rem;
@@ -228,7 +228,7 @@
     transform: translateX(-50%);
     left: 50%;
     top: 2rem;
-    background-color: $color-tertiary;
+    background-color: white;
     background-clip: content-box;
     visibility: hidden;
     white-space: nowrap;
@@ -267,7 +267,7 @@
   }
 
   &:hover > .nav__link {
-    color: $color-tertiary;
+    color: $color-primary;
   }
 
   &__nav .nav__link {
@@ -275,7 +275,7 @@
     display: inline-block;
 
     &:hover {
-      color: white;
+      color: $color-primary;
     }
   }
 }

@@ -198,7 +198,7 @@ $output .= '<div class="topics-section__text-area">';
 //Header 
 $output .= '<div class="topics-section__header-area">';
 if ($heading != "") {
-    $output .= '<h1 class="header header--white">'.$heading.'</h1>';
+    $output .= '<h1 class="header header--dark">'.$heading.'</h1>';
     $output .= '<hr class="line" />';
 }
 if ($ctaDescription !='' && $ctaLink['url'] !='') {
@@ -220,7 +220,7 @@ if ($ctaDescription !='' && $ctaLink['url'] !='') {
 }
 $output .= '</div>';
 
-$output .= '<span class="header header--white">=</span>';
+$output .= '<span class="header header--dark">=</span>';
 
 //Topics
 $output .= '<div class="topics-section__topics">';

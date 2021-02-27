@@ -19,7 +19,7 @@
   position: relative;
 
   @include respond(phone) {
-    width: 16rem;
+    width: 13rem;
     margin-right: 3.5rem;
   }
 
@@ -41,13 +41,19 @@
     -webkit-box-orient: vertical;
 
     @include respond(phone) {
-      top: 13rem;
+      font-size: 2rem;
+      top: 11rem;
     }
   }
 
   &__title {
     margin-bottom: 0.5rem;
     margin-top: 7.5rem;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+      margin-top: 6rem;
+    }
   }
 
   &__social-icons-container {
