@@ -20,15 +20,15 @@
 @import "elements/buttons";
 @import "elements/fields";
 
-
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 1 rem = 10px | 10/16px = 62.5%
-
+  box-sizing: border-box;
+  font-size: 62.5%; // 1 rem = 10px | 10/16px = 62.5%
+  overflow-x: hidden;
+  color: $color-black;
 }
