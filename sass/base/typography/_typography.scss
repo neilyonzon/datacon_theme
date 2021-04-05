@@ -13,6 +13,10 @@ textarea {
 @import "headings";
 @import "copy";
 
+.disclaimer {
+  font-size: 1.6rem;
+}
+
 .disclaimer:before {
   content: "*";
 }

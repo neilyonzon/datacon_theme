@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name:  */
 
 /**
  * The template for displaying all landing page

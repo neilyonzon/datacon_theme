@@ -35,11 +35,6 @@ $color-primary-gradient: linear-gradient(
   rgba(0, 77, 133, 0.65)
 );
 
-// $color-primary-gradient: linear-gradient(
-//   to right,
-//   rgb(19, 151, 245),
-//   rgba(22, 140, 255, 0.5)
-// );
 $color-secondary-gradient: linear-gradient(
   to right,
   rgba(164, 82, 255, 1),
@@ -47,3 +42,5 @@ $color-secondary-gradient: linear-gradient(
 );
 
 $color-gray-bg: rgba(228, 236, 245, 0.886);
+
+$color-light-blue-bg: #f4faff;

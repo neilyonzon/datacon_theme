@@ -368,8 +368,8 @@ jQuery(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/neilyonzon2/Local Sites/data-con-la/app/public/wp-content/themes/datacon-refresh/js/index.js */"./js/index.js");
-module.exports = __webpack_require__(/*! /Users/neilyonzon2/Local Sites/data-con-la/app/public/wp-content/themes/datacon-refresh/sass/style.scss */"./sass/style.scss");
+__webpack_require__(/*! /Users/neilyonzon/Local Sites/data-con-la/app/public/wp-content/themes/datacon_theme/js/index.js */"./js/index.js");
+module.exports = __webpack_require__(/*! /Users/neilyonzon/Local Sites/data-con-la/app/public/wp-content/themes/datacon_theme/sass/style.scss */"./sass/style.scss");
 
 
 /***/ })

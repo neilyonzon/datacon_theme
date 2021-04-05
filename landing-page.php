@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Landing Page */
+/* Template Name: Landing Page (No Header Banner) */
 
 /**
  * The template for displaying all landing page

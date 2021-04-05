@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: */
+/* Template Name: Design Test */
 
 /**
  * The template for displaying all landing page
@@ -19,140 +19,111 @@ get_header();
 ?>
 
 <main id="primary" class="main-content">
-    <?php 
-// while (have_posts()):
-//     the_post(); 
-
-//     get_template_part('template-parts/content', 'page');
-
-// endwhile; 
-// End of the Loop.
-?>
-    <!-- 
-1. Create Flex Container 
-2. Create Flex Items 
-3. Style with CSS
-4. Integrate PHP Scripts. 
-5. Add to Plugin 
--->
+    <?php ?>
 
     <div class="topics-section">
-
-
-        <img src="http://localhost:10003/wp-content/themes/datacon_theme/img/conference-image.jpg" alt="Conference"
-            class="topics-section__image">
-        <div class="topics-section__overlay"></div>
-
-
-        <hr class="topics-section__line line" />
-
-        <div class="topics-section__text-area">
-
+        <hr class="topics-section__line line--primary" />
+        <div class="topics-section__topics">
             <!-- Header -->
-            <div class="topics-section__header-area">
-                <h1 class="header header--dark">This Year’s Conference Topics</h1>
-                <hr class="line" />
-                <div class="topics-section__cta-box-area">
-                    <div class="topics-section__cta-box cta-box cta-box--secondary">
-                        <div class="cta-box__body">
-                            <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="cta-box__cta">
-                            <a href="#" class="btn btn--secondary">BE A SPEAKER</a>
-                        </div>
-                    </div>
+            <h1 class="topics-section__header header header--primary">This Year’s Conference Topics</h1>
+            <!-- Topics -->
+            <ul class="topics-section__list">
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem ipsum dolor sit amet adipiscing elit</span>
+                </li>
+                <li class="topics-section__list-item"> <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg><span>Lorem ipsum dolor sit</span></li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit</span>
+                </li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit</span>
+                </li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit adipiscing</span>
+                </li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit adipiscing</span>
+                </li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit adipiscing</span>
+                </li>
+                <li class="topics-section__list-item">
+                    <svg class="topics-section__icon">
+                        <use xlink:href=<?php echo THEME_IMG_PATH  ?>/sprite.svg#icon-group>
+                        </use>
+                    </svg>
+                    <span>Lorem adipiscing elit adipiscing</span>
+                </li>
+            </ul>
+            <p class="disclaimer">Finalized list of panels will be available</p>
+        </div>
+
+        <div class="topics-section__speakers">
+            <h3 class="header h3">2020 Speaker Spotlight</h3>
+            <div class="topics-section__speaker-grid">
+                <div class="topics-section__speaker-item">
+                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                        alt="placeholder" />
+                    <p class="topics-section__speaker-panel">Speaker for 2020’s
+                        ‘Tech for Good’</p>
+                    <span class="topics-section__speaker-name">SUBASH D’SOUZA</span><br />
+                    <span class="topics-section__speaker-title">Founder, Data Con LA </span>
+                </div>
+                <div class="topics-section__speaker-item">
+                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                        alt="placeholder" />
+                    <p class="topics-section__speaker-panel">Speaker for 2020’s
+                        ‘Tech for Good’</p>
+                    <span class="topics-section__speaker-name">SUBASH D’SOUZA</span><br />
+                    <span class="topics-section__speaker-title">Founder, Data Con LA </span>
+                </div>
+                <div class="topics-section__speaker-item">
+                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                        alt="placeholder" />
+                    <p class="topics-section__speaker-panel">Speaker for 2020’s
+                        ‘Tech for Good’</p>
+                    <span class="topics-section__speaker-name">SUBASH D’SOUZA</span><br />
+                    <span class="topics-section__speaker-title">Founder, Data Con LA </span>
                 </div>
             </div>
-
-
-            <span class="header header--white">=</span>
-
-            <!-- Topics -->
-            <div class="topics-section__topics">
-                <ul class="topics-section__list">
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem ipsum dolor sit amet adipiscing elit</span>
-                    </li>
-                    <li> <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg><span>Lorem ipsum dolor sit</span></li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit</span>
-                    </li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit</span>
-                    </li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit adipiscing</span>
-                    </li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit adipiscing</span>
-                    </li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit adipiscing</span>
-                    </li>
-                    <li>
-                        <svg class="topics-section__icon">
-                            <use
-                                xlink:href=http://localhost:10003/wp-content/themes/datacon_theme/img/sprite.svg#icon-group>
-                            </use>
-                        </svg>
-                        <span>Lorem adipiscing elit adipiscing</span>
-                    </li>
-                </ul>
-                <p class="disclaimer">Finalized list of panels will be available</p>
-            </div>
-
-            <hr class="line topics-section__line--mobile " />
-
-
-            <!-- CTA -->
-            <div class="topics-section__cta-box-area--mobile">
-                <div class="topics-section__cta-box cta-box cta-box--secondary">
+            <div class="topics-section__cta-box-area">
+                <div class="topics-section__cta-box cta-box cta-box--primary">
                     <div class="cta-box__body">
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="cta-box__cta">
-                        <a href="#" class="btn btn--secondary">BE A SPEAKER</a>
+                        <a href="#" class="btn btn--primary">BE A SPEAKER</a>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
 
