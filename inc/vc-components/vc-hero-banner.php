@@ -83,6 +83,31 @@ array(
         "description" => __("Choose image for background.", "my-text-domain"),
         'save_always' => true,
     ),
+    array(
+        "type" => "dropdown",
+        "holder" => "div",
+        "class" => "",
+        "heading" => __('Color Theme', "my-text-domain"),
+        "param_name" => "color",
+        "value" => array(
+            __('Blue', "my-text-domain") => 'primary',
+            __('Purple', "my-text-domain") => 'secondary',
+        ),
+        'save_always' => true,
+    ),
+    array(
+        "type" => "checkbox",
+        "holder" => "div",
+        "class" => "",
+        "heading" => __("Short Hero", "my-text-domain"),
+        "param_name" => "short", 
+        "value" => array(
+            __('True', "my-text-domain") => 'true',
+        ),
+        "description" => __("Check to use short hero banner.", "my-text-domain"),
+        'save_always' => true,
+        'std' => "",
+    ),
 ),
 )
 );
@@ -99,13 +124,19 @@ $sub_heading = esc_attr($atts['sub_heading']);
 $cta = vc_build_link($atts['cta']);
 $image_src = wp_get_attachment_image_src($atts['bg_image'], 'full')[0];
 $image_alt = get_post_meta($atts['bg_image'], '_wp_attachment_image_alt', true);
+$color = $atts['color'];
 $output = '';
-$output .= '<div class="hero">';
+//Start of Parent Div
+if ($atts['short'] == 'true') {
+    $output .= '<div class="hero hero--short">';
+} else {
+    $output .= '<div class="hero">';
+}
 if ($image_src != '') {
 $output .= '<img src="' . $image_src . '" alt="' . $image_alt . '" class="hero__img">';
 }
 $output .= '
-<div class="hero__overlay"></div>
+<div class="hero__overlay hero__overlay--'. $color .'"></div>
 <div class="hero__headline">
 <h1>';
 

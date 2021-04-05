@@ -10,6 +10,11 @@
   color: white;
   overflow: hidden;
 
+  &--short {
+    height: 45rem;
+    padding: 2rem 10rem;
+  }
+
   @include respond(tab-port) {
     align-items: center;
     text-align: center;
@@ -38,6 +43,10 @@
     height: 100%;
     background: $color-primary-gradient;
     z-index: -7;
+
+    &--secondary {
+      background: $color-secondary-gradient;
+    }
 
     @include respond(phone) {
       background: $color-primary-dark;
@@ -71,7 +80,7 @@
 
   &__description {
     font-size: 2.2rem;
-    width: 55rem;
+    width: 60rem;
 
     & > * {
       color: white;

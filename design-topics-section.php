@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: Design Test */
+/* Template Name: Design Test Topics */
 
 /**
  * The template for displaying all landing page

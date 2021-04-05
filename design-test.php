@@ -36,16 +36,14 @@ get_header();
 5. Add to Plugin 
 -->
 
-    <h1 class="header header--solo header--primary">Header Center</h1>
-
-    <h1 class="header header--solo header--left header--primary">Header Center</h1>
-
-    <h1 class="header header--solo header--right header--primary">Header Center</h1>
-
-    <h1 class="header header--solo header--primary">Header Blue</h1>
-
-    <h1 class="header header--solo header--secondary">Header Purple</h1>
-
+    <div class="hero hero--short"><img src="https://data-con-la.local/wp-content/uploads/2021/02/hero_los_angeles.png"
+            alt="Los Angeles" class="hero__img">
+        <div class="hero__overlay hero__overlay--secondary"></div>
+        <div class="hero__headline">
+            <h1>Thank You<br>For Attending<br>Data Con 2020!</h1>
+        </div>
+        <div class="hero__description">Check out the recap video, panel overview and more below!</div>
+    </div>
 </main>
 
 <?php
