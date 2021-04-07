@@ -646,11 +646,12 @@ p,
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #169fff;
+	font-size: 1.6rem;
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #a452ff;
 }
 
 a:focus {
@@ -659,6 +660,18 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.link--primary {
+	color: #169fff;
+}
+
+.link--secondary {
+	color: #a452ff;
+}
+
+.link--secondary:hover {
+	color: #169fff;
 }
 
 /* Forms
@@ -2464,6 +2477,89 @@ body.stop-transition .nav {
 .listing-feature__item-name {
 	display: block;
 	text-transform: uppercase;
+}
+
+/* Panels Grid
+--------------------------------------------- */
+.panels {
+	background-repeat: no-repeat;
+	background-blend-mode: lighten;
+	position: relative;
+	overflow: hidden;
+}
+
+.panels__header {
+	padding-top: 5rem;
+	padding-left: 10rem;
+	position: relative;
+	z-index: 9;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.panels__header {
+		padding-top: 2.5rem;
+		padding-left: 3rem;
+	}
+}
+
+.panels--primary {
+	background-color: #68b9fc;
+}
+
+.panels--secondary {
+	background-color: #a452ff;
+}
+
+.panels__overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: 0;
+	opacity: 0.9;
+}
+
+.panels__items-container {
+	padding: 1rem 10rem;
+	z-index: 9;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.panels__items-container {
+		padding: 3rem 2.5rem;
+	}
+}
+
+.panels__item {
+	width: 30%;
+	margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.panels__item {
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.panels__item {
+		width: 100%;
+	}
+}
+
+.panels__item-title {
+	font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.panels__item-description > p {
+		font-size: 1.6rem;
+	}
 }
 
 #modal-background {

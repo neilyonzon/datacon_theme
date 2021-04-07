@@ -1,5 +1,6 @@
 a {
-  color: $color__link;
+  color: $color-primary;
+  font-size: 1.6rem;
 
   // &:visited {
   // 	color: $color-black;
@@ -8,7 +9,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $color__link-hover;
+    color: $color-secondary;
   }
 
   &:focus {
@@ -18,5 +19,19 @@ a {
   &:hover,
   &:active {
     outline: 0;
+  }
+}
+
+.link {
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--secondary {
+    color: $color-secondary;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
