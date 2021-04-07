@@ -43,7 +43,7 @@ get_header();
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     </p>
                 </div>
-                <a href="#" class="link--primary">Learn More</a>
+                <!-- <a href="#" class="link--primary">Learn More</a> -->
             </div>
             <div class="panels__item">
                 <h4 class="panels__item-title">Think in Color</h4>
@@ -53,7 +53,7 @@ get_header();
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     </p>
                 </div>
-                <a href="#" class="link--primary">Learn More</a>
+                <!-- <a href="#" class="link--primary">Learn More</a> -->
             </div>
             <div class="panels__item">
                 <h4 class="panels__item-title">Data 4 Good</h4>
@@ -65,7 +65,7 @@ get_header();
                         industry
                         leaders as part of the advisory board.</p>
                 </div>
-                <a href="#" class="link--primary">Learn More</a>
+                <!-- <a href="#" class="link--primary">Learn More</a> -->
             </div>
             <div class="panels__item">
                 <h4 class="panels__item-title">Data 4 Good</h4>
@@ -77,7 +77,7 @@ get_header();
                         industry
                         leaders as part of the advisory board.</p>
                 </div>
-                <a href="#" class="link--primary">Learn More</a>
+                <!-- <a href="#" class="link--primary">Learn More</a> -->
             </div>
             <i class="panels__item"></i>
             <i class="panels__item"></i>

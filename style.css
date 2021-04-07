@@ -2486,6 +2486,7 @@ body.stop-transition .nav {
 	background-blend-mode: lighten;
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 3rem;
 }
 
 .panels__header {
@@ -2560,6 +2561,85 @@ body.stop-transition .nav {
 	.panels__item-description > p {
 		font-size: 1.6rem;
 	}
+}
+
+/* Listing Highlight
+--------------------------------------------- */
+.listing-highlight {
+	padding: 5rem 10rem;
+	padding-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.listing-highlight {
+		padding: 0rem 2.5rem;
+		margin-bottom: 15rem;
+	}
+}
+
+.listing-highlight--primary > .header {
+	color: #169fff;
+}
+
+.listing-highlight--primary a {
+	color: #169fff;
+}
+
+.listing-highlight--primary > .listing-highlight__list {
+	background: rgba(22, 159, 255, 0.05);
+}
+
+.listing-highlight--secondary > .header {
+	color: #a452ff;
+}
+
+.listing-highlight--secondary a.link {
+	color: #a452ff;
+}
+
+.listing-highlight--secondary > .listing-highlight__list {
+	background: rgba(164, 82, 255, 0.05);
+}
+
+.listing-highlight__list {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 50rem;
+	overflow-y: scroll;
+	padding: 3rem;
+	justify-content: center;
+}
+
+.listing-highlight__list::-webkit-scrollbar {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 10px;
+}
+
+.listing-highlight__list::-webkit-scrollbar-thumb {
+	background-color: rgba(22, 159, 255, 0.3);
+	-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.listing-highlight__item {
+	width: 23%;
+	display: flex;
+	align-items: center;
+	height: 5rem;
+}
+
+.listing-highlight__name {
+	font-size: 1.6rem;
+	margin-right: 0.5rem;
+}
+
+.listing-highlight__social-symbol {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	fill: #169fff;
 }
 
 #modal-background {
