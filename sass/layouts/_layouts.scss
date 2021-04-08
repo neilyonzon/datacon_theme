@@ -55,9 +55,18 @@
   position: relative;
   top: $header-height;
   min-height: 50rem;
+  margin-bottom: 7rem;
 
   @include respond(tab-land) {
     top: $header-height-m;
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: $header-height-m;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 15rem;
   }
 }
 

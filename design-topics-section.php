@@ -89,7 +89,7 @@ get_header();
             <h3 class="header h3">2020 Speaker Spotlight</h3>
             <div class="topics-section__speaker-grid">
                 <div class="topics-section__speaker-item">
-                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                    <img class="profile-item__speaker-item-img" src="<?php echo THEME_IMG_PATH  ?>/briankursar.jpg"
                         alt="placeholder" />
                     <p class="topics-section__speaker-panel">Speaker for 2020’s
                         ‘Tech for Good’</p>
@@ -97,7 +97,8 @@ get_header();
                     <span class="topics-section__speaker-title">Founder, Data Con LA </span>
                 </div>
                 <div class="topics-section__speaker-item">
-                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                    <img class="profile-item__speaker-item-img"
+                        src="<?php echo THEME_IMG_PATH  ?>/Bryan_Kirshner-Headshot-Mike-Sarjeant.jpg"
                         alt="placeholder" />
                     <p class="topics-section__speaker-panel">Speaker for 2020’s
                         ‘Tech for Good’</p>
@@ -105,7 +106,7 @@ get_header();
                     <span class="topics-section__speaker-title">Founder, Data Con LA </span>
                 </div>
                 <div class="topics-section__speaker-item">
-                    <img class="profile-item__speaker-item-img" src="https://placekitten.com/200/200"
+                    <img class="profile-item__speaker-item-img" src="<?php echo THEME_IMG_PATH  ?>/Rye-Kevin-Lee.jpg"
                         alt="placeholder" />
                     <p class="topics-section__speaker-panel">Speaker for 2020’s
                         ‘Tech for Good’</p>

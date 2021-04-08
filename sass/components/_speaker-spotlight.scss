@@ -1,0 +1,108 @@
+.speaker-spotlight {
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--primary .speaker-spotlight__content {
+    border-color: $color-primary;
+  }
+
+  &--primary .speaker-spotlight__heading,
+  &--primary .line {
+    background: $color-primary;
+  }
+
+  &--primary img {
+    border-radius: 50%;
+    border: 4px solid $color-primary;
+  }
+
+  &--secondary .speaker-spotlight__content {
+    border-color: $color-secondary;
+  }
+
+  &--secondary .speaker-spotlight__heading,
+  &--secondary .line {
+    background: $color-secondary;
+  }
+
+  &--secondary img {
+    border-radius: 50%;
+    border: 4px solid $color-secondary;
+  }
+
+  &__heading {
+    position: relative;
+    padding-left: 3rem;
+    top: 1.5rem;
+    color: white;
+  }
+
+  &__container {
+    padding: 5rem 10rem;
+
+    @include respond(tab-port) {
+      padding: 2rem 3rem;
+    }
+  }
+
+  &__content {
+    border: 4px solid;
+  }
+
+  &__text {
+    width: 60%;
+    padding-right: 2rem;
+    position: relative;
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding-right: 0rem;
+    }
+  }
+
+  &__media {
+    width: 40%;
+    text-align: center;
+
+    @include respond(tab-port) {
+      width: 75%;
+    }
+  }
+
+  &__details {
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
+
+    & > .line {
+      width: 4px;
+      height: 20rem;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    font-size: 2rem;
+  }
+
+  &__title {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  &__panel {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
