@@ -176,6 +176,17 @@ array(
         "group" => "Speakers Spotlight",
         "holder" => "div",
         "class" => "",
+        "heading" => __("Speaker Spotlight Heading", "my-text-domain"),
+        "param_name" => "speaker-heading", 
+        "value" => __("", "my-text-domain"),
+        "description" => __("Enter heading to be displayed above speakers.", "my-text-domain"),
+        'save_always' => true,
+    ),
+    array(
+        "type" => "textfield",
+        "group" => "Speakers Spotlight",
+        "holder" => "div",
+        "class" => "",
         "heading" => __("Speaker Spotlight 1 Name", "my-text-domain"),
         "param_name" => "speaker-name-1", 
         "value" => __("", "my-text-domain"),
@@ -343,6 +354,7 @@ $image_src = wp_get_attachment_image_src($atts['image'], 'full')[0];
 $image_alt = get_post_meta($atts['image'], '_wp_attachment_image_alt', true);
 $disclaimer = $atts['disclaimer'];
 $color = $atts['color'];
+$speaker_heading = $atts['speaker-heading'];
 
 //Start of Top Div
 $output .= '<div class="topics-section">';
@@ -382,26 +394,30 @@ $output .= '</div>';
 $output .= '<div class="topics-section__speakers">';
 
 //Heading
-$output .= '<h3 class="header h3">2020 Speaker Spotlight</h3>';
+if ($speaker_heading !='') {
+    $output .= '<h3 class="header h3">'.$speaker_heading.'</h3>';
+}
 
 //Start of Speaker Spotlight Section
 $output .= '<div class="topics-section__speaker-grid">';
 
 for ($x = 1; $x <= 3; $x++) {
-    if ($atts['topic_text_'. $x] != ''){
-    // $output .= '<li class="topics-section__list-item">';
-    // $output .= '<svg class="topics-section__icon"><use xlink:href="' . THEME_IMG_PATH . "/sprite.svg#" .  $atts['topic_icon_'. $x] .'"></use>
-    //     </svg>';
-    // $output .= '<span>'. $atts['topic_text_'. $x].'</span>';
-    // $output .= '</li>';
-    $output .= ' <div class="topics-section__speaker-item">
-    <img class="profile-item__speaker-item-img" src="<?php echo THEME_IMG_PATH  ?>/briankursar.jpg"
-alt="placeholder" />
-<p class="topics-section__speaker-panel">Speaker for 2020’s
-    ‘Tech for Good’</p>
-<span class="topics-section__speaker-name">SUBASH D’SOUZA</span><br />
-<span class="topics-section__speaker-title">Founder, Data Con LA </span>
-</div>';
+$speaker_image_src = wp_get_attachment_image_src($atts['speaker-image-'. $x], 'full')[0];
+$speaker_image_alt = get_post_meta($atts['speaker-image-'. $x], '_wp_attachment_image_alt', true);
+$speaker_title = $atts['speaker-title-'. $x];
+$speaker_name = $atts['speaker-name-'. $x];
+$speaker_panel= $atts['speaker-panel-'. $x];
+    if ($speaker_name != ''){
+        $output .= '<div class="topics-section__speaker-item">';
+        $output .= ' <img class="topics-section__speaker-item-img   " src="'.$speaker_image_src.'"
+alt="placeholder">';
+$output .= '</img>';
+$output .= '<p class="topics-section__speaker-panel">'.$speaker_panel.'</p>';
+$output .= '<span class="topics-section__speaker-name">'.$speaker_name.'</span>';
+if ($speaker_title != '') {
+    $output .= '<br /><span class="topics-section__speaker-title">'.$speaker_title.'</span>';
+}
+$output .= '</div>';
 }
 }
 

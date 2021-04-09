@@ -113,7 +113,7 @@ $output .= "</div>";
 $output .= "<div class=\"col-1-of-2 flex-align--center\">
 <div class=\"countdown\">
 <div class=\"countdown__subtitle\">Save the Date</div>
-<div class=\"countdown__title\">Nov 9, 2021</div>
+<div class=\"countdown__title\">September 17, 2021</div>
 <div class=\"countdown__timer timer\">
 <div class=\"timer__item\">
 <div class=\"timer__number timer__number--days\"></div>

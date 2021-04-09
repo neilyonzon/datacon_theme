@@ -99,20 +99,6 @@ if ($youtubeUrl != '') {
 
 ?>
 
-        <?php
-
-if ($mailUrl != '') {
-    echo '
-                <a class="footer__social-link" href="mailto:subash@dataconla.com">
-                    <span class="footer__social-icon footer__social-icon--circle">
-                        <svg class="footer__social-icon--mail">
-                            <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-mail"></use>
-        </svg>
-        </span>
-        </a>';
-}
-
-?>
     </div>
     <?php wp_footer();?>
 

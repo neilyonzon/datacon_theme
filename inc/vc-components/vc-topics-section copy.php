@@ -176,6 +176,17 @@ array(
         "group" => "Speakers Spotlight",
         "holder" => "div",
         "class" => "",
+        "heading" => __("Heading", "my-text-domain"),
+        "param_name" => "speaker-spotlight-heading", 
+        "value" => __("", "my-text-domain"),
+        "description" => __("Enter the heading to be displayed above the speakers.", "my-text-domain"),
+        'save_always' => true,
+    ),
+    array(
+        "type" => "textfield",
+        "group" => "Speakers Spotlight",
+        "holder" => "div",
+        "class" => "",
         "heading" => __("Speaker Spotlight 1 Name", "my-text-domain"),
         "param_name" => "speaker-name-1", 
         "value" => __("", "my-text-domain"),
@@ -343,6 +354,7 @@ $image_src = wp_get_attachment_image_src($atts['image'], 'full')[0];
 $image_alt = get_post_meta($atts['image'], '_wp_attachment_image_alt', true);
 $disclaimer = $atts['disclaimer'];
 $color = $atts['color'];
+$speaker_heading = $atts['speaker-spotlight-heading'];
 
 //Start of Top Div
 $output .= '<div class="topics-section">';

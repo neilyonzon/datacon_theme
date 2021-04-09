@@ -94,7 +94,7 @@
 /***/ (function(module, exports) {
 
 //Set date we're counting down to
-var countDownDate = new Date("Nov 9, 2021 00:00:00").getTime(); //Update the count down every 1 second
+var countDownDate = new Date("Sep 17, 2021 00:00:00").getTime(); //Update the count down every 1 second
 
 if (document.querySelector(".timer__number--days")) {
   var start = setInterval(function () {

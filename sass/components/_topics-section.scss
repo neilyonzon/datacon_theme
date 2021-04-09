@@ -1,9 +1,10 @@
 .topics-section {
   width: 100%;
-  min-height: 80rem;
+  min-height: 90rem;
   overflow: hidden;
   display: flex;
   color: $color-black;
+  padding-bottom: 3rem;
 
   @include respond(tab-port) {
     flex-direction: column;
@@ -41,6 +42,9 @@
   }
 
   &__header {
+    position: relative;
+    top: 1rem;
+
     @include respond(tab-port) {
       text-align: center;
     }
@@ -56,20 +60,24 @@
     height: 7.3rem;
     display: flex;
     align-items: center;
+
+    @include respond(phone) {
+      padding-left: 1.5rem;
+    }
   }
 
   &__icon {
     width: 5rem;
     flex-shrink: 0;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     fill: $color-black;
   }
 
   &__speakers {
     margin-left: 5rem;
     position: relative;
-    top: 8rem;
-    padding-top: 5rem;
+    top: 7rem;
+    padding-top: 3rem;
     padding-right: 10rem;
 
     & > .header {
@@ -104,9 +112,21 @@
     width: 30%;
   }
 
+  &__speaker-item-img {
+    width: 18rem;
+
+    @include respond(phone) {
+      width: 10rem;
+    }
+  }
+
   &__speaker-panel {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__speaker-name {

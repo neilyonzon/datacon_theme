@@ -1,17 +1,23 @@
 .media-banner {
   width: 100%;
   position: relative;
-  height: 46rem;
+  min-height: 46rem;
   color: white;
-  text-transform: uppercase;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 
-  @include respond(tab-land) {
-    height: 40rem;
+  @include respond(tab-port) {
+    height: 75rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
   }
 
   @include respond(phone) {
-    height: 38rem;
+    height: auto;
+    padding-bottom: 1rem;
   }
 
   &__img {
@@ -24,27 +30,16 @@
     max-width: none;
 
     @include respond(tab-land) {
-      width: 1200px;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
   &__overlay {
+    position: absolute;
+    z-index: -7;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 8rem 10rem 3rem;
-
-    @include respond(tab-port) {
-      align-items: center;
-      text-align: center;
-    }
-
-    @include respond(phone) {
-      align-items: center;
-      padding: 8rem 4rem;
-    }
 
     &--primary {
       background: $color-primary-gradient;
@@ -55,32 +50,54 @@
     }
   }
 
-  &__intro-text {
-    font-size: 2.4rem;
+  &__text {
+    width: 40%;
+    padding-left: 10rem;
+    padding-right: 2rem;
+    position: relative;
 
-    @include respond(phone) {
-      height: 2rem;
-    }
-  }
-
-  &__header {
-    font-size: 4rem;
-    width: 50rem;
-
-    @include respond(phone) {
-      font-size: 3rem;
+    @include respond(tab-port) {
       width: 100%;
+      padding: 1rem 2.5rem;
+    }
+
+    & > p {
+      color: white;
     }
   }
 
-  &__line {
-    width: 50%;
-    height: 2px;
-    background: white;
+  &__video {
+    width: 70rem;
+    padding-top: 5rem;
+    padding-right: 10rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 0.5rem 2.5rem;
+    }
   }
 
-  &__cta {
-    font-size: 2rem;
-    cursor: pointer;
+  &__video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    left: 20%;
+
+    @include respond(tab-port) {
+      left: 0%;
+    }
+
+    & > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 90%;
+
+      @include respond(phone) {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
