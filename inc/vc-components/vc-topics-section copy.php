@@ -347,24 +347,47 @@ $color = $atts['color'];
 //Start of Top Div
 $output .= '<div class="topics-section">';
 
-//Line
-$output .= '<hr class="topics-section__line line--' . $color .'" />';
-
 //Image and Overlay
+$output .='<img src="'. $image_src .'" alt="'. $image_alt .'" class="topics-section__image">';
+$output .= '<div class="topics-section__overlay"></div>';
+$output .= '<hr class="topics-section__line line" />';
 
-//Topics Area Parent
-$output .= '<div class="topics-section__topics">';
+//Text Area Parent
+$output .= '<div class="topics-section__text-area">';
 
 //Header 
+$output .= '<div class="topics-section__header-area">';
 if ($heading != "") {
-    $output .= '<h1 class="topics-section__header header header--' . $color .'">'.$heading.'</h1>';
+    $output .= '<h1 class="header header--dark">'.$heading.'</h1>';
+    $output .= '<hr class="line" />';
 }
+if ($ctaDescription !='' && $ctaLink['url'] !='') {
+    $output .= '<div class="topics-section__cta-box-area">';
+    $output .= '<div class="topics-section__cta-box cta-box cta-box--secondary">';
+    
+    $output .= '<div class="cta-box__body">';
+    $output .= '<p class="paragraph">'.$ctaDescription.'</p>';
+    $output .= '</div>';
+
+    if ($ctaLink['url'] != '') {
+        $output .= '<div class="cta-box__cta">';
+        $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--secondary-dark">' . $ctaLink['title'] . '</a>';
+        $output .= '</div>';
+    }
+
+    $output .= '</div>';
+    $output .= '</div>';
+}
+$output .= '</div>';
+
+$output .= '<span class="header header--dark">=</span>';
 
 //Topics
+$output .= '<div class="topics-section__topics">';
 $output .= '<ul class="topics-section__list">';
 for ($x = 1; $x <= 8; $x++) {
     if ($atts['topic_text_'. $x] != ''){
-    $output .= '<li class="topics-section__list-item">';
+    $output .= '<li>';
     $output .= '<svg class="topics-section__icon"><use xlink:href="' . THEME_IMG_PATH . "/sprite.svg#" .  $atts['topic_icon_'. $x] .'"></use>
         </svg>';
     $output .= '<span>'. $atts['topic_text_'. $x].'</span>';
@@ -373,63 +396,10 @@ for ($x = 1; $x <= 8; $x++) {
 }
 $output .= '</ul>';
 $output .= '<p class="disclaimer">'.$disclaimer.'</p>';
-
-
-//End of Topics Area Praent
-$output .= '</div>';
-
-//Start of Speaker Area Parent
-$output .= '<div class="topics-section__speakers">';
-
-//Heading
-$output .= '<h3 class="header h3">2020 Speaker Spotlight</h3>';
-
-//Start of Speaker Spotlight Section
-$output .= '<div class="topics-section__speaker-grid">';
-
-for ($x = 1; $x <= 3; $x++) {
-    if ($atts['topic_text_'. $x] != ''){
-    // $output .= '<li class="topics-section__list-item">';
-    // $output .= '<svg class="topics-section__icon"><use xlink:href="' . THEME_IMG_PATH . "/sprite.svg#" .  $atts['topic_icon_'. $x] .'"></use>
-    //     </svg>';
-    // $output .= '<span>'. $atts['topic_text_'. $x].'</span>';
-    // $output .= '</li>';
-    $output .= ' <div class="topics-section__speaker-item">
-    <img class="profile-item__speaker-item-img" src="<?php echo THEME_IMG_PATH  ?>/briankursar.jpg"
-alt="placeholder" />
-<p class="topics-section__speaker-panel">Speaker for 2020’s
-    ‘Tech for Good’</p>
-<span class="topics-section__speaker-name">SUBASH D’SOUZA</span><br />
-<span class="topics-section__speaker-title">Founder, Data Con LA </span>
-</div>';
-}
-}
-
-
-//End of Speaker Spotlight Section
 $output .= '</div>';
 
 
-//CTA Box
-if ($ctaDescription !='') {
-$output .= '<div class="topics-section__cta-box-area">';
-    $output .= '<div class="topics-section__cta-box cta-box cta-box--'. $color .'">';
-
-        $output .= '<div class="cta-box__body">';
-            $output .= '<p class="paragraph">'.$ctaDescription.'</p>';
-            $output .= '</div>';
-
-        if ($ctaLink['url'] != '') {
-        $output .= '<div class="cta-box__cta">';
-            $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--'. $color .'">' . $ctaLink['title'] . '</a>';
-            $output .= '</div>';
-        }
-
-        $output .= '</div>';
-    $output .= '</div>';
-}
-
-//End of Speaker Area Parent
+//End of Text Area Praent
 $output .= '</div>';
 
 
