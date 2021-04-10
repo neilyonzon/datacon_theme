@@ -8,12 +8,12 @@
 
   @include respond(tab-port) {
     flex-direction: column;
-    min-height: 160rem;
+    min-height: 140rem;
     margin-bottom: 2rem;
   }
 
   @include respond(phone) {
-    min-height: 170rem;
+    min-height: 150rem;
   }
 
   &__line {

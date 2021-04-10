@@ -1377,6 +1377,12 @@ body.stop-transition .nav {
 	}
 }
 
+@media only screen and (max-width: 37.5em) {
+	.footer {
+		padding: 1rem;
+	}
+}
+
 .footer__contact {
 	width: 35rem;
 	display: flex;
@@ -2132,6 +2138,7 @@ body.stop-transition .nav {
 }
 
 .about-section__img-column > img {
+	width: 50rem;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -2178,14 +2185,14 @@ body.stop-transition .nav {
 @media only screen and (max-width: 56.25em) {
 	.topics-section {
 		flex-direction: column;
-		min-height: 160rem;
+		min-height: 140rem;
 		margin-bottom: 2rem;
 	}
 }
 
 @media only screen and (max-width: 37.5em) {
 	.topics-section {
-		min-height: 170rem;
+		min-height: 150rem;
 	}
 }
 
