@@ -125,6 +125,7 @@ $cta = vc_build_link($atts['cta']);
 $image_src = wp_get_attachment_image_src($atts['bg_image'], 'full')[0];
 $image_alt = get_post_meta($atts['bg_image'], '_wp_attachment_image_alt', true);
 $color = $atts['color'];
+$content = wpb_js_remove_wpautop($content, true);
 $output = '';
 //Start of Parent Div
 if ($atts['short'] == 'true') {

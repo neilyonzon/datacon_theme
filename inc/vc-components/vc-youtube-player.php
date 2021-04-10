@@ -12,16 +12,6 @@ array(
 "icon" => get_template_directory_uri . "",
 "category" => __("Components", "my-text-domain"),
 "params" => array(
-    array(  
-        "type" => "textfield",
-        "holder" => "div",
-        "class" => "",
-        "heading" => __("Intro Text", "my-text-domain"),
-        "param_name" => "video-intro", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
-        "value" => __("Enter Text", "my-text-domain"),
-        "description" => __("Enter introduction text.", "my-text-domain"),
-        'save_always' => true,
-    ),
     array(
         "type" => "textfield",
         "holder" => "div",
@@ -33,23 +23,23 @@ array(
         'save_always' => true,
     ),
     array(
-        "type" => "textfield",
+        "type" => "textarea_html",
         "holder" => "div",
         "class" => "",
-        "heading" => __("Button text", "my-text-domain"),
-        "param_name" => "video-button-text", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
-        "value" => __("Enter Text", "my-text-domain"),
-        "description" => __("Enter button text.", "my-text-domain"),
+        "heading" => __("Description", "my-text-domain"),
+        "param_name" => "content", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+        "value" => __("<p>I am test text block. Click edit button to change this text.</p>", "my-text-domain"),
+        "description" => __("Enter your content.", "my-text-domain"),
         'save_always' => true,
     ),
     array(
         "type" => "textfield",
         "holder" => "div",
         "class" => "",
-        "heading" => __("YouTube URL", "my-text-domain"),
+        "heading" => __("YouTube Embed URL", "my-text-domain"),
         "param_name" => "video-url", // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
         "value" => __("", "my-text-domain"),
-        "description" => __("Enter YouTube URL (e.g. https://www.youtube.com/watch?v=CWR3n8Ifsv0)", "my-text-domain"),
+        "description" => __("Enter YouTube URL (e.g. https://www.youtube.com/embed/Kn9j1RoEKPQ)", "my-text-domain"),
         'save_always' => true,
     ),
     array(
@@ -86,15 +76,15 @@ add_shortcode("video_player", "output_video_player");
 
 function output_video_player($atts, $content, $tags)
 {
-$intro = $atts['video-intro'];
+$description = $atts['video-description'];
 $header = $atts['video-header'];
-$buttonText = $atts['video-button-text'];
+$content = wpb_js_remove_wpautop($content, true);
 $image_src = wp_get_attachment_image_src($atts['bg_image'], 'full')[0];
 $image_alt = get_post_meta($atts['bg_image'], '_wp_attachment_image_alt', true);
 if ($atts['video-url'] != '') {
 $url = $atts['video-url'];
 } else {
-$url = 'https://www.youtube.com/watch?v=CWR3n8Ifsv0';
+$url = 'https://www.youtube.com/embed/Kn9j1RoEKPQ';
 }
 if ($atts['bg-color'] == 'primary') {
 $bg_color = 'primary';
@@ -105,17 +95,29 @@ $btn_color = 'primary';
 }
 $output = '';
 $output .= '<div class="media-banner">';
+
+//Image and Overlay
 $output .= '<img src="' . $image_src . '" alt="' . $image_alt . '" class="media-banner__img">';
-$output .= '<div class="media-banner__overlay media-banner__overlay--' . $bg_color . '">';
-$output .= '<div class="media-banner__intro-text">' . $intro . '</div>';
-$output .= '<div class="media-banner__header header">' . $header . '</div>';
-$output .= '<div class="media-banner__cta">';
-$output .= '<a class="btn btn--' . $btn_color . ' media-banner__btn" href="' . $url . '">' . $buttonText . '</a>';
+$output .= '<div class="media-banner__overlay media-banner__overlay--' . $bg_color . '"></div>';
+
+//Banner Text
+$output .= '<div class="media-banner__text">';
+if ($header != '') {
+    $output .= '<h3 class="header">' . $header . '</h3>';
+}
+if ($content  != '') {
+    $output .= $content;
+}
 $output .= '</div>';
-$output .= '<div class="media-banner__line">';
-$output .= '</hr>';
+
+//Video 
+$output .= '<div class="media-banner__video">';
+$output .= '<div class="media-banner__video-container">';
+$output .= '<iframe src="'.$url.'" title="YouTube video player" frameborder="0"
+    allowfullscreen></iframe>';
 $output .= '</div>';
 $output .= '</div>';
+
 $output .= '</div>';
 return $output;
 }

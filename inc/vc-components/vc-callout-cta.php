@@ -119,6 +119,7 @@ function output_callout_cta($atts, $content, $tags)
 
 //Callout Section Variables
 $coIntro = $atts['callout-intro'];
+$content = wpb_js_remove_wpautop($content, true);
 $coText = $content;
 $coColor = $atts['callout-color'];
 

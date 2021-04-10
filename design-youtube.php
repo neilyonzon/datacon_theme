@@ -27,11 +27,14 @@ get_header();
             class="media-banner__img">
         <div class="media-banner__overlay media-banner__overlay--primary">
         </div>
+
+
         <div class="media-banner__text">
             <h3 class="header">Watch Highlights from 2020</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. </p>
         </div>
+        
         <div class="media-banner__video">
             <div class="media-banner__video-container">
                 <iframe src="https://www.youtube.com/embed/Kn9j1RoEKPQ" title="YouTube video player" frameborder="0"
