@@ -17,7 +17,7 @@
 
   @include respond(phone) {
     height: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
 
   &__img {
@@ -63,6 +63,10 @@
 
     & > p {
       color: white;
+    }
+
+    & a {
+      font-weight: bold;
     }
   }
 

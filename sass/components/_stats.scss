@@ -7,6 +7,11 @@
   align-items: center;
   padding: 5rem 10rem;
 
+  @include respond(phone) {
+    padding: 3rem 2.5rem;
+    padding-bottom: 6rem;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
