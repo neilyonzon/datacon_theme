@@ -103,7 +103,7 @@ $output .= " <p class=\"paragraph\">{$ctaDetails}</p>";
 $output .= "</div>";
 $output .= "<div class=\"cta-box__cta\">";
 if ($ctaBtn['url'] != '') {
-$output .= "<a href=\"{$ctaBtn['url']}\" class=\"btn btn--{$ctaColor}\">{$ctaBtn['title']}</a>";
+$output .= "<a href=\"{$ctaBtn['url']}\" target=\"{$ctaBtn['target']}\"  class=\"btn btn--{$ctaColor}\">{$ctaBtn['title']}</a>";
 }
 $output .= "</div>";
 $output .= "</div>";

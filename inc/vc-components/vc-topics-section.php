@@ -437,7 +437,7 @@ $output .= '<div class="topics-section__cta-box-area">';
 
         if ($ctaLink['url'] != '') {
         $output .= '<div class="cta-box__cta">';
-            $output .= '<a href="' . $ctaLink['url'] . '" class="btn btn--'. $color .'">' . $ctaLink['title'] . '</a>';
+            $output .= '<a href="' . $ctaLink['url'] . '" target="'.$ctaLink['target'].'" class="btn btn--'. $color .'">' . $ctaLink['title'] . '</a>';
             $output .= '</div>';
         }
 
