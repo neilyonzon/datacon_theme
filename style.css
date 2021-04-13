@@ -1821,7 +1821,7 @@ body.stop-transition .nav {
 	left: 0;
 	z-index: -10;
 	object-fit: cover;
-	height: 100%;
+	width: 100%;
 	max-width: none;
 }
 
@@ -1867,12 +1867,10 @@ body.stop-transition .nav {
 	}
 }
 
-.media-banner__text > p {
-	color: white;
-}
-
+.media-banner__text > p,
 .media-banner__text a {
-	font-weight: bold;
+	font-weight: 400;
+	color: white;
 }
 
 .media-banner__video {
@@ -2015,6 +2013,12 @@ body.stop-transition .nav {
 	color: #d7da34;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.hero__subline {
+		width: 80%;
+	}
+}
+
 .hero__description {
 	font-size: 2.2rem;
 	width: 60rem;
@@ -2079,6 +2083,7 @@ body.stop-transition .nav {
 @media only screen and (max-width: 37.5em) {
 	.countdown__title {
 		top: 0;
+		font-size: 3rem;
 	}
 }
 
@@ -2488,7 +2493,7 @@ body.stop-transition .nav {
 
 .listing-feature__media > p {
 	position: relative;
-	top: 4.5rem;
+	top: 4rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -2500,18 +2505,24 @@ body.stop-transition .nav {
 .listing-feature__img {
 	position: relative;
 	top: 6rem;
+	width: 80%;
+	border-radius: 50%;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 @media only screen and (max-width: 56.25em) {
 	.listing-feature__img {
 		top: 1rem;
-		width: 80%;
+		width: 40%;
+		left: 0%;
+		transform: translateX(0%);
 	}
 }
 
 @media only screen and (max-width: 37.5em) {
 	.listing-feature__img {
-		width: 75%;
+		width: 50%;
 	}
 }
 
@@ -2895,6 +2906,55 @@ body.stop-transition .nav {
 	display: flex;
 	align-items: center;
 	fill: #169fff;
+}
+
+/* Image Grid
+--------------------------------------------- */
+.image-grid {
+	width: 100%;
+	padding: 5rem 10rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.image-grid {
+		padding: 3rem 2.5rem;
+	}
+}
+
+.image-grid__heading {
+	font-size: 1.8rem;
+	position: relative;
+	top: 1rem;
+}
+
+.image-grid__container {
+	width: 100rem;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.image-grid__section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 100rem;
+	padding-left: 0rem;
+}
+
+.image-grid__item {
+	width: 30rem;
+	height: 15rem;
+	background: white;
+}
+
+.image-grid__item img {
+	position: relative;
+	width: 80%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #modal-background {

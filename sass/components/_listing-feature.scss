@@ -81,7 +81,7 @@
 
     & > p {
       position: relative;
-      top: 4.5rem;
+      top: 4rem;
 
       @include respond(tab-port) {
         top: 1rem;
@@ -92,14 +92,20 @@
   &__img {
     position: relative;
     top: 6rem;
+    width: 80%;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%);
 
     @include respond(tab-port) {
       top: 1rem;
-      width: 80%;
+      width: 40%;
+      left: 0%;
+      transform: translateX(0%);
     }
 
     @include respond(phone) {
-      width: 75%;
+      width: 50%;
     }
   }
 

@@ -76,6 +76,10 @@
   &__subline {
     font-size: 2rem;
     color: $color-yellow;
+
+    @include respond(phone) {
+      width: 80%;
+    }
   }
 
   &__description {
