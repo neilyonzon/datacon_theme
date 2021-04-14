@@ -2588,6 +2588,7 @@ body.stop-transition .nav {
 
 .listing-feature__item-name {
 	display: block;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
