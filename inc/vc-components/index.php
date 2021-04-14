@@ -32,6 +32,7 @@ require_once ('vc-content-section.php');
 require_once ('vc-cta-countdown.php');
 require_once ('vc-header.php');
 require_once ('vc-hero-banner.php');
+// require_once ('vc-image-grid.php');
 require_once ('vc-panels-section.php');
 require_once ('vc-stats.php');
 require_once ('vc-topics-section.php');

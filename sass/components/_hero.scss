@@ -48,13 +48,16 @@
     background: $color-primary-gradient;
     z-index: -7;
 
-    &--secondary {
-      background: $color-secondary-gradient;
+    @include respond(phone) {
+      background: $color-primary-gradient-dark;
     }
 
-    @include respond(phone) {
-      background: $color-primary-dark;
-      opacity: 0.85;
+    &--secondary {
+      background: $color-secondary-gradient;
+
+      @include respond(phone) {
+        background: $color-secondary-gradient-dark;
+      }
     }
   }
 
