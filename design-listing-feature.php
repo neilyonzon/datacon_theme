@@ -1,7 +1,5 @@
 <?php 
 
-/* Template Name: Design Test Listings Feature */
-
 /**
  * The template for displaying all landing page
  *

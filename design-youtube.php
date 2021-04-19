@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name: Design Test YouTube */
 
 /**
  * The template for displaying all landing page
@@ -34,7 +33,7 @@ get_header();
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. </p>
         </div>
-        
+
         <div class="media-banner__video">
             <div class="media-banner__video-container">
                 <iframe src="https://www.youtube.com/embed/Kn9j1RoEKPQ" title="YouTube video player" frameborder="0"

@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name: Design Listings Highlight */
 
 /**
  * The template for displaying all landing page

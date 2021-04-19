@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name: Design Test Sponsors */
 
 /**
  * The template for displaying all landing page

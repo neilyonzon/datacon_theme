@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name: Design Speaker Spotlight */
 
 /**
  * The template for displaying all landing page

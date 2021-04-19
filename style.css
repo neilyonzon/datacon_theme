@@ -1230,6 +1230,7 @@ html {
 	min-width: 8rem;
 	margin: 0 0.5rem;
 	position: relative;
+	padding-left: 2rem;
 }
 
 .nav__item--highlight {

@@ -1,0 +1,10 @@
+.keynote-speakers {
+  padding: 5rem 10rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    padding: 0rem 2.5rem;
+    margin-bottom: 2rem;
+  }
+}

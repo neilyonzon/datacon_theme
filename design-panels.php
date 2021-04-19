@@ -1,6 +1,5 @@
 <?php 
 
-/* Template Name: Design Test Panels */
 
 /**
  * The template for displaying all landing page
