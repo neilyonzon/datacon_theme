@@ -1,10 +1,52 @@
 .keynote-speakers {
-  padding: 5rem 10rem;
-  padding-top: 2rem;
   margin-bottom: 2rem;
+  position: relative;
 
-  @include respond(phone) {
-    padding: 0rem 2.5rem;
-    margin-bottom: 2rem;
+  &__container {
+    padding: 5rem 10rem;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 9;
+
+    @include respond(phone) {
+      padding: 0rem 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.1;
+    height: 100%;
+  }
+
+  &__intro {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: 0;
+    opacity: 0.3;
+
+    &--primary {
+      background-color: rgb(104, 185, 252);
+      opacity: 0.12;
+    }
+
+    &--secondary {
+      background-color: rgb(164, 82, 255);
+      opacity: 0.07;
+    }
+  }
+
+  &__profile-grid {
+    justify-content: space-around;
   }
 }

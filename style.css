@@ -640,7 +640,7 @@ p,
 .paragraph {
 	font-size: 1.8rem;
 	color: #414344;
-	font-weight: 200;
+	font-weight: 400;
 }
 
 /* Links
@@ -982,15 +982,29 @@ html {
 @media only screen and (max-width: 37.5em) {
 	.profile-item {
 		width: 13rem;
-		margin-right: 3.5rem;
+		margin-right: 0rem;
+	}
+}
+
+.profile-item__img-container {
+	width: 18rem;
+	height: 18rem;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.profile-item__img-container {
+		width: 14rem;
+		height: 14rem;
 	}
 }
 
 .profile-item__img {
 	width: 50rem;
+	object-fit: cover;
 }
 
-.profile-item__name > * {
+.profile-item__name {
 	font-weight: bold;
 	font-size: 2.3rem;
 	line-height: 2.3rem;
@@ -1006,9 +1020,9 @@ html {
 }
 
 @media only screen and (max-width: 37.5em) {
-	.profile-item__name > * {
-		font-size: 2rem;
-		top: 11rem;
+	.profile-item__name {
+		font-size: 1.8rem;
+		top: 12rem;
 	}
 }
 
@@ -1737,7 +1751,7 @@ body.stop-transition .nav {
 
 .stats__detail {
 	font-size: 3rem;
-	font-weight: 200;
+	font-weight: 400;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -3014,6 +3028,63 @@ body.stop-transition .nav {
 	.image-grid__item img {
 		width: 100%;
 	}
+}
+
+/* Keynote Feature
+--------------------------------------------- */
+.keynote-speakers {
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.keynote-speakers__container {
+	padding: 5rem 10rem;
+	padding-top: 2rem;
+	position: relative;
+	z-index: 9;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers__container {
+		padding: 0rem 1rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.keynote-speakers__img {
+	object-fit: cover;
+	position: absolute;
+	opacity: 0.1;
+	height: 100%;
+}
+
+.keynote-speakers__intro {
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.keynote-speakers__overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: 0;
+	opacity: 0.3;
+}
+
+.keynote-speakers__overlay--primary {
+	background-color: #68b9fc;
+	opacity: 0.12;
+}
+
+.keynote-speakers__overlay--secondary {
+	background-color: #a452ff;
+	opacity: 0.07;
+}
+
+.keynote-speakers__profile-grid {
+	justify-content: space-around;
 }
 
 #modal-background {

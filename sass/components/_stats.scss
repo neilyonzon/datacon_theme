@@ -69,7 +69,7 @@
 
   &__detail {
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 400;
 
     @include respond(tab-port) {
       font-size: 2rem;

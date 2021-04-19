@@ -20,14 +20,26 @@
 
   @include respond(phone) {
     width: 13rem;
-    margin-right: 3.5rem;
+    margin-right: 0rem;
+  }
+
+  &__img-container {
+    width: 18rem;
+    height: 18rem;
+    overflow: hidden;
+
+    @include respond(phone) {
+      width: 14rem;
+      height: 14rem;
+    }
   }
 
   &__img {
     width: 50rem;
+    object-fit: cover;
   }
 
-  &__name > * {
+  &__name {
     font-weight: bold;
     font-size: 2.3rem;
     line-height: 2.3rem;
@@ -41,8 +53,8 @@
     -webkit-box-orient: vertical;
 
     @include respond(phone) {
-      font-size: 2rem;
-      top: 11rem;
+      font-size: 1.8rem;
+      top: 12rem;
     }
   }
 
