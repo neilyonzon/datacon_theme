@@ -136,6 +136,70 @@ var getMediaplayer = __webpack_require__(/*! ./media-player.js */ "./js/media-pl
 
 var countdown = __webpack_require__(/*! ./countdown.js */ "./js/countdown.js");
 
+var getKeyNoteModal = __webpack_require__(/*! ./keynotes-speakers-modal */ "./js/keynotes-speakers-modal.js");
+
+/***/ }),
+
+/***/ "./js/keynotes-speakers-modal.js":
+/*!***************************************!*\
+  !*** ./js/keynotes-speakers-modal.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * File keynotes-speaker-modal.js
+ *
+ * Toggles the keynote speaker modal
+ */
+(function () {
+  //Variables
+  var profileLinks = document.querySelectorAll(".keynote-speakers__link");
+  var modalBackground = document.querySelector(".keynote-speakers-modal__overlay");
+  var closeIcon = document.querySelector(".keynote-speakers-modal__close"); //Functions
+
+  var toggleProfileModal = function toggleProfileModal() {
+    var modal = document.querySelector(".keynote-speakers-modal");
+    modal.classList.toggle("keynote-speakers-modal--active");
+  };
+
+  modalBackground.addEventListener("click", function () {
+    toggleProfileModal();
+  });
+  closeIcon.addEventListener("click", function () {
+    toggleProfileModal();
+  });
+
+  var fillModalDetails = function fillModalDetails(e) {
+    console.log(e.target);
+    var parentNode = e.target.closest(".profile-item");
+    var profileName = parentNode.querySelector(".profile-item__name").innerText;
+    var profileTitle = parentNode.querySelector(".profile-item__title").innerText;
+    var profileImage = parentNode.querySelector(".profile-item__img").getAttribute("src");
+    var profileAlt = parentNode.querySelector(".profile-item__img").getAttribute("alt");
+    var profileDescription = parentNode.querySelector(".profile-item__description").innerText;
+    var socialDiv = "";
+    var modal = document.querySelector(".keynote-speakers-modal");
+    var modalName = modal.querySelector(".modal-name");
+    var modalTitle = modal.querySelector(".modal-title");
+    var modalDescription = modal.querySelector(".modal-description");
+    var modalImage = modal.querySelector(".modal-image");
+    console.log(profileImage);
+    modalName.innerText = profileName;
+    modalTitle.innerText = profileTitle;
+    modalDescription.innerText = profileDescription;
+    modalImage.setAttribute("src", profileImage);
+    modalImage.setAttribute("alt", profileAlt);
+  };
+
+  Array.from(profileLinks).forEach(function (elem) {
+    elem.addEventListener("click", function (e) {
+      toggleProfileModal();
+      fillModalDetails(e);
+    });
+  });
+})();
+
 /***/ }),
 
 /***/ "./js/media-player.js":

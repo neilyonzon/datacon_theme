@@ -9,7 +9,7 @@
     z-index: 9;
 
     @include respond(phone) {
-      padding: 0rem 1rem;
+      padding: 3rem 1rem;
       margin-bottom: 2rem;
     }
   }
@@ -48,5 +48,128 @@
 
   &__profile-grid {
     justify-content: space-around;
+  }
+}
+
+.keynote-speakers-modal {
+  position: fixed;
+  z-index: 99999;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 159, 255, 0.8);
+  visibility: hidden;
+
+  &--active {
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 88880;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 88888;
+    width: 80rem;
+    height: 60rem;
+    background-color: rgba(255, 255, 255, 0.96);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem;
+    overflow: auto;
+
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 100vw;
+    }
+  }
+
+  &__close {
+    position: relative;
+    left: 92%;
+    bottom: 4%;
+    background: none;
+    border: none;
+    width: 10rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      left: 90%;
+    }
+  }
+
+  &__close-icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-black;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    top: 5rem;
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+      top: 0rem;
+    }
+  }
+
+  &__details {
+    flex-basis: 80%;
+
+    @include respond(tab-port) {
+      flex-basis: 60%;
+    }
+  }
+
+  &__media {
+    flex-basis: 30%;
+
+    @include respond(tab-port) {
+      flex-basis: 40%;
+    }
+  }
+
+  & h2 {
+    font-size: 3rem;
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
+  }
+
+  & h3 {
+    font-size: 2rem;
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+
+  & p {
+    width: 85%;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  & img {
+    @include respond(phone) {
+      width: 50%;
+    }
   }
 }

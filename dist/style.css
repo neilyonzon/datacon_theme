@@ -641,7 +641,7 @@ p,
 .paragraph {
   font-size: 1.8rem;
   color: #414344;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /* Links
@@ -877,7 +877,7 @@ html {
 
 @media only screen and (max-width: 37.5em) {
   .main-content {
-    margin-bottom: 15rem;
+    margin-bottom: 7rem;
   }
 }
 
@@ -983,19 +983,34 @@ html {
 
 @media only screen and (max-width: 37.5em) {
   .profile-item {
-    width: 13rem;
-    margin-right: 3.5rem;
+    width: 14rem;
+    margin-right: 0rem;
+  }
+}
+
+.profile-item__img-container {
+  width: 18rem;
+  height: 18rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .profile-item__img-container {
+    width: 14rem;
+    height: 14rem;
   }
 }
 
 .profile-item__img {
   width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.profile-item__name > * {
+.profile-item__name {
   font-weight: bold;
   font-size: 2.3rem;
-  line-height: 2.3rem;
+  line-height: 2.8rem;
   text-decoration: none;
   position: absolute;
   top: 17rem;
@@ -1008,15 +1023,15 @@ html {
 }
 
 @media only screen and (max-width: 37.5em) {
-  .profile-item__name > * {
-    font-size: 2rem;
-    top: 11rem;
+  .profile-item__name {
+    font-size: 1.8rem;
+    top: 12.5rem;
   }
 }
 
 .profile-item__title {
   margin-bottom: 0.5rem;
-  margin-top: 7.5rem;
+  margin-top: 7.8rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1024,6 +1039,10 @@ html {
     font-size: 1.5rem;
     margin-top: 6rem;
   }
+}
+
+.profile-item__description {
+  display: none;
 }
 
 .profile-item__social-icons-container {
@@ -1051,6 +1070,12 @@ html {
   width: 100%;
 }
 
+.profile-item__link {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1067,7 +1092,7 @@ html {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  z-index: 88888;
+  z-index: 9999999999;
   top: 0;
   box-shadow: 1px 1px 7px #d0d0d0;
 }
@@ -1232,6 +1257,7 @@ html {
   min-width: 8rem;
   margin: 0 0.5rem;
   position: relative;
+  padding-left: 2rem;
 }
 
 .nav__item--highlight {
@@ -1376,6 +1402,12 @@ body.stop-transition .nav {
   .footer {
     height: auto;
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    padding: 1rem;
   }
 }
 
@@ -1658,6 +1690,13 @@ body.stop-transition .nav {
   padding: 5rem 10rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .stats {
+    padding: 3rem 2.5rem;
+    padding-bottom: 6rem;
+  }
+}
+
 .stats__container {
   display: flex;
   justify-content: space-between;
@@ -1725,7 +1764,7 @@ body.stop-transition .nav {
 
 .stats__detail {
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1800,7 +1839,7 @@ body.stop-transition .nav {
 @media only screen and (max-width: 37.5em) {
   .media-banner {
     height: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -1848,11 +1887,19 @@ body.stop-transition .nav {
 @media only screen and (max-width: 56.25em) {
   .media-banner__text {
     width: 100%;
-    padding: 1rem 2.5rem;
+    padding: 3rem 10rem;
   }
 }
 
-.media-banner__text > p {
+@media only screen and (max-width: 37.5em) {
+  .media-banner__text {
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+.media-banner__text > p,
+.media-banner__text a {
+  font-weight: 400;
   color: white;
 }
 
@@ -1865,6 +1912,12 @@ body.stop-transition .nav {
 @media only screen and (max-width: 56.25em) {
   .media-banner__video {
     width: 100%;
+    padding: 3rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .media-banner__video {
     padding: 0.5rem 2.5rem;
   }
 }
@@ -1925,6 +1978,12 @@ body.stop-transition .nav {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .hero {
+    height: 50rem;
+  }
+}
+
 .hero__img {
   position: absolute;
   top: 0;
@@ -1952,14 +2011,19 @@ body.stop-transition .nav {
   z-index: -7;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .hero__overlay {
+    background: linear-gradient(to right, #004d85, rgba(22, 159, 255, 0.74));
+  }
+}
+
 .hero__overlay--secondary {
   background: linear-gradient(to right, #652fa3, rgba(164, 82, 255, 0.5));
 }
 
 @media only screen and (max-width: 37.5em) {
-  .hero__overlay {
-    background: #126aa8;
-    opacity: 0.85;
+  .hero__overlay--secondary {
+    background: linear-gradient(to right, #652fa3, rgba(164, 82, 255, 0.8));
   }
 }
 
@@ -1987,7 +2051,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
   .hero__subline {
-    font-size: 1.6rem;
+    width: 80%;
   }
 }
 
@@ -2000,6 +2064,12 @@ body.stop-transition .nav {
   color: white;
   font-size: 2.2rem;
   font-weight: normal;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .hero__description > * {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -2049,6 +2119,7 @@ body.stop-transition .nav {
 @media only screen and (max-width: 37.5em) {
   .countdown__title {
     top: 0;
+    font-size: 3rem;
   }
 }
 
@@ -2137,6 +2208,7 @@ body.stop-transition .nav {
 }
 
 .about-section__img-column > img {
+  width: 50rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2183,14 +2255,14 @@ body.stop-transition .nav {
 @media only screen and (max-width: 56.25em) {
   .topics-section {
     flex-direction: column;
-    min-height: 160rem;
+    min-height: 140rem;
     margin-bottom: 2rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .topics-section {
-    min-height: 170rem;
+    min-height: 150rem;
   }
 }
 
@@ -2458,7 +2530,7 @@ body.stop-transition .nav {
 
 .listing-feature__media > p {
   position: relative;
-  top: 4.5rem;
+  top: 4rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -2470,18 +2542,24 @@ body.stop-transition .nav {
 .listing-feature__img {
   position: relative;
   top: 6rem;
+  width: 80%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 @media only screen and (max-width: 56.25em) {
   .listing-feature__img {
     top: 1rem;
-    width: 80%;
+    width: 40%;
+    left: 0%;
+    transform: translateX(0%);
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .listing-feature__img {
-    width: 75%;
+    width: 50%;
   }
 }
 
@@ -2542,6 +2620,7 @@ body.stop-transition .nav {
 
 .listing-feature__item-name {
   display: block;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -2553,6 +2632,12 @@ body.stop-transition .nav {
   position: relative;
   overflow: hidden;
   margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .panels {
+    background-repeat: repeat;
+  }
 }
 
 .panels__header {
@@ -2584,7 +2669,7 @@ body.stop-transition .nav {
   width: 100%;
   background: white;
   z-index: 0;
-  opacity: 0.9;
+  opacity: 0.88;
 }
 
 .panels__items-container {
@@ -2761,7 +2846,7 @@ body.stop-transition .nav {
 @media only screen and (max-width: 37.5em) {
   .listing-highlight {
     padding: 0rem 2.5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2845,6 +2930,7 @@ body.stop-transition .nav {
 @media only screen and (max-width: 37.5em) {
   .listing-highlight__item {
     height: 4.4rem;
+    padding-right: 1rem;
   }
 }
 
@@ -2855,7 +2941,8 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
   .listing-highlight__name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -2865,6 +2952,298 @@ body.stop-transition .nav {
   display: flex;
   align-items: center;
   fill: #169fff;
+}
+
+/* Image Grid
+--------------------------------------------- */
+.image-grid {
+  width: 100%;
+  padding: 5rem 10rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 75em) {
+  .image-grid {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .image-grid {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.image-grid__heading {
+  font-size: 2.2rem;
+  position: relative;
+  top: 1rem;
+  text-align: left;
+}
+
+.image-grid__container {
+  width: 100rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 75em) {
+  .image-grid__container {
+    width: 100%;
+  }
+}
+
+.image-grid__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100rem;
+  padding-left: 0rem;
+  margin: 6rem 0rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .image-grid__section {
+    width: 100%;
+    padding: 3rem 2.5rem;
+  }
+}
+
+.image-grid__item {
+  width: 30rem;
+  background: white;
+}
+
+@media only screen and (max-width: 75em) {
+  .image-grid__item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .image-grid__item {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .image-grid__item {
+    width: 50%;
+  }
+}
+
+.image-grid__item img {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .image-grid__item img {
+    width: 100%;
+  }
+}
+
+/* Keynote Feature
+--------------------------------------------- */
+.keynote-speakers {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.keynote-speakers__container {
+  padding: 5rem 10rem;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 9;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers__container {
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.keynote-speakers__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  opacity: 0.1;
+  height: 100%;
+}
+
+.keynote-speakers__intro {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.keynote-speakers__overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.keynote-speakers__overlay--primary {
+  background-color: #68b9fc;
+  opacity: 0.12;
+}
+
+.keynote-speakers__overlay--secondary {
+  background-color: #a452ff;
+  opacity: 0.07;
+}
+
+.keynote-speakers__profile-grid {
+  justify-content: space-around;
+}
+
+.keynote-speakers-modal {
+  position: fixed;
+  z-index: 99999;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 159, 255, 0.8);
+  visibility: hidden;
+}
+
+.keynote-speakers-modal--active {
+  visibility: visible;
+}
+
+.keynote-speakers-modal__overlay {
+  position: absolute;
+  z-index: 88880;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.keynote-speakers-modal__container {
+  position: relative;
+  z-index: 88888;
+  width: 80rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .keynote-speakers-modal__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal__container {
+    width: 100vw;
+  }
+}
+
+.keynote-speakers-modal__close {
+  position: relative;
+  left: 92%;
+  bottom: 4%;
+  background: none;
+  border: none;
+  width: 10rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal__close {
+    left: 90%;
+  }
+}
+
+.keynote-speakers-modal__close-icon {
+  width: 4rem;
+  height: 4rem;
+  fill: #414344;
+}
+
+.keynote-speakers-modal__content {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  top: 5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal__content {
+    flex-direction: column-reverse;
+    top: 0rem;
+  }
+}
+
+.keynote-speakers-modal__details {
+  flex-basis: 80%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .keynote-speakers-modal__details {
+    flex-basis: 60%;
+  }
+}
+
+.keynote-speakers-modal__media {
+  flex-basis: 30%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .keynote-speakers-modal__media {
+    flex-basis: 40%;
+  }
+}
+
+.keynote-speakers-modal h2 {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.keynote-speakers-modal h3 {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.keynote-speakers-modal p {
+  width: 85%;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal img {
+    width: 50%;
+  }
 }
 
 #modal-background {

@@ -981,7 +981,7 @@ html {
 
 @media only screen and (max-width: 37.5em) {
 	.profile-item {
-		width: 13rem;
+		width: 14rem;
 		margin-right: 0rem;
 	}
 }
@@ -1007,7 +1007,7 @@ html {
 .profile-item__name {
 	font-weight: bold;
 	font-size: 2.3rem;
-	line-height: 2.3rem;
+	line-height: 2.8rem;
 	text-decoration: none;
 	position: absolute;
 	top: 17rem;
@@ -1022,13 +1022,13 @@ html {
 @media only screen and (max-width: 37.5em) {
 	.profile-item__name {
 		font-size: 1.8rem;
-		top: 12rem;
+		top: 12.5rem;
 	}
 }
 
 .profile-item__title {
 	margin-bottom: 0.5rem;
-	margin-top: 7.5rem;
+	margin-top: 7.8rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1036,6 +1036,10 @@ html {
 		font-size: 1.5rem;
 		margin-top: 6rem;
 	}
+}
+
+.profile-item__description {
+	display: none;
 }
 
 .profile-item__social-icons-container {
@@ -1063,6 +1067,12 @@ html {
 	width: 100%;
 }
 
+.profile-item__link {
+	display: inline-block;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1079,7 +1089,7 @@ html {
 	justify-content: space-around;
 	align-items: center;
 	position: fixed;
-	z-index: 88888;
+	z-index: 9999999999;
 	top: 0;
 	box-shadow: 1px 1px 7px #d0d0d0;
 }
@@ -3046,7 +3056,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
 	.keynote-speakers__container {
-		padding: 0rem 1rem;
+		padding: 3rem 1rem;
 		margin-bottom: 2rem;
 	}
 }
@@ -3085,6 +3095,147 @@ body.stop-transition .nav {
 
 .keynote-speakers__profile-grid {
 	justify-content: space-around;
+}
+
+.keynote-speakers-modal {
+	position: fixed;
+	z-index: 99999;
+	top: 0%;
+	left: 0%;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(22, 159, 255, 0.8);
+	visibility: hidden;
+}
+
+.keynote-speakers-modal--active {
+	visibility: visible;
+}
+
+.keynote-speakers-modal__overlay {
+	position: absolute;
+	z-index: 88880;
+	top: 0%;
+	left: 0%;
+	width: 100vw;
+	height: 100vh;
+}
+
+.keynote-speakers-modal__container {
+	position: relative;
+	z-index: 88888;
+	width: 80rem;
+	height: 60rem;
+	background-color: rgba(255, 255, 255, 0.96);
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5rem;
+	overflow: auto;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.keynote-speakers-modal__container {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal__container {
+		width: 100vw;
+	}
+}
+
+.keynote-speakers-modal__close {
+	position: relative;
+	left: 92%;
+	bottom: 4%;
+	background: none;
+	border: none;
+	width: 10rem;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal__close {
+		left: 90%;
+	}
+}
+
+.keynote-speakers-modal__close-icon {
+	width: 4rem;
+	height: 4rem;
+	fill: #414344;
+}
+
+.keynote-speakers-modal__content {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	top: 5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal__content {
+		flex-direction: column-reverse;
+		top: 0rem;
+	}
+}
+
+.keynote-speakers-modal__details {
+	flex-basis: 80%;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.keynote-speakers-modal__details {
+		flex-basis: 60%;
+	}
+}
+
+.keynote-speakers-modal__media {
+	flex-basis: 30%;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.keynote-speakers-modal__media {
+		flex-basis: 40%;
+	}
+}
+
+.keynote-speakers-modal h2 {
+	font-size: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal h2 {
+		font-size: 2.2rem;
+	}
+}
+
+.keynote-speakers-modal h3 {
+	font-size: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal h3 {
+		font-size: 1.8rem;
+	}
+}
+
+.keynote-speakers-modal p {
+	width: 85%;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal p {
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.keynote-speakers-modal img {
+		width: 50%;
+	}
 }
 
 #modal-background {
