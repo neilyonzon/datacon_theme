@@ -37,7 +37,7 @@ if ($ctaPrompt !== '') {
 
 if ($lnUrl !== '') {
     echo '
-            <a class="footer__social-link" href="' . $lnUrl . '">
+            <a class="footer__social-link" title="Link to Data Con LA LinkedIn" target="_blank" href="' . $lnUrl . '">
             <svg class="footer__social-icon">
                 <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-linkedin-with-circle" />
         </svg>
@@ -50,7 +50,7 @@ if ($lnUrl !== '') {
 
 if ($twitterUrl != '') {
     echo '
-            <a class="footer__social-link" href="https://twitter.com/dataconla/">
+            <a class="footer__social-link" title="Link to Data Con LA Twitter profile" target="_blank" href="https://twitter.com/dataconla/">
                 <svg class="footer__social-icon">
                     <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-twitter-with-circle" />
         </svg>
@@ -62,7 +62,7 @@ if ($twitterUrl != '') {
 
 if ($fbLink != '') {
     echo '
-            <a class="footer__social-link" href="https://www.facebook.com/dataconla">
+            <a class="footer__social-link" title="Link to Data Con LA Facebook page"  target="_blank" href="https://www.facebook.com/dataconla">
             <svg class="footer__social-icon">
                 <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-facebook-with-circle" />
         </svg>
@@ -75,7 +75,7 @@ if ($fbLink != '') {
 
 if ($igUrl != '') {
     echo '
-                <a class="footer__social-link" href="https://www.instagram.com/dataconla/">
+                <a class="footer__social-link" title="Link to Data Con LA Instagram page" target="_blank" href="https://www.instagram.com/dataconla/">
                 <svg class="footer__social-icon">
                     <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-instagram-with-circle" />
             </svg>
@@ -89,7 +89,7 @@ if ($igUrl != '') {
 
 if ($youtubeUrl != '') {
     echo '
-                <a class="footer__social-link" href="https://www.youtube.com/user/sawjd/videos">
+                <a class="footer__social-link" title="Link to Data Con LA YouTube channel" target="_blank" href="https://www.youtube.com/user/sawjd/videos">
                 <svg class="footer__social-icon">
                     <use xlink:href="' . THEME_IMG_PATH . '/sprite.svg#icon-youtube-with-circle" />
         </svg>

@@ -136,7 +136,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -397,7 +397,8 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -651,7 +652,9 @@ a {
   font-size: 1.6rem;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #a452ff;
 }
 
@@ -659,7 +662,8 @@ a:focus {
   outline: thin dotted;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   outline: 0;
 }
 
@@ -923,7 +927,7 @@ html {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
 }
 
@@ -1004,7 +1008,7 @@ html {
 .profile-item__img {
   width: 50rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .profile-item__name {
@@ -1161,14 +1165,17 @@ html {
   top: 45%;
 }
 
-.main-navigation__icon, .main-navigation__icon::before, .main-navigation__icon::after {
+.main-navigation__icon,
+.main-navigation__icon::before,
+.main-navigation__icon::after {
   width: 3rem;
   height: 2px;
   background-color: #169fff;
   display: inline-block;
 }
 
-.main-navigation__icon::before, .main-navigation__icon::after {
+.main-navigation__icon::before,
+.main-navigation__icon::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1191,16 +1198,22 @@ html {
   top: 1rem;
 }
 
-.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon {
+.main-navigation__checkbox:checked
+  + .main-navigation__button
+  .main-navigation__icon {
   background-color: transparent;
 }
 
-.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon::before {
+.main-navigation__checkbox:checked
+  + .main-navigation__button
+  .main-navigation__icon::before {
   top: 0;
   transform: rotate(135deg);
 }
 
-.main-navigation__checkbox:checked + .main-navigation__button .main-navigation__icon::after {
+.main-navigation__checkbox:checked
+  + .main-navigation__button
+  .main-navigation__icon::after {
   top: 0;
   transform: rotate(-135deg);
 }
@@ -1441,12 +1454,14 @@ body.stop-transition .nav {
   text-decoration: none;
 }
 
-.footer__social-link, .footer__social-link:visited {
+.footer__social-link,
+.footer__social-link:visited {
   text-decoration: none;
   color: white;
 }
 
-.footer__social-link:not(:last-child), .footer__social-link:visited:not(:last-child) {
+.footer__social-link:not(:last-child),
+.footer__social-link:visited:not(:last-child) {
   margin-right: 0.5rem;
 }
 
@@ -1849,7 +1864,7 @@ body.stop-transition .nav {
   left: 0;
   z-index: -10;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   max-width: none;
 }
@@ -1858,7 +1873,7 @@ body.stop-transition .nav {
   .media-banner__img {
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -1989,7 +2004,7 @@ body.stop-transition .nav {
   top: 0;
   left: 0;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   z-index: -10;
   max-width: none;
   width: 100%;
@@ -2467,7 +2482,7 @@ body.stop-transition .nav {
 .listing-feature__bg {
   position: absolute;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   z-index: -2;
 }
@@ -2862,7 +2877,8 @@ body.stop-transition .nav {
   background: rgba(22, 159, 255, 0.05);
 }
 
-.listing-highlight--primary > .listing-highlight__list::-webkit-scrollbar-thumb {
+.listing-highlight--primary
+  > .listing-highlight__list::-webkit-scrollbar-thumb {
   background-color: rgba(22, 159, 255, 0.3);
 }
 
@@ -2878,7 +2894,8 @@ body.stop-transition .nav {
   background: rgba(164, 82, 255, 0.05);
 }
 
-.listing-highlight--secondary > .listing-highlight__list::-webkit-scrollbar-thumb {
+.listing-highlight--secondary
+  > .listing-highlight__list::-webkit-scrollbar-thumb {
   background-color: rgba(164, 82, 255, 0.3);
 }
 
@@ -3070,7 +3087,7 @@ body.stop-transition .nav {
 
 .keynote-speakers__img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   opacity: 0.1;
   height: 100%;
@@ -3116,6 +3133,12 @@ body.stop-transition .nav {
   visibility: hidden;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .keynote-speakers-modal {
+    top: 1rem;
+  }
+}
+
 .keynote-speakers-modal--active {
   visibility: visible;
 }
@@ -3154,6 +3177,17 @@ body.stop-transition .nav {
   }
 }
 
+.keynote-speakers-modal__container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 10px;
+}
+
+.keynote-speakers-modal__container::-webkit-scrollbar-thumb {
+  background-color: rgba(22, 159, 255, 0.3);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
 .keynote-speakers-modal__close {
   position: relative;
   left: 92%;
@@ -3180,7 +3214,7 @@ body.stop-transition .nav {
   display: flex;
   align-items: flex-start;
   position: relative;
-  top: 5rem;
+  top: 3rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -3211,7 +3245,8 @@ body.stop-transition .nav {
 }
 
 .keynote-speakers-modal h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -3221,7 +3256,8 @@ body.stop-transition .nav {
 }
 
 .keynote-speakers-modal h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin-top: 0rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -3242,7 +3278,7 @@ body.stop-transition .nav {
 
 @media only screen and (max-width: 37.5em) {
   .keynote-speakers-modal img {
-    width: 50%;
+    width: 55%;
   }
 }
 
@@ -3288,7 +3324,7 @@ body.stop-transition .nav {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -3304,7 +3340,7 @@ body.stop-transition .nav {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #21759b;
   display: block;
   font-size: 0.875rem;
