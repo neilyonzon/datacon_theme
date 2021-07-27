@@ -60,4 +60,9 @@ a.btn {
     background: white;
     color: $color-primary;
   }
+
+  &--white-secondary {
+    background: white;
+    color: $color-secondary;
+  }
 }

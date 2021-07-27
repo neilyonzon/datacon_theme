@@ -1,0 +1,91 @@
+.content-image {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 5rem 10rem;
+
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 2.5rem;
+  }
+
+  & .header , & p {
+    color: white;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__primary {
+    background: $color-primary;
+  }
+
+  &__primary-inverse {
+    background: white;
+
+    & .header {
+      color: $color-primary;
+    }
+
+    & p {
+      color: $color-black;
+    }
+  }
+
+  &__secondary {
+    background: $color-secondary;
+  }
+
+  &__secondary-inverse {
+    background: white;
+
+    & .header {
+      color: $color-secondary;
+    } 
+    
+    & p {
+      color: $color-black;
+    }
+  }
+
+  &__img-column {
+    flex: 0 0 40%;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin: 1rem 0;
+    }
+
+    & > img {
+      width: 50rem;
+      @include center-self;
+
+      @include respond(tab-land) {
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+  }
+
+  &__text-column {
+    flex: 0 0 55%;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin: 1rem 0;
+    }
+  }
+
+}

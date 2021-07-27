@@ -1,7 +1,6 @@
 <?php
 
 
-/*Template Name: Design Keynote Speakers */
 
 /**
  * The template for displaying all landing page

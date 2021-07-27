@@ -1,8 +1,6 @@
 <?php
 
 
-/*Template Name: Design Keynote Speakers with Modal */
-
 /**
  * The template for displaying all landing page
  *
@@ -25,26 +23,34 @@ get_header();
     <div class="keynote-speakers"><img class="keynote-speakers__img"
             src=" https://data-con-la.local/wp-content/themes/datacon_theme/img/data_graphic.jpg" alt="Data Graphic">
         <div class="keynote-speakers__overlay"></div>
+
         <div class="keynote-speakers__container">
             <div class="keynote-speakers__intro">
                 <h3 class="header">2021 Keynote Speakers</h3>
                 <p>Check out a preview of this year’s keynote speakers. A full list will be available soon!</p>
             </div>
+
+
             <div class="keynote-speakers__profile-grid profile-grid">
+
+
                 <div class="profile-item">
                     <div class="profile-item__img-container"><img class="profile-item__img"
                             src="https://data-con-la.local/wp-content/uploads/2021/04/headshot-DCLA-Karen-Karen-Borchgrevink.jpg"
                             alt="Karen Borchgrevink"></div>
+
                     <a href="#" class="keynote-speakers__link">
                         <h4 class="profile-item__name">Karen Borchgrevink</h4>
                     </a>
+
+
                     <p class="profile-item__title">Executive Director / Founder at LA Tech4Good</p>
-                    <p class="profile-item__description">Lorem Ipsum</p>
+                    <p class="profile-item__description">Lorem Ipsum </p>
                     <a class="profile-item__link keynote-speakers__link" href="#">Read Bio</a>
                     <div class="profile-item__social-icons-container">
                         <div class="profile-item__social-icon">
                             <a href="https://www.linkedin.com/in/kborchgrevink/" target="_blank"
-                                class="profile-item__social-link">
+                                class="profile-item__social-link profile-item__social-link--ln">
                                 <svg class="profile-item__social-symbol">
                                     <use
                                         xlink:href="https://data-con-la.local/wp-content/themes/datacon_theme/img/sprite.svg#icon-linkedin-with-circle">
@@ -54,7 +60,7 @@ get_header();
                         </div>
                         <div class="profile-item__social-icon">
                             <a href="https://twitter.com/kborchgrevink" target="_blank"
-                                class="profile-item__social-link">
+                                class="profile-item__social-link profile-item__social-link--twitter">
                                 <svg class="profile-item__social-symbol">
                                     <use
                                         xlink:href="https://data-con-la.local/wp-content/themes/datacon_theme/img/sprite.svg#icon-twitter-with-circle">
@@ -76,7 +82,7 @@ get_header();
                     <p class="profile-item__description">Lorem Ipsum</p>
                     <a class="profile-item__link keynote-speakers__link" href="#">Read Bio</a>
                     <div class="profile-item__social-icons-container">
-                        <div class="profile-item__social-icon">
+                        <div class="profile-item__social-icon profile-item__social-link--ln">
                             <a href="https://linkedin.com/in/cfregly" target="_blank" class="profile-item__social-link">
                                 <svg class="profile-item__social-symbol">
                                     <use
@@ -85,7 +91,7 @@ get_header();
                                 </svg>
                             </a>
                         </div>
-                        <div class="profile-item__social-icon">
+                        <div class="profile-item__social-icon profile-item__social-link--twitter">
                             <a href="https://twitter.com/cfregly" target="_blank" class="profile-item__social-link">
                                 <svg class="profile-item__social-symbol">
                                     <use
@@ -278,30 +284,8 @@ get_header();
                 <div class="keynote-speakers-modal__media modal-social">
                     <img class="profile-item__img modal-image"
                         src="https://data-con-la.local/wp-content/uploads/2021/04/headshot-DCLA-Karen-Karen-Borchgrevink.jpg"
-                        alt="Karen Borchgrevink">
-                    <div class="profile-item__social-icons-container">
-                        <div class="profile-item__social-icon">
-                            <a href="https://www.linkedin.com/in/kborchgrevink/" target="_blank"
-                                class="profile-item__social-link">
-                                <svg class="profile-item__social-symbol">
-                                    <use
-                                        xlink:href="https://data-con-la.local/wp-content/themes/datacon_theme/img/sprite.svg#icon-linkedin-with-circle">
-                                    </use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="profile-item__social-icon">
-                            <a href="https://twitter.com/kborchgrevink" target="_blank"
-                                class="profile-item__social-link">
-                                <svg class="profile-item__social-symbol">
-                                    <use
-                                        xlink:href="https://data-con-la.local/wp-content/themes/datacon_theme/img/sprite.svg#icon-twitter-with-circle">
-                                    </use>
-                                </svg>
-                            </a>
-                        </div>
+                        alt="Karen Borchgrevinssk">
 
-                    </div>
                 </div>
             </div>
         </div>

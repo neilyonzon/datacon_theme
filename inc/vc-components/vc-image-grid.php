@@ -298,7 +298,7 @@ for ($x = 1; $x <= 3; $x++) {
     }
 
   }
-}
+
 $output .= '<i class="panels__item"></i>';
 $output .= '<i class="panels__item"></i>';
 $output .= '<i class="panels__item"></i>';
