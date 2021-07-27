@@ -26,8 +26,8 @@ function icons()
 }
 
 require_once ('vc-about-section.php');
-require_once ('vc-about-section.php');
 require_once ('vc-callout-description.php');
+require_once ('vc-content-image.php');
 require_once ('vc-content-section.php');
 require_once ('vc-cta-countdown.php');
 require_once ('vc-header.php');

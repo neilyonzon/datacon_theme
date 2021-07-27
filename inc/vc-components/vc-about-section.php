@@ -116,9 +116,8 @@ $output .= '</div>';
 
 //Start of Text Column
 
-$output .= '<div class="about-section__text-column flex-align--center headspace-s--m">';
+$output .= '<div class="about-section__text-column headspace-s--m">';
 $output .= '<div class="callout callout--'. $color . '">'. $heading.'</div>';
-$output .= '<hr class="line line--'. $color . '" />';
 if ($description1 !='') {
 $output .= '<p>' . $description1 . '</p>';
 }
