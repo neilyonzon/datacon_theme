@@ -13,7 +13,6 @@ h6 {
   line-height: 5.6rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
 
   @include respond(phone) {
     font-size: 4rem;
@@ -73,7 +72,6 @@ h6 {
   font-size: 4rem;
   font-weight: bold;
   line-height: 6rem;
-  text-transform: uppercase;
 
   @include respond(phone) {
     font-size: 4rem;
@@ -96,7 +94,6 @@ h6 {
 
 .callout-2 {
   font-size: 4rem;
-  text-transform: uppercase;
 
   &--primary {
     color: $color-primary;

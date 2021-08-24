@@ -128,8 +128,10 @@ $output .= '</div>';
 //Start of Text Column
 
 $output .= '<div class="content-image__text-column">';
+$output .= '<div class="content-image__text">';
 $output .= '<div class="header">'. $heading.'</div>';
 $output .= $content;
+$output .= '</div>';
 if ($ctaBtn['url'] != '') 
 {
     $output .= "<a href=\"{$ctaBtn['url']}\" target=\"{$ctaBtn['target']}\" class=\"btn btn--{$ctaColor}\">{$ctaBtn['title']}</a>";

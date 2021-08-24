@@ -73,6 +73,11 @@
 
 @import "panels-grid";
 
+/* Panels with Modal
+--------------------------------------------- */
+
+@import "panels-modal.scss";
+
 /* Speaker Spotlight
 --------------------------------------------- */
 
@@ -98,6 +103,11 @@
 --------------------------------------------- */
 
 @import "content-image";
+
+/* Content with Image
+--------------------------------------------- */
+
+@import "vertical-listing";
 
 
 #modal-background {
