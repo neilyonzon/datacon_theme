@@ -11,7 +11,6 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <h1>Interior Test</h1>
     <?php
 while (have_posts()):
     the_post();

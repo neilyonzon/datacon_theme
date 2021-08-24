@@ -12,7 +12,8 @@
     ".keynote-speakers-modal__overlay"
   );
 
-  const closeIcon = document.querySelector(".keynote-speakers-modal__close");
+  if (modalBackground) {
+    const closeIcon = document.querySelector(".keynote-speakers-modal__close");
 
   //Functions
   const toggleProfileModal = () => {
@@ -93,4 +94,7 @@
     document.documentElement.style.overflow = "hidden"; // firefox, chrome
     document.body.scroll = "no"; // ie only
   }
+  }
+
+  
 })();
