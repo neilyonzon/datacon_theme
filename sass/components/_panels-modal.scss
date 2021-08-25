@@ -201,6 +201,14 @@
     fill: white;
   }
 
+  &__image {
+    width: 10rem;
+
+    @include respond(tab-port) {
+      width: 15rem;
+    }
+  }
+
   &__content {
     display: flex;
     align-items: flex-start;

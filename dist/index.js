@@ -498,10 +498,11 @@ jQuery(document).ready(function () {
       var panelModerator = parentNode.querySelector("[data-type*=\"moderator\"]");
       var panelists = parentNode.querySelectorAll("[data-type*=\"panelist\"]");
       var modal = document.querySelector(".panels-m-modal");
-      var modalTitle = modal.querySelector(".panels-m-modal__title");
+      var modalTitle = modal.querySelector(".modal-title");
       var modalDescription = modal.querySelector(".panels-m-modal__summary");
       var modalModerator = modal.querySelector(".panels-m-modal__moderator");
       var modalModeratorTitle = modal.querySelector(".panels-m-modal__title");
+      var modalModeratorImage = modal.querySelector(".panels-m-modal__image");
       var modalGrid = modal.querySelector(".panels-m-modal__grid");
       modalGrid.innerHtml = "";
 
@@ -513,6 +514,8 @@ jQuery(document).ready(function () {
       modalDescription.innerText = panelDescription;
       modalModerator.innerText = panelModerator.dataset.name;
       modalModeratorTitle.innerText = panelModerator.dataset.title;
+      modalModeratorImage.src = panelModerator.dataset.image;
+      modalModeratorImage.alt = "Photo of " + panelModerator.dataset.name;
       Array.from(panelists).forEach(function (elem) {
         var name = elem.dataset.name;
         var image = elem.dataset.image;
