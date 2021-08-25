@@ -39,34 +39,42 @@
     const fillModalDetails = (e) => {
       let parentNode = e.target.closest(".panels-m__item");
 
-      let panelName = parentNode.querySelector(".panels-m__item-name").innerText;
-      let panelTitle = parentNode.querySelector(".panels-m__item-title")
+      let panelTitle = parentNode.querySelector(".panels-m__item-title").innerText;
+      let panelDescription = parentNode.querySelector(".panels-m__item-description")
         .innerText;
-      let panelImage = parentNode
-        .querySelector(".panels-m__item__img")
-        .getAttribute("src");
-      let panelAlt = parentNode
-        .querySelector(".panels-m__item__img")
-        .getAttribute("alt");
-      let panelDescription = parentNode.querySelector(
-        ".panels-m__item__description"
-      ).innerText;
+      let panelModerator = parentNode.querySelector(`[data-type*="moderator"]`);
+      let panelists = parentNode.querySelectorAll(`[data-type*="panelist"]`);
 
-      let panelSocial = parentNode
-        .querySelector(".panel-item__social-icons-container")
-        .cloneNode(true);
+      let modal = document.querySelector(".panels-m-modal");
+      let modalTitle = modal.querySelector(".panels-m-modal__title");
+      let modalDescription = modal.querySelector(".panels-m-modal__summary");
+      let modalModerator = modal.querySelector(".panels-m-modal__moderator");
+      let modalModeratorTitle = modal.querySelector(".panels-m-modal__title");
+      let modalGrid = modal.querySelector(".panels-m-modal__grid");
+      modalGrid.innerHtml = "";
+      while (modalGrid.firstChild) modalGrid.removeChild(modalGrid.firstChild);
 
-      let modal = document.querySelector(".keynote-speakers-modal");
-      let modalName = modal.querySelector(".modal-name");
-      let modalTitle = modal.querySelector(".modal-title");
-      let modalDescription = modal.querySelector(".modal-description");
-      let modalImage = modal.querySelector(".modal-image");
-
-      modalName.innerText = panelName;
       modalTitle.innerText = panelTitle;
       modalDescription.innerText = panelDescription;
-      modalImage.setAttribute("src", panelImage);
-      modalImage.setAttribute("alt", panelAlt);
+      modalModerator.innerText = panelModerator.dataset.name;
+      modalModeratorTitle.innerText = panelModerator.dataset.title;
+      Array.from(panelists).forEach(function(elem) {
+        let name = elem.dataset.name;
+        let image = elem.dataset.image;
+        let title = elem.dataset.title;
+        if ('content' in document.createElement('template')) {
+          let template = document.querySelector("#panelist-item-template");
+          let clone = template.content.cloneNode(true);
+          cloneImg = clone.querySelector(".panels-m-modal__grid-img");
+          cloneName = clone.querySelector(".panels-m-modal__grid-name");
+          cloneTitle = clone.querySelector(".panels-m-modal__grid-title");
+          cloneImg.src = image;
+          cloneImg.alt = "Image of " + name;
+          cloneName.innerText = name;
+          cloneTitle.innerText = title;
+          modalGrid.appendChild(clone);
+        }
+      })
     };
 
     Array.from(panelItems).forEach(function(elem) {
@@ -74,6 +82,13 @@
         togglePanelModal();
         fillModalDetails(e);
       });
+
+      elem.addEventListener("keydown",(e)=> {
+        if (e.keyCode === 13) {
+          togglePanelModal();
+          fillModalDetails(e);
+        }
+      })
     });
 
     function reloadScrollBars() {

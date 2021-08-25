@@ -92,7 +92,7 @@
       }
     }
 
-    &-description > p {
+    &-description {
       display: none;
 
       @include respond(phone) {
@@ -285,6 +285,10 @@
       }
     
     }
+  }
+
+  &__meta-text {
+    padding-right: 1rem;
   }
 
   &__grid {
