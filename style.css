@@ -2815,12 +2815,12 @@ body.stop-transition .nav {
 	content: " >";
 }
 
-.panels-m__item-description > p {
+.panels-m__item-description {
 	display: none;
 }
 
 @media only screen and (max-width: 37.5em) {
-	.panels-m__item-description > p {
+	.panels-m__item-description {
 		font-size: 1.6rem;
 	}
 }
@@ -3036,6 +3036,10 @@ body.stop-transition .nav {
 	.panels-m-modal__meta img {
 		width: 15rem;
 	}
+}
+
+.panels-m-modal__meta-text {
+	padding-right: 1rem;
 }
 
 .panels-m-modal__grid {

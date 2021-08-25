@@ -493,28 +493,56 @@ jQuery(document).ready(function () {
 
     var fillModalDetails = function fillModalDetails(e) {
       var parentNode = e.target.closest(".panels-m__item");
-      var panelName = parentNode.querySelector(".panels-m__item-name").innerText;
       var panelTitle = parentNode.querySelector(".panels-m__item-title").innerText;
-      var panelImage = parentNode.querySelector(".panels-m__item__img").getAttribute("src");
-      var panelAlt = parentNode.querySelector(".panels-m__item__img").getAttribute("alt");
-      var panelDescription = parentNode.querySelector(".panels-m__item__description").innerText;
-      var panelSocial = parentNode.querySelector(".panel-item__social-icons-container").cloneNode(true);
-      var modal = document.querySelector(".keynote-speakers-modal");
-      var modalName = modal.querySelector(".modal-name");
-      var modalTitle = modal.querySelector(".modal-title");
-      var modalDescription = modal.querySelector(".modal-description");
-      var modalImage = modal.querySelector(".modal-image");
-      modalName.innerText = panelName;
+      var panelDescription = parentNode.querySelector(".panels-m__item-description").innerText;
+      var panelModerator = parentNode.querySelector("[data-type*=\"moderator\"]");
+      var panelists = parentNode.querySelectorAll("[data-type*=\"panelist\"]");
+      var modal = document.querySelector(".panels-m-modal");
+      var modalTitle = modal.querySelector(".panels-m-modal__title");
+      var modalDescription = modal.querySelector(".panels-m-modal__summary");
+      var modalModerator = modal.querySelector(".panels-m-modal__moderator");
+      var modalModeratorTitle = modal.querySelector(".panels-m-modal__title");
+      var modalGrid = modal.querySelector(".panels-m-modal__grid");
+      modalGrid.innerHtml = "";
+
+      while (modalGrid.firstChild) {
+        modalGrid.removeChild(modalGrid.firstChild);
+      }
+
       modalTitle.innerText = panelTitle;
       modalDescription.innerText = panelDescription;
-      modalImage.setAttribute("src", panelImage);
-      modalImage.setAttribute("alt", panelAlt);
+      modalModerator.innerText = panelModerator.dataset.name;
+      modalModeratorTitle.innerText = panelModerator.dataset.title;
+      Array.from(panelists).forEach(function (elem) {
+        var name = elem.dataset.name;
+        var image = elem.dataset.image;
+        var title = elem.dataset.title;
+
+        if ('content' in document.createElement('template')) {
+          var template = document.querySelector("#panelist-item-template");
+          var clone = template.content.cloneNode(true);
+          cloneImg = clone.querySelector(".panels-m-modal__grid-img");
+          cloneName = clone.querySelector(".panels-m-modal__grid-name");
+          cloneTitle = clone.querySelector(".panels-m-modal__grid-title");
+          cloneImg.src = image;
+          cloneImg.alt = "Image of " + name;
+          cloneName.innerText = name;
+          cloneTitle.innerText = title;
+          modalGrid.appendChild(clone);
+        }
+      });
     };
 
     Array.from(panelItems).forEach(function (elem) {
       elem.addEventListener("click", function (e) {
         togglePanelModal();
         fillModalDetails(e);
+      });
+      elem.addEventListener("keydown", function (e) {
+        if (e.keyCode === 13) {
+          togglePanelModal();
+          fillModalDetails(e);
+        }
       });
     });
   }
