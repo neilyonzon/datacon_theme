@@ -2944,6 +2944,16 @@ body.stop-transition .nav {
   fill: white;
 }
 
+.panels-m-modal__image {
+  width: 10rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .panels-m-modal__image {
+    width: 15rem;
+  }
+}
+
 .panels-m-modal__content {
   display: flex;
   align-items: flex-start;

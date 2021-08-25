@@ -46,10 +46,11 @@
       let panelists = parentNode.querySelectorAll(`[data-type*="panelist"]`);
 
       let modal = document.querySelector(".panels-m-modal");
-      let modalTitle = modal.querySelector(".panels-m-modal__title");
+      let modalTitle = modal.querySelector(".modal-title");
       let modalDescription = modal.querySelector(".panels-m-modal__summary");
       let modalModerator = modal.querySelector(".panels-m-modal__moderator");
       let modalModeratorTitle = modal.querySelector(".panels-m-modal__title");
+      let modalModeratorImage = modal.querySelector(".panels-m-modal__image");
       let modalGrid = modal.querySelector(".panels-m-modal__grid");
       modalGrid.innerHtml = "";
       while (modalGrid.firstChild) modalGrid.removeChild(modalGrid.firstChild);
@@ -58,6 +59,8 @@
       modalDescription.innerText = panelDescription;
       modalModerator.innerText = panelModerator.dataset.name;
       modalModeratorTitle.innerText = panelModerator.dataset.title;
+      modalModeratorImage.src = panelModerator.dataset.image;
+      modalModeratorImage.alt = "Photo of " + panelModerator.dataset.name;
       Array.from(panelists).forEach(function(elem) {
         let name = elem.dataset.name;
         let image = elem.dataset.image;
